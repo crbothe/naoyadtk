@@ -1,0 +1,276 @@
+digraph G {
+
+node [fontname=Calibri][shape=box][style=rounded]
+graph [fontname=Calibri][overlap=false][splines=true]
+edge [fontname=Calibri][arrowhead=open]
+
+MEDIA_hotel [label="MEDIA:hotel"];
+
+MEDIA_hotel -> nombre;
+nombre [label="nombre"];
+
+MEDIA_hotel -> nombreNonDigit_quelques;
+nombreNonDigit_quelques [label="nombreNonDigit:quelques"];
+
+MEDIA_hotel -> nombreNonDigit_plusieurs;
+nombreNonDigit_plusieurs [label="nombreNonDigit:plusieurs"];
+
+MEDIA_hotel -> hotel_marque_Campanile;
+hotel_marque_Campanile [label="hotel-marque:Campanile"];
+
+MEDIA_hotel -> hotel_marque_EtapHotel;
+hotel_marque_EtapHotel [label="hotel-marque:EtapHotel"];
+
+MEDIA_hotel -> hotel_marque_Formule1;
+hotel_marque_Formule1 [label="hotel-marque:Formule1"];
+
+MEDIA_hotel -> hotel_marque_HolidayInn;
+hotel_marque_HolidayInn [label="hotel-marque:HolidayInn"];
+
+MEDIA_hotel -> hotel_marque_Ibis;
+hotel_marque_Ibis [label="hotel-marque:Ibis"];
+
+MEDIA_hotel -> hotel_marque_Mercure;
+hotel_marque_Mercure [label="hotel-marque:Mercure"];
+
+MEDIA_hotel -> hotel_marque_Meridien;
+hotel_marque_Meridien [label="hotel-marque:Meridien"];
+
+MEDIA_hotel -> hotel_marque_Novotel;
+hotel_marque_Novotel [label="hotel-marque:Novotel"];
+
+MEDIA_hotel -> hotel_marque_Sofitel;
+hotel_marque_Sofitel [label="hotel-marque:Sofitel"];
+
+MEDIA_hotel -> temps_heure;
+temps_heure [label="temps-heure"];
+
+MEDIA_hotel -> date;
+date [label="date"];
+
+MEDIA_hotel -> date_rang;
+date_rang [label="date-rang"];
+
+MEDIA_hotel -> date_plage;
+date_plage [label="date-plage"];
+
+MEDIA_hotel -> date_precise;
+date_precise [label="date-precise"];
+
+MEDIA_hotel -> date_environ;
+date_environ [label="date-environ"];
+
+MEDIA_hotel -> heure_precise;
+heure_precise [label="heure-precise"];
+
+MEDIA_hotel -> heure_environ;
+heure_environ [label="heure-environ"];
+
+MEDIA_hotel -> duree;
+duree [label="duree"];
+
+MEDIA_hotel -> duree_floue;
+duree_floue [label="duree-floue"];
+
+MEDIA_hotel -> duree_environ;
+duree_environ [label="duree-environ"];
+
+MEDIA_hotel -> periode_heures;
+periode_heures [label="periode-heures"];
+
+MEDIA_hotel -> periode_dates;
+periode_dates [label="periode-dates"];
+
+MEDIA_hotel -> periode_semaine_date;
+periode_semaine_date [label="periode-semaine-date"];
+
+MEDIA_hotel -> periode_mois_plage;
+periode_mois_plage [label="periode-mois-plage"];
+
+MEDIA_hotel -> periode_mois_rang;
+periode_mois_rang [label="periode-mois-rang"];
+
+MEDIA_hotel -> periode_jours_2;
+periode_jours_2 [label="periode-jours:2"];
+
+MEDIA_hotel -> periode_jours_3;
+periode_jours_3 [label="periode-jours:3"];
+
+MEDIA_hotel -> temps_jourFerie_noel;
+temps_jourFerie_noel [label="temps-jourFerie:noel"];
+
+MEDIA_hotel -> temps_jourFerie_paques;
+temps_jourFerie_paques [label="temps-jourFerie:paques"];
+
+MEDIA_hotel -> temps_jourFerie_toussaint;
+temps_jourFerie_toussaint [label="temps-jourFerie:toussaint"];
+
+MEDIA_hotel -> temps_dateRelative_aujourdhui;
+temps_dateRelative_aujourdhui [label="temps-dateRelative:aujourdhui"];
+
+MEDIA_hotel -> temps_dateRelative_demain;
+temps_dateRelative_demain [label="temps-dateRelative:demain"];
+
+MEDIA_hotel -> temps_dateRelative_hier;
+temps_dateRelative_hier [label="temps-dateRelative:hier"];
+
+MEDIA_hotel -> temps_dateRelative_futur;
+temps_dateRelative_futur [label="temps-dateRelative:futur"];
+
+MEDIA_hotel -> temps_dateRelative_passe;
+temps_dateRelative_passe [label="temps-dateRelative:passe"];
+
+MEDIA_hotel -> temps_axe__prochain;
+temps_axe__prochain [label="temps-axe::prochain"];
+
+MEDIA_hotel -> temps_axe_suivant;
+temps_axe_suivant [label="temps-axe:suivant"];
+
+MEDIA_hotel -> temps_axe_precedent;
+temps_axe_precedent [label="temps-axe:precedent"];
+
+MEDIA_hotel -> date_localisation;
+date_localisation [label="date-localisation"];
+
+MEDIA_hotel -> localisation_precise_pays;
+localisation_precise_pays [label="localisation-precise:pays"];
+
+MEDIA_hotel -> localisation_precise_departement;
+localisation_precise_departement [label="localisation-precise:departement"];
+
+MEDIA_hotel -> localisation_precise_ville;
+localisation_precise_ville [label="localisation-precise:ville"];
+
+MEDIA_hotel -> localisation_precise_arrondissement;
+localisation_precise_arrondissement [label="localisation-precise:arrondissement"];
+
+MEDIA_hotel -> localisation_cardinal_est;
+localisation_cardinal_est [label="localisation-cardinal:est"];
+
+MEDIA_hotel -> localisation_cardinal_ouest;
+localisation_cardinal_ouest [label="localisation-cardinal:ouest"];
+
+MEDIA_hotel -> localisation_cardinal_nord;
+localisation_cardinal_nord [label="localisation-cardinal:nord"];
+
+MEDIA_hotel -> localisation_cardinal_sud;
+localisation_cardinal_sud [label="localisation-cardinal:sud"];
+
+MEDIA_hotel -> localisation_distance_proche;
+localisation_distance_proche [label="localisation-distance:proche"];
+
+MEDIA_hotel -> localisation_distance_loin;
+localisation_distance_loin [label="localisation-distance:loin"];
+
+MEDIA_hotel -> hotel_etoile_1etoile;
+hotel_etoile_1etoile [label="hotel-etoile:1etoile"];
+
+MEDIA_hotel -> hotel_etoile_2etoile;
+hotel_etoile_2etoile [label="hotel-etoile:2etoile"];
+
+MEDIA_hotel -> hotel_etoile_3etoile;
+hotel_etoile_3etoile [label="hotel-etoile:3etoile"];
+
+MEDIA_hotel -> hotel_etoile_4etoile;
+hotel_etoile_4etoile [label="hotel-etoile:4etoile"];
+
+MEDIA_hotel -> hotel_etoile_luxe;
+hotel_etoile_luxe [label="hotel-etoile:luxe"];
+
+MEDIA_hotel -> nom_hotel;
+nom_hotel [label="nom-hotel"];
+
+MEDIA_hotel -> hotel_services_accessibilite;
+hotel_services_accessibilite [label="hotel-services:accessibilite"];
+
+MEDIA_hotel -> hotel_services_breakfast;
+hotel_services_breakfast [label="hotel-services:breakfast"];
+
+MEDIA_hotel -> hotel_services_breakfastInclude;
+hotel_services_breakfastInclude [label="hotel-services:breakfastInclude"];
+
+MEDIA_hotel -> hotel_services_climatisation;
+hotel_services_climatisation [label="hotel-services:climatisation"];
+
+MEDIA_hotel -> hotel_services_jacuzzi;
+hotel_services_jacuzzi [label="hotel-services:jacuzzi"];
+
+MEDIA_hotel -> hotel_services_sauna;
+hotel_services_sauna [label="hotel-services:sauna"];
+
+MEDIA_hotel -> hotel_services_piscine;
+hotel_services_piscine [label="hotel-services:piscine"];
+
+MEDIA_hotel -> hotel_services_piscineCouverte;
+hotel_services_piscineCouverte [label="hotel-services:piscineCouverte"];
+
+MEDIA_hotel -> hotel_services_salleMusculation;
+hotel_services_salleMusculation [label="hotel-services:salleMusculation"];
+
+MEDIA_hotel -> hotel_services_tennis;
+hotel_services_tennis [label="hotel-services:tennis"];
+
+MEDIA_hotel -> hotel_services_restaurant;
+hotel_services_restaurant [label="hotel-services:restaurant"];
+
+MEDIA_hotel -> hotel_services_parking;
+hotel_services_parking [label="hotel-services:parking"];
+
+MEDIA_hotel -> hotel_services_salleReunion;
+hotel_services_salleReunion [label="hotel-services:salleReunion"];
+
+MEDIA_hotel -> hotel_services_animation;
+hotel_services_animation [label="hotel-services:animation"];
+
+MEDIA_hotel -> hotel_services_animaux;
+hotel_services_animaux [label="hotel-services:animaux"];
+
+MEDIA_hotel -> sejour_nbPersonne;
+sejour_nbPersonne [label="sejour-nbPersonne"];
+
+MEDIA_hotel -> sejour_nbAdulte;
+sejour_nbAdulte [label="sejour-nbAdulte"];
+
+MEDIA_hotel -> sejour_nbCouple;
+sejour_nbCouple [label="sejour-nbCouple"];
+
+MEDIA_hotel -> sejour_nbEnfant;
+sejour_nbEnfant [label="sejour-nbEnfant"];
+
+MEDIA_hotel -> sejour_nbEnfant_1;
+sejour_nbEnfant_1 [label="sejour-nbEnfant:1"];
+
+MEDIA_hotel -> sejour_nbEnfant_0;
+sejour_nbEnfant_0 [label="sejour-nbEnfant:0"];
+
+MEDIA_hotel -> sejour_nbLitBebe;
+sejour_nbLitBebe [label="sejour-nbLitBebe"];
+
+MEDIA_hotel -> comparatif_montant_environ;
+comparatif_montant_environ [label="comparatif-montant:environ"];
+
+MEDIA_hotel -> comparatif_montant_superieur;
+comparatif_montant_superieur [label="comparatif-montant:superieur"];
+
+MEDIA_hotel -> comparatif_montant_inferieur;
+comparatif_montant_inferieur [label="comparatif-montant:inferieur"];
+
+MEDIA_hotel -> comparatif_montant_moins;
+comparatif_montant_moins [label="comparatif-montant:moins"];
+
+MEDIA_hotel -> comparatif_montant_plus;
+comparatif_montant_plus [label="comparatif-montant:plus"];
+
+MEDIA_hotel -> comparatif_montant_minimum;
+comparatif_montant_minimum [label="comparatif-montant:minimum"];
+
+MEDIA_hotel -> comparatif_montant_maximum;
+comparatif_montant_maximum [label="comparatif-montant:maximum"];
+
+MEDIA_hotel -> qualificatif_montant_cher;
+qualificatif_montant_cher [label="qualificatif-montant:cher"];
+
+MEDIA_hotel -> qualificatif_montant_abordable;
+qualificatif_montant_abordable [label="qualificatif-montant:abordable"];
+
+}

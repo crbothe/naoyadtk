@@ -1,0 +1,250 @@
+
+<declare-feature id="speech-act"/>
+<declare-feature id="object"/>
+<declare-feature id="action"/>
+<declare-feature id="property"/>
+<declare-feature id="requestable"/>
+<declare-feature id="politeness"/>
+<declare-feature id="city"/>
+<declare-feature id="station"/>
+<declare-feature id="ticket-property"/>
+<declare-feature id="number"/>
+<declare-feature id="room-feature"/>
+<declare-feature id="reference"/>
+<declare-feature id="pronoun"/>
+<declare-feature id="article"/>
+
+<declare-metadata id="level:1"/>
+<declare-metadata id="level:2"/>
+<declare-metadata id="level:3"/>
+<declare-metadata id="style:informal"/>
+<declare-metadata id="style:slangy"/>
+<declare-metadata id="mode:inter"/>
+<declare-metadata id="mode:neg"/>
+<declare-metadata id="morpho:sing"/>
+<declare-metadata id="morpho:plu"/>
+<declare-metadata id="morpho:definite"/>
+<declare-metadata id="morpho:indefinite"/>
+
+<declare-role id="departure"/>
+<declare-role id="destination"/>
+<declare-role id="constraint"/>
+<declare-role id="referenced"/>
+
+<declare-role id="quantity"/>
+<declare-role id="type"/>
+
+<!-- First example -->
+
+<granule concept="hello" offers="politeness">
+    <syntax pattern="hello"/>
+    <syntax pattern="hi" metadata="style:informal"/>
+</granule>
+
+<granule concept="please" offers="politeness">
+    <syntax pattern="please"/>
+</granule>
+
+<granule concept="request" offers="speech-act">
+    <dependency id="A1" expected="object requestable reference"/>
+    <syntax pattern="I want (A1)" metadata="level:1"/>
+    <syntax pattern="I would like (A1)" metadata="level:2"/>
+    <syntax pattern="can I have/obtain (A1)" metadata="mode:inter"/>
+    <syntax pattern="I don' t want (A1)" metadata="mode:neg"/>
+</granule>
+
+<granule concept="ticket" offers="object requestable">
+    <dependency id="A1" expected="number" role="quantity"/>
+    <dependency id="A2" expected="ticket-property" role="type"/>
+    <dependency id="A3" expected="station" role="departure"/>
+    <dependency id="A4" expected="station" role="destination"/>
+    <syntax pattern="(A1) (A2) ticket" metadata="morpho:sing" gen="TRUE"/>
+    <syntax pattern="(A1) (A2) tickets" metadata="morpho:plu" gen="TRUE"/>
+    <syntax pattern="(A1) (A2) ticket to A4" metadata="morpho:sing" gen="TRUE"/>
+    <syntax pattern="(A1) (A2) tickets to A4" metadata="morpho:plu" gen="TRUE"/>
+    <syntax pattern="(A1) (A2) ticket from A3 to A4" metadata="morpho:sing" gen="TRUE"/>
+    <syntax pattern="(A1) (A2) tickets from A3 to A4" metadata="morpho:plu" gen="TRUE"/>
+    <syntax pattern="A1 (ticket(s)) A3 A4"/>
+</granule>
+
+<granule concept="cheque" offers="object requestable">
+    <dependency id="A1" expected="number"/>
+    <syntax pattern="(A1) cheque"/>
+</granule>
+
+<granule concept="roundtrip" offers="ticket-property">
+    <syntax pattern="round trip" gen="TRUE"/>
+</granule>
+
+<granule concept="paris" offers="city station">
+    <syntax pattern="paris" gen="TRUE"/>
+    <syntax pattern="panam" metadata="style:slangy" gen="TRUE"/>
+</granule>
+
+<granule concept="london" offers="city station">
+    <syntax pattern="london" gen="TRUE"/>
+</granule>
+
+<granule concept="le_mans" offers="city station">
+    <syntax pattern="le mans" gen="TRUE"/>
+</granule>
+
+<granule concept="number:1">
+    <syntax pattern="a"/>
+    <syntax pattern="1"/>
+    <syntax pattern="one" metadata="morpho:sing" gen="TRUE"/>
+</granule>
+
+<granule concept="number:2">
+    <syntax pattern="2"/>
+    <syntax pattern="two" metadata="morpho:plu" gen="TRUE"/>
+</granule>
+
+<granule concept="number:5">
+    <syntax pattern="5"/>
+    <syntax pattern="five" metadata="morpho:plu" gen="TRUE"/>
+</granule>
+
+<!-- Multiple and flexible dependencies -->
+
+<granule concept="room" offers="requestable">
+    <dependency id="A1" expected="number"/>
+    <dependency id="A2" expected="room-feature room-constraint time-constraint place-constraint" role="constraint" mult="TRUE"/>
+    <syntax pattern="(A1) room" metadata="morpho:sing"/>
+    <syntax pattern="(A1) rooms" metadata="morpho:plu"/>
+</granule>
+
+<granule concept="television" offers="object room-feature">
+    <syntax pattern="a/the TV (set)"/>
+    <syntax pattern="a/the television"/>
+</granule>
+
+<granule concept="jacuzzi" offers="room-feature">
+    <syntax pattern="a/the jacuzzi"/>
+</granule>
+
+<granule concept="addition" offerexpr="(intersection ?offersA1 ?offersA2)">
+	<dependency id="A1"/>
+	<dependency id="A2"/>
+	<constraint test="(intersectp ?offersA1 ?offersA2)"/>
+	<syntax pattern="A1 and A2" gen="TRUE"/>
+	<syntax pattern="A1 then A2"/>
+</granule>
+
+<!-- Dealing with references -->
+
+<granule concept="reference:this" offers="A1">
+    <dependency id="A1" expected="requestable" rejected="reference" role="referenced"/>
+    <syntax pattern="this one" metadata="morpho:sing"/>
+    <syntax pattern="this A1" metadata="morpho:sing"/>
+    <syntax pattern="these A1" metadata="morpho:plu"/>
+</granule>
+
+<granule concept="reference:other" offers="A1">
+    <dependency id="A1" expected="requestable" rejected="reference" role="referenced"/>
+    <syntax pattern="the other one" metadata="morpho:definite morpho:sing"/>
+    <syntax pattern="the other A1" metadata="morpho:definite morpho:sing"/>
+    <syntax pattern="another A1" metadata="morpho:indefinite morpho:sing"/>
+    <syntax pattern="something else" metadata="morpho:indefinite morpho:sing"/>
+</granule>
+
+<!-- The Granule Guesser -->
+
+<granule concept="color" offers="property">
+    <syntax pattern="color"/>
+</granule>
+
+<granule concept="table" offers="object">
+    <syntax pattern="(the) table"/>
+</granule>
+
+<declare-role id="attribute"/>
+
+<granule concept="attribution">
+	<dependency id="A1" expected="property" role="property"/>
+	<dependency id="A2" expected="object" role="object" tag="NP"/>
+    <syntax pattern="the A1 of A2" example="the color of the black snow"/>
+</granule>
+
+<granule concept="definition">
+	<dependency id="A1" expected="attribution" role="object"/>
+	<dependency id="A2" expected="definition" role="definition" tag="NP"/>
+    <syntax pattern="A1 is A2" example="the color of the black snow is an oxymoron"/>
+    <syntax pattern="is A1 A2" example="is the color of the black snow an oxymoron" metadata="mode:inter"/>
+</granule>
+
+<!-- The Avigon big example -->
+<!-- Hello, can I have a room for five people, two couples and one child from 30th January to 2nd February in Marseille, then the next two nights in Avignon? -->
+
+<declare-feature id="time-constraint"/>
+<declare-feature id="place-constraint"/>
+<declare-feature id="room-constraint"/>
+<declare-feature id="time-unit"/>
+
+<granule concept="city:avignon" offers="place-constraint">
+    <syntax pattern="avignon" gen="TRUE"/>
+</granule>
+
+<granule concept="city:marseille" offers="place-constraint">
+    <syntax pattern="marseille" gen="TRUE"/>
+</granule>
+
+<granule concept="date" offers="time-constraint">
+	<dependency id="A1" expected="day"/>
+	<dependency id="A2" expected="ordinal"/>
+	<dependency id="A3" expected="month"/>
+	<dependency id="A4" expected="year"/>
+	<syntax pattern="A1" example="thursday" gen="TRUE"/>
+	<syntax pattern="A2" example="20th" gen="TRUE"/>
+	<syntax pattern="A2 A3" example="20th " gen="TRUE"/>
+	<syntax pattern="(A1) the A2" gen="TRUE" example="thursday the eighth"/>
+	<syntax pattern="(A1) the A2 of A3" gen="TRUE" example="thursday the eighth of january"/>
+	<syntax pattern="(A1) the A2 of A3 A4" gen="TRUE" example="thursday the eighth of january 2014"/>
+</granule>
+
+<declare-role id="time"/>
+<declare-role id="place"/>
+
+<granule concept="time-place" offers="time-constraint place-constraint">
+	<dependency id="A1" expected="time-constraint" rejected="time-place addition" role="time"/>
+	<dependency id="A2" expected="place-constraint" rejected="time-place addition" role="place"/>
+	<syntax pattern="A1 in A2" gen="TRUE"/>
+</granule>
+
+<granule concept="time-unit:night">
+	<syntax pattern="night" gen="TRUE" metadata="morpho:sing"/>
+	<syntax pattern="nights" gen="TRUE" metadata="morpho:plu"/>
+</granule>
+
+<declare-role id="start"/>
+<declare-role id="end"/>
+
+<granule concept="date-period" offers="time-constraint">
+	<dependency id="A1" expected="date" role="start"/>
+	<dependency id="A2" expected="date" role="end"/>
+	<syntax pattern="from A1 to A2" gen="TRUE" example="from the eighth to the ninth of january"/>
+</granule>
+
+<granule concept="duration:following" offers="time-constraint">
+	<dependency id="A1" expected="number"/>
+	<dependency id="A2" expected="time-unit"/>
+	<syntax pattern="the next A1 A2" gen="TRUE" example="the next two nights"/>		
+</granule>
+
+<granule concept="person-number" offers="room-constraint">
+	<dependency id="A1" expected="number"/>
+	<syntax pattern="(for) A1 person(s)/people"/>
+</granule>
+
+<granule concept="couple-number" offers="room-constraint">
+	<dependency id="A1" expected="number"/>
+	<syntax pattern="(for) A1 couple(s)"/>
+</granule>
+
+<granule concept="children-number" offers="room-constraint">
+	<dependency id="A1" expected="number"/>
+	<syntax pattern="(for) A1 child+"/>
+</granule>
+
+<!-- EOF -->
+

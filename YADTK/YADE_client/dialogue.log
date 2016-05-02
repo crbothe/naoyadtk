@@ -1,0 +1,355 @@
+-------------------------------------- 12/04/16 16:54 --------------------------------------
+<-- [error:audio]
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- [error:audio]
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- [error:audio]
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- [error:audio]
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- [error:audio]
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- _exit
+--> EXIT
+-------------------------------------- 12/04/16 16:59 --------------------------------------
+<-- hello
+--> Hi, what can I do for you ? [expression:asking]
+<-- #i am fine
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- what are you doing
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- _exit
+--> EXIT
+-------------------------------------- 12/04/16 17:09 --------------------------------------
+<-- [error:audio]
+--> Sorry, I didn't understand. Can you reformulate please ?
+-------------------------------------- 12/04/16 17:09 --------------------------------------
+<-- hello
+--> Hello world.
+<-- stand
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- sit
+--> Sorry, I don't know what to say. I do not have enough dialogue rules...
+<-- thank
+--> Sorry, I didn't understand. Can you reformulate please ?
+-------------------------------------- 12/04/16 17:26 --------------------------------------
+<-- hello
+--> Hello world.
+<-- #stop
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- _exit
+--> EXIT
+-------------------------------------- 13/04/16 11:05 --------------------------------------
+<-- hello
+--> Hello world.
+<-- can you sit
+--> Yeah. [nao:sitdown]
+<-- sit down
+--> Sorry, I don't know what to say. I do not have enough dialogue rules...
+<-- _exit
+--> EXIT
+-------------------------------------- 13/04/16 11:07 --------------------------------------
+<-- sit
+--> Sorry, I don't know what to say. I do not have enough dialogue rules...
+<-- can you sit
+--> Sorry, I don't know what to say. I do not have enough dialogue rules...
+<-- _exit
+--> EXIT
+-------------------------------------- 13/04/16 12:35 --------------------------------------
+<-- sit down
+--> Yeah. [nao:sitdown]
+<-- can you sit
+--> Yeah. [nao:sitdown]
+<-- _exit
+--> EXIT
+-------------------------------------- 13/04/16 12:37 --------------------------------------
+<-- stand up
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- can you stand up
+--> Sorry, I don't know what to say. I do not have enough dialogue rules...
+<-- _exit
+--> EXIT
+-------------------------------------- 13/04/16 12:42 --------------------------------------
+<-- sit
+--> Yeah. [nao:sitdown]
+<-- stand
+--> Sorry, I don't know what to say. I do not have enough dialogue rules...
+<-- can you stand
+--> Sorry, I don't know what to say. I do not have enough dialogue rules...
+<-- _exit
+--> EXIT
+-------------------------------------- 13/04/16 12:43 --------------------------------------
+<-- stand
+--> Yeah. [nao:standup]
+<-- can you stand up
+--> Yeah. [nao:standup]
+<-- stand please
+--> Yeah. [nao:standup]
+<-- _exit
+--> EXIT
+-------------------------------------- 13/04/16 12:45 --------------------------------------
+<-- hello
+--> Hello world.
+<-- sit
+--> Yeah. [nao:sitdown]
+<-- turn right
+--> Yeah sure. [nao:turnRight]
+<-- turn left
+--> Yeah sure. [nao:turnLeft]
+<-- move right
+--> Yeah sure. [nao:walkRight]
+<-- go left
+--> Yeah sure. [nao:walkLeft]
+<-- come back
+--> okay. [nao:walkBackward]
+<-- can you come back
+--> okay. [nao:walkBackward]
+<-- can you come back please
+--> okay. [nao:walkBackward]
+<-- _exit
+--> EXIT
+-------------------------------------- 13/04/16 12:50 --------------------------------------
+<-- stand up
+--> Yeah. [nao:standup]
+<-- turn right
+--> Yeah sure. [nao:turnRight]
+<-- turn left
+--> Yeah sure. [nao:turnLeft]
+<-- move right
+--> Yeah sure. [nao:walkRight]
+<-- move left
+--> Yeah sure. [nao:walkLeft]
+<-- go back
+--> okay. [nao:walkBackward]
+<-- what is your name
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- turn around
+--> Yeah sure. [nao:turnAround]
+<-- turn back
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- turn around
+--> Yeah sure. [nao:turnAround]
+<-- hi
+--> Hello world.
+<-- forward
+--> okay, let's go.[nao:walkForward]
+-------------------------------------- 13/04/16 12:55 --------------------------------------
+<-- hi
+--> Hello world.
+<-- walk forward
+--> okay, let's go.[nao:walkForward]
+-------------------------------------- 13/04/16 12:57 --------------------------------------
+<-- move forward
+--> okay, let's go.[nao:walkForward]
+<-- ok
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- _exit
+--> EXIT
+-------------------------------------- 13/04/16 12:58 --------------------------------------
+<-- go forward
+--> okay, let's go.[nao:walkForward]
+-------------------------------------- 13/04/16 12:59 --------------------------------------
+<-- go forward
+--> okay, let's go.[nao:walkForward]
+<-- right_left_question
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- _exit
+--> EXIT
+-------------------------------------- 13/04/16 13:04 --------------------------------------
+<-- sit
+--> Yeah. [nao:sitdown]
+<-- stand
+--> Yeah. [nao:standup]
+<-- relax
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- sit
+--> Yeah. [nao:sitdown]
+<-- _exit
+--> EXIT
+-------------------------------------- 13/04/16 13:55 --------------------------------------
+<-- _exit
+--> EXIT
+-------------------------------------- 20/04/16 10:41 --------------------------------------
+<-- hello
+--> Hello world.
+<-- sit
+--> Yeah. [nao:sitdown]
+<-- stand
+--> Yeah. [nao:standup]
+<-- can you stand up
+--> Yeah. [nao:standup]
+<-- sit down please
+--> Yeah. [nao:sitdown]
+<-- please sit
+--> Yeah. [nao:sitdown]
+<-- _exit
+--> EXIT
+-------------------------------------- 20/04/16 11:20 --------------------------------------
+<-- sit
+--> Yeah. [nao:sitdown]
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 20:01 --------------------------------------
+<-- hello
+--> Hello world.
+<-- how are you
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- sit
+--> Yeah. [nao:sitdown]
+<-- can you sit down
+--> Yeah. [nao:sitdown]
+<-- can you sit down please
+--> Yeah. [nao:sitdown]
+<-- please sit
+--> Yeah. [nao:sitdown]
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 20:05 --------------------------------------
+<-- hello
+--> Hello world.
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 20:20 --------------------------------------
+<-- hello
+--> Hello world.
+<-- relation
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 20:21 --------------------------------------
+<-- relation
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- can you tell me a relation
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- tell me a relation, if man is to king then woman is related to
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 20:26 --------------------------------------
+<-- relation
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 20:26 --------------------------------------
+<-- relation
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 20:27 --------------------------------------
+<-- relation
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 20:31 --------------------------------------
+<-- hello
+--> Hello world.
+<-- relation
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 20:32 --------------------------------------
+<-- relation
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 22:16 --------------------------------------
+<-- hello
+--> Hello world.
+<-- relation
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 23:19 --------------------------------------
+<-- hello
+--> Hello world.
+<-- relation tell me if man is to king then woman
+--> Yes sure, I will try my best, I think [nao:getRelation].
+-------------------------------------- 01/05/16 23:28 --------------------------------------
+<-- relation
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 23:29 --------------------------------------
+<-- relation tell me if woman is to queen then man
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 01/05/16 23:30 --------------------------------------
+<-- tell me a relatio, if man is to king then woman
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- tell me a relation if man is to king then woman
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- relation
+--> Yes sure, I will try my best, I think [nao:getRelation].
+-------------------------------------- 02/05/16 12:53 --------------------------------------
+<-- hello
+--> Hello world.
+<-- _exit
+--> EXIT
+-------------------------------------- 02/05/16 12:55 --------------------------------------
+<-- hello
+--> Hello world.
+<-- _exit
+--> EXIT
+-------------------------------------- 02/05/16 12:55 --------------------------------------
+<-- hi
+--> Hello world.
+<-- tell me a relation, if man is to king then woman
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 02/05/16 12:57 --------------------------------------
+<-- hello
+--> Hello world.
+<-- tell me a relation if man is to king then woman
+--> Yes sure, I will try my best, I think [nao:getRelation].
+-------------------------------------- 02/05/16 12:58 --------------------------------------
+<-- relation if man is to king then woman
+--> Yes sure, I will try my best, I think [nao:getRelation].
+-------------------------------------- 02/05/16 12:59 --------------------------------------
+<-- relation if man is to king then woman
+--> Yes sure, I will try my best, I think [nao:getRelation].
+-------------------------------------- 02/05/16 13:00 --------------------------------------
+<-- relation if man is to king then woman
+--> Yes sure, I will try my best, I think [nao:getRelation].
+-------------------------------------- 02/05/16 13:02 --------------------------------------
+<-- hi
+--> Hello world.
+<-- import re
+--> Sorry, I didn't understand. Can you reformulate please ?
+<-- 
+-------------------------------------- 02/05/16 13:03 --------------------------------------
+<-- hi
+--> Hello world.
+<-- relation of man is to king then woman
+--> Yes sure, I will try my best, I think [nao:getRelation].
+-------------------------------------- 02/05/16 13:03 --------------------------------------
+<-- hi
+--> Hello world.
+<-- relation if man is to king then woman
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 02/05/16 13:05 --------------------------------------
+<-- relation if man is to king then woman
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 02/05/16 13:06 --------------------------------------
+<-- relation if man is to king then woman
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 02/05/16 13:58 --------------------------------------
+<-- relation tell me, if man is to king then woman
+--> Yes sure, I will try my best, I think [nao:getRelation].
+<-- _exit
+--> EXIT
+-------------------------------------- 02/05/16 13:59 --------------------------------------
+<-- relation tell me, if man is to king then woman
+--> Yes sure, I will try my best, I am thinking. [nao:getRelation]
+<-- _exit
+--> EXIT
+-------------------------------------- 02/05/16 13:59 --------------------------------------
+<-- _exit
+--> EXIT

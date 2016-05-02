@@ -1,0 +1,14 @@
+<structure text="un aller retour le mans paris">
+   <mot pos="1" texte="un" lemmes="un"/>
+   <mot pos="2" texte="aller" lemmes="aller"/>
+   <mot pos="3" texte="retour" lemmes="retour"/>
+   <mot pos="4" texte="le" lemmes="le"/>
+   <mot pos="5" texte="mans" lemmes="?"/>
+   <mot pos="6" texte="paris" lemmes="paris pari"/>
+   <granule id="108" concept="billet" code="nil" role="nil" offers="demandable billet" retained="" metadata="" text="un aller retour le mans paris" cov="6" pos="1" fin="6" root="TRUE" inferred="FALSE" rescued="FALSE" score="6">
+      <granule id="100" concept="nombre:1" code="A1" role="nil" offers="nombre quantite" retained="nombre" metadata="morpho:masc morpho:sing" text="un" cov="1" pos="1" fin="1" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+      <granule id="104" concept="type:ar" code="A4" role="nil" offers="type ar" retained="type" metadata="" text="aller retour" cov="2" pos="2" fin="3" root="FALSE" inferred="FALSE" rescued="FALSE" score="2"/>
+      <granule id="105" concept="le_mans" code="A2" role="depart" offers="gare ville lieu le_mans" retained="gare" metadata="" text="le mans" cov="2" pos="4" fin="5" root="FALSE" inferred="FALSE" rescued="FALSE" score="2"/>
+      <granule id="106" concept="paris" code="A3" role="destination" offers="gare ville lieu paris" retained="gare" metadata="" text="paris" cov="1" pos="6" fin="6" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+   </granule>
+</structure>

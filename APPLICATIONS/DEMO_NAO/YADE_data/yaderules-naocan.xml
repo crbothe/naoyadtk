@@ -1,0 +1,92 @@
+<!-- Write here some YADEML rules -->
+<!-- 
+###############################################################################
+Here are definitions to order Nao by saying "Can you 'do(order)'?" or "(order)"
+###############################################################################
+-->
+
+
+<rule descr="sitting rule" example="can you sit down">
+	<conditions>
+		<granule concept="sit"/>
+	</conditions>
+	<actions>
+		<speak text="Yeah. [nao:sitdown]"/>
+	</actions>
+</rule>
+
+<rule descr="standing rule" example="can you stand up">
+	<conditions>
+		<granule concept="stand"/>
+	</conditions>
+	<actions>
+		<speak text="Yeah. [nao:standup]"/>
+	</actions>
+</rule>
+
+<rule descr="move forward rule" example="can you move forward">
+	<conditions>
+		<granule concept="forward"/>
+	</conditions>
+	<actions>
+		<speak text="okay, let's go.[nao:walkForward]"/>
+	</actions>
+</rule>
+
+<rule descr="move back rule" example="can you move backward">
+	<conditions>
+		<granule concept="backward"/>
+	</conditions>
+	<actions>
+		<speak text="okay. [nao:walkBackward]"/>
+	</actions>
+</rule>
+
+<rule descr="move left rule" example="can you move left ">
+	<conditions>
+		<granule concept="moveleft"/>
+	</conditions>
+	<actions>
+		<speak text="Yeah sure. [nao:walkLeft]"/>
+	</actions>
+</rule>
+
+<rule descr="move right rule" example="can you move right">
+	<conditions>
+		<granule concept="moveright"/>
+	</conditions>
+	<actions>
+		<speak text="Yeah sure. [nao:walkRight]"/>
+	</actions>
+</rule>
+
+<rule descr="turn left rule" example="can you turn left">
+	<conditions>
+		<granule concept="turnleft"/>
+	</conditions>
+	<actions>
+		<speak text="Yeah sure. [nao:turnLeft]"/>
+	</actions>
+</rule>
+
+<rule descr="turn right rule" example="can you turn right">
+	<conditions>
+		<granule concept="turnright"/>
+	</conditions>
+	<actions>
+		<speak text="Yeah sure. [nao:turnRight]"/>
+	</actions>
+</rule>
+
+<rule descr="turn around rule" example="can you turn around">
+	<conditions>
+		<granule concept="turnaround"/>
+	</conditions>
+	<actions>
+		<speak text="Yeah sure. [nao:turnAround]"/>
+	</actions>
+</rule>
+
+<!-- Write here some new YADEML rules -->
+
+

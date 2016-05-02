@@ -1,0 +1,8 @@
+<working-memory>
+   <input text="relation tell me, if man is to king then woman">
+      <granule id="30" indice="1" context="0" pos="1" fin="1" poids="0" concept="relation" code="nil" role="nil" offres="relationshipofwords relation" metadata="" text="relation" inferred="FALSE" rescued="FALSE" added="FALSE" used="FALSE"/>
+   </input>
+   <output text="Yes sure, I will try my best, I am thinking. [nao:getRelation] " indice="1" stack="0">
+      <granule id="30" indice="1" context="0" pos="1" fin="1" poids="1" concept="relation" code="nil" role="nil" offres="relationshipofwords relation" metadata="" text="relation" inferred="FALSE" rescued="FALSE" added="FALSE" used="FALSE"/>
+   </output>
+</working-memory>

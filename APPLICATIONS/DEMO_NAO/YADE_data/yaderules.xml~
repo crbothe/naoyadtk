@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE yaderules SYSTEM "../../../YADTK/COMPILER/yaderules.dtd" [
+
+<!ENTITY dialogue-nao SYSTEM "dialogue-nao.xml">
+<!ENTITY dialogue-1 SYSTEM "dialogue-naocan.xml">
+
+]>
+
+<yaderules>
+
+	<set-string name="timeout" value="Hey, are you sleeping ?"/>
+	<set-string name="openning" value="Hi, what can I do for you ?"/>
+	<set-string name="nogranule" value="Sorry, I didn't understand. Can you reformulate please ?"/>
+	<set-string name="noresponse" value="Sorry, I don't know what to say. I do not have enough dialogue rules..."/>
+	
+	<initial fact="(tache0)"/>
+	
+	&dialogue-nao;
+	&dialogue-1;
+		
+</yaderules>

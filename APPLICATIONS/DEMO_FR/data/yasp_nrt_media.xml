@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exemples>
+
+<structure text="bonjour serait il possible de réserver une chambre pour cinq personnes deux couples et un enfant du vingt au vingt et un février sur marseille puis les deux nuits suivantes sur avignon merci">
+   <mot pos="1" texte="bonjour" lemmes="bonjour"/>
+   <mot pos="2" texte="serait" lemmes="être"/>
+   <mot pos="3" texte="il" lemmes="il"/>
+   <mot pos="4" texte="possible" lemmes="possible"/>
+   <mot pos="5" texte="de" lemmes="de"/>
+   <mot pos="6" texte="réserver" lemmes="réserver"/>
+   <mot pos="7" texte="une" lemmes="une"/>
+   <mot pos="8" texte="chambre" lemmes="chambrer chambre"/>
+   <mot pos="9" texte="pour" lemmes="pour"/>
+   <mot pos="10" texte="cinq" lemmes="cinq"/>
+   <mot pos="11" texte="personnes" lemmes="personne"/>
+   <mot pos="12" texte="deux" lemmes="deux"/>
+   <mot pos="13" texte="couples" lemmes="coupler couple"/>
+   <mot pos="14" texte="et" lemmes="et"/>
+   <mot pos="15" texte="un" lemmes="un"/>
+   <mot pos="16" texte="enfant" lemmes="enfant"/>
+   <mot pos="17" texte="du" lemmes="du"/>
+   <mot pos="18" texte="vingt" lemmes="vingt"/>
+   <mot pos="19" texte="au" lemmes="?"/>
+   <mot pos="20" texte="vingt" lemmes="vingt"/>
+   <mot pos="21" texte="et" lemmes="et"/>
+   <mot pos="22" texte="un" lemmes="un"/>
+   <mot pos="23" texte="février" lemmes="?"/>
+   <mot pos="24" texte="sur" lemmes="sur"/>
+   <mot pos="25" texte="marseille" lemmes="?"/>
+   <mot pos="26" texte="puis" lemmes="pouvoir puis ]"/>
+   <mot pos="27" texte="les" lemmes="les"/>
+   <mot pos="28" texte="deux" lemmes="deux"/>
+   <mot pos="29" texte="nuits" lemmes="nuits nuit"/>
+   <mot pos="30" texte="suivantes" lemmes="suivant"/>
+   <mot pos="31" texte="sur" lemmes="sur"/>
+   <mot pos="32" texte="avignon" lemmes="avignon"/>
+   <mot pos="33" texte="merci" lemmes="merci"/>
+   <granule id="625" concept="ouverture" code="nil" role="nil" offers="politesse ouverture" retained="" metadata="" text="bonjour" cov="1" pos="1" fin="1" root="TRUE" inferred="FALSE" rescued="FALSE" score="1"/>
+   <granule id="661" concept="MEDIA:reservation" code="nil" role="nil" offers="demandable enumerable MEDIA reservation" retained="" metadata="" text="réserver une chambre pour cinq personnes" cov="6" pos="6" fin="11" root="TRUE" inferred="FALSE" rescued="FALSE" score="6">
+      <granule id="660" concept="MEDIA:chambre" code="A2" role="nil" offers="demandable reservable enumerable MEDIA chambre" retained="reservable" metadata="morpho:fem morpho:sing" text="une chambre pour cinq personnes" cov="5" pos="7" fin="11" root="FALSE" inferred="FALSE" rescued="FALSE" score="5">
+         <granule id="602" concept="nombre:1" code="A1" role="nil" offers="nombre quantite" retained="nombre" metadata="morpho:fem morpho:sing" text="une" cov="1" pos="7" fin="7" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+         <granule id="635" concept="sejour-nbPersonne" code="A2" role="nil" offers="contrainte-sejour sejour-nbPersonne" retained="contrainte-sejour" metadata="" text="pour cinq personnes" cov="3" pos="9" fin="11" root="FALSE" inferred="FALSE" rescued="FALSE" score="3">
+            <granule id="601" concept="nombre:5" code="A1" role="nil" offers="nombre quantite" retained="nombre" metadata="morpho:plu" text="cinq" cov="1" pos="10" fin="10" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+         </granule>
+         <granule id="657" concept="connectAttr:addition2" code="A2" role="nil" offers="connecteur connectAttr addition2 contrainte-sejour" retained="contrainte-sejour" metadata="" text="deux couples et un enfant" cov="5" pos="12" fin="16" root="FALSE" inferred="FALSE" rescued="TRUE" score="5">
+            <granule id="645" concept="sejour-nbCouple" code="A1" role="nil" offers="contrainte-sejour sejour-nbCouple" retained="" metadata="" text="deux couples" cov="2" pos="12" fin="13" root="FALSE" inferred="FALSE" rescued="FALSE" score="2">
+               <granule id="600" concept="nombre:2" code="A1" role="nil" offers="nombre quantite" retained="nombre" metadata="morpho:plu" text="deux" cov="1" pos="12" fin="12" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+            </granule>
+            <granule id="646" concept="sejour-nbEnfant" code="A2" role="nil" offers="contrainte-sejour sejour-nbEnfant" retained="" metadata="" text="un enfant" cov="2" pos="15" fin="16" root="FALSE" inferred="FALSE" rescued="FALSE" score="2">
+               <granule id="599" concept="nombre:1" code="A1" role="nil" offers="nombre quantite" retained="nombre" metadata="morpho:masc morpho:sing" text="un" cov="1" pos="15" fin="15" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+            </granule>
+         </granule>
+      </granule>
+      <granule id="669" concept="connectAttr:addition2" code="A3" role="nil" offers="connecteur connectAttr addition2 contrainte-temporelle contrainte-localisation date-localisation" retained="contrainte-localisation contrainte-temporelle date-localisation" metadata="" text="du vingt au vingt et un sur marseille puis les deux nuits suivantes sur avignon" cov="15" pos="17" fin="32" root="FALSE" inferred="FALSE" rescued="TRUE" score="13.5">
+         <granule id="668" concept="date-localisation" code="A1" role="nil" offers="contrainte-temporelle contrainte-localisation date-localisation" retained="" metadata="" text="du vingt au vingt et un sur marseille" cov="8" pos="17" fin="25" root="FALSE" inferred="FALSE" rescued="FALSE" score="6.5">
+            <granule id="654" concept="periode-dates" code="A1" role="nil" offers="temps-periode contrainte-temporelle periode-dates" retained="contrainte-temporelle" metadata="" text="du vingt au vingt et un" cov="6" pos="17" fin="22" root="FALSE" inferred="FALSE" rescued="FALSE" score="6">
+               <granule id="652" concept="date" code="A1" role="date-debut" offers="temps-date contrainte-temporelle date" retained="date" metadata="" text="vingt" cov="1" pos="18" fin="18" root="FALSE" inferred="FALSE" rescued="FALSE" score="1">
+                  <granule id="620" concept="temps-ordinal:20" code="A2" role="nil" offers="temps-ordinal" retained="temps-ordinal" metadata="" text="vingt" cov="1" pos="18" fin="18" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+               </granule>
+               <granule id="653" concept="date" code="A2" role="date-fin" offers="temps-date contrainte-temporelle date" retained="date" metadata="" text="vingt et un" cov="3" pos="20" fin="22" root="FALSE" inferred="FALSE" rescued="FALSE" score="3">
+                  <granule id="619" concept="temps-ordinal:21" code="A2" role="nil" offers="temps-ordinal" retained="temps-ordinal" metadata="" text="vingt et un" cov="3" pos="20" fin="22" root="FALSE" inferred="FALSE" rescued="FALSE" score="3"/>
+               </granule>
+            </granule>
+            <granule id="640" concept="localisation-precise:ville" code="A2" role="nil" offers="contrainte-localisation localisation-precise ville" retained="contrainte-localisation" metadata="" text="sur marseille" cov="2" pos="24" fin="25" root="FALSE" inferred="FALSE" rescued="FALSE" score="2">
+               <granule id="603" concept="ville:marseille" code="A1" role="nil" offers="ville lieu" retained="ville" metadata="" text="marseille" cov="1" pos="25" fin="25" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+            </granule>
+         </granule>
+         <granule id="665" concept="date-localisation" code="A2" role="nil" offers="contrainte-temporelle contrainte-localisation date-localisation" retained="" metadata="" text="les deux nuits suivantes sur avignon" cov="6" pos="27" fin="32" root="FALSE" inferred="FALSE" rescued="FALSE" score="6">
+            <granule id="655" concept="temps-axe:suivant" code="A1" role="nil" offers="temps-periode contrainte-temporelle temps-axe suivant" retained="contrainte-temporelle" metadata="" text="les deux nuits suivantes" cov="4" pos="27" fin="30" root="FALSE" inferred="FALSE" rescued="FALSE" score="4">
+               <granule id="597" concept="nombre:2" code="A1" role="nil" offers="nombre quantite" retained="nombre" metadata="morpho:plu" text="deux" cov="1" pos="28" fin="28" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+               <granule id="631" concept="temps-unite:nuit" code="A2" role="nil" offers="temps-unite nuit" retained="temps-unite" metadata="morpho:fem morpho:plu" text="nuits" cov="1" pos="29" fin="29" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+            </granule>
+            <granule id="639" concept="localisation-precise:ville" code="A2" role="nil" offers="contrainte-localisation localisation-precise ville" retained="contrainte-localisation" metadata="" text="sur avignon" cov="2" pos="31" fin="32" root="FALSE" inferred="FALSE" rescued="FALSE" score="2">
+               <granule id="604" concept="ville:avignon" code="A1" role="nil" offers="ville lieu" retained="ville" metadata="" text="avignon" cov="1" pos="32" fin="32" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+            </granule>
+         </granule>
+      </granule>
+   </granule>
+   <granule id="633" concept="remerciement" code="nil" role="nil" offers="politesse remerciement" retained="" metadata="" text="merci" cov="1" pos="33" fin="33" root="TRUE" inferred="FALSE" rescued="FALSE" score="1"/>
+</structure>
+
+<structure text="quelle est la taille de la première chambre">
+   <mot pos="1" texte="quelle" lemmes="quelle"/>
+   <mot pos="2" texte="est" lemmes="être est"/>
+   <mot pos="3" texte="la" lemmes="la"/>
+   <mot pos="4" texte="taille" lemmes="tailler taille"/>
+   <mot pos="5" texte="de" lemmes="de"/>
+   <mot pos="6" texte="la" lemmes="la"/>
+   <mot pos="7" texte="première" lemmes="première premier"/>
+   <mot pos="8" texte="chambre" lemmes="chambrer chambre"/>
+   <granule id="91" concept="attribution" code="nil" role="nil" offers="questionnable attribution" retained="" metadata="mode:inter" text="quelle est la taille de la première chambre" cov="8" pos="1" fin="8" root="TRUE" inferred="FALSE" rescued="FALSE" score="8">
+      <granule id="75" concept="attribut:taille" code="A1" role="nil" offers="attribut taille" retained="attribut" metadata="" text="la taille" cov="2" pos="3" fin="4" root="FALSE" inferred="FALSE" rescued="FALSE" score="2"/>
+      <granule id="90" concept="lienRef-elsEns:singulier" code="A2" role="nil" offers="reference reference:singulier lienRef-elsEns singulier demandable reservable enumerable MEDIA chambre" retained="enumerable" metadata="morpho:fem morpho:sing" text="la première chambre" cov="3" pos="6" fin="8" root="FALSE" inferred="FALSE" rescued="FALSE" score="3">
+         <granule id="77" concept="rang:1" code="A1" role="rang" offers="rang 1" retained="rang" metadata="morpho:fem morpho:sing" text="première" cov="1" pos="7" fin="7" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+         <granule id="78" concept="MEDIA:chambre" code="A2" role="reference" offers="demandable reservable enumerable MEDIA chambre" retained="enumerable" metadata="morpho:fem morpho:sing" text="chambre" cov="1" pos="8" fin="8" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+      </granule>
+   </granule>
+</structure>
+
+</exemples>

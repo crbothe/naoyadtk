@@ -1,0 +1,11 @@
+
+<!-- Write here some YADEML rules -->
+
+<rule descr="hello world rule" example="hello">
+	<conditions>
+		<granule concept="openning"/>
+	</conditions>
+	<actions>
+		<speak text="Hello world"/>
+	</actions>
+</rule>

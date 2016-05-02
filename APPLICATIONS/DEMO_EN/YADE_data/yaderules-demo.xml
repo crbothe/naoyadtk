@@ -1,0 +1,80 @@
+
+<rule descr="add departure station to a ticket" example="one ticket to Paris">
+	<conditions>
+		<granule concept="ticket" ident="?id">
+			<granule role="destination"/>
+			<nogranule role="departure"/>
+		</granule>
+	</conditions>
+	<actions>
+		<reuse-granule ident="?id">
+			<create-granule concept="(get-current-station)" role="departure"/>
+		</reuse-granule>
+	</actions>
+</rule>
+
+<!-- Initiative Rule (IR) -->
+
+<rule descr="openning" example="hello">
+	<conditions>
+		<granule concept="hello"/>
+	</conditions>
+	<actions>
+		<speak text="Hi, what can I do for you ?"/>
+		<command expr="expression:asking"/>
+	</actions>
+</rule>
+
+<rule descr="request without requestable" example="can I have">
+	<conditions>
+		<granule concept="request" ident="?id1">
+			<nogranule/>
+		</granule>
+	</conditions>
+	<actions>
+		<speak text="I did not understand well what you ask me."/>
+		<speak text="What are you looking for exactly? [timeout:5]"/>
+	</actions>
+	
+	<!-- Nested Terminal Rule (NTR) -->
+	
+	<rule terminal="TRUE" descr="identifies a requestable" example="a ticket">
+		<conditions>
+			<granule offer="requestable" ident="?id2"/>
+		</conditions>
+		<actions>
+			<speak text="(rephrase ?id2), Ok."/>
+			<reuse-granule ident="?id1">
+				<reuse-granule ident="?id2"/>
+			</reuse-granule>
+		</actions>
+	</rule>
+	
+	<!-- Nested Rule (NR) -->
+	
+	<rule descr="not a requestable then reiterates">
+		<conditions>
+			<nogranule offer="requestable"/>
+			<verify test="(&lt; (counter-value reiteration) 2)"/>
+		</conditions>
+		<actions>
+			<increase counter="reiteration"/>
+			<!-- Post-conditions for introducing variability -->
+			<speak text="Excuse me but you asked me something?" test="(= (counter-value reiteration) 1)"/>
+			<speak text="What do you want? Please answer me..." test="(= (counter-value reiteration) 2)"/>
+		</actions>
+	</rule>
+	
+	<!-- Nested Terminal Rule (NTR) -->
+	
+	<rule terminal="TRUE" descr="too much reiteration">
+		<conditions>
+			<nogranule offer="requestable"/>
+			<verify test="(= (counter-value reiteration) 2)"/>
+		</conditions>
+		<actions>
+			<speak text="Sorry but we definitively do not understand ourselves"/>
+			<remove counter="reiteration"/>
+		</actions>
+	</rule>
+</rule>

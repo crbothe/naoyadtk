@@ -1,0 +1,106 @@
+
+<!-- http://www.vocabulaireanglais.fr/date-en-anglais/ -->
+
+<group concept="day">
+	<entity pattern="monday" gen="TRUE"/>
+	<entity pattern="tuesday" gen="TRUE"/>
+	<entity pattern="wednesday" gen="TRUE"/>
+	<entity pattern="thursday" gen="TRUE"/>
+	<entity pattern="friday" gen="TRUE"/>
+	<entity pattern="saturday" gen="TRUE"/>
+	<entity pattern="sunday" gen="TRUE"/>
+</group>
+
+<group concept="month">
+	<entity pattern="january" value="01" gen="TRUE"/>
+	<entity pattern="february" value="02" gen="TRUE"/>
+	<entity pattern="march" value="03" gen="TRUE"/>
+	<entity pattern="april" value="04" gen="TRUE"/>
+	<entity pattern="may" value="05" gen="TRUE"/>
+	<entity pattern="june" value="06" gen="TRUE"/>
+	<entity pattern="july" value="07" gen="TRUE"/>
+	<entity pattern="august" value="08" gen="TRUE"/>
+	<entity pattern="september" value="09" gen="TRUE"/>
+	<entity pattern="october" value="10" gen="TRUE"/>
+	<entity pattern="november" value="11" gen="TRUE"/>
+	<entity pattern="december" value="12" gen="TRUE"/>
+</group>
+
+<group concept="year">
+	<entity pattern="2010" gen="TRUE"/>
+	<entity pattern="2011" gen="TRUE"/>
+	<entity pattern="2012" gen="TRUE"/>
+	<entity pattern="2013" gen="TRUE"/>
+	<entity pattern="2014" gen="TRUE"/>
+	<entity pattern="2015" gen="TRUE"/>
+	<entity pattern="2016" gen="TRUE"/>
+	<entity pattern="2017" gen="TRUE"/>
+	<entity pattern="2018" gen="TRUE"/>
+	<entity pattern="2019" gen="TRUE"/>
+	<entity pattern="2020" gen="TRUE"/>
+</group>
+
+<group concept="ordinal">
+	<entity pattern="first" value="01" gen="TRUE"/>
+	<entity pattern="second" value="02" gen="TRUE"/>
+	<entity pattern="third" value="03" gen="TRUE"/>
+	<entity pattern="fourth" value="04" gen="TRUE"/>
+	<entity pattern="fifth" value="05" gen="TRUE"/>
+	<entity pattern="sixth" value="06" gen="TRUE"/>
+	<entity pattern="seventh" value="07" gen="TRUE"/>
+	<entity pattern="eighth" value="08" gen="TRUE"/>
+	<entity pattern="ninth" value="09" gen="TRUE"/>
+	<entity pattern="tenth" value="10" gen="TRUE"/>
+	<entity pattern="eleventh" value="11" gen="TRUE"/>
+	<entity pattern="twelfth" value="12" gen="TRUE"/>
+	<entity pattern="thirteenth" value="13" gen="TRUE"/>
+	<entity pattern="fourteenth" value="14" gen="TRUE"/>
+	<entity pattern="fifteenth" value="15" gen="TRUE"/>
+	<entity pattern="sixteenth" value="16" gen="TRUE"/>
+	<entity pattern="seventeenth" value="17" gen="TRUE"/>
+	<entity pattern="eighteenth" value="18" gen="TRUE"/>
+	<entity pattern="nineteenth" value="19" gen="TRUE"/>
+	<entity pattern="twentieth" value="20" gen="TRUE"/>
+	<entity pattern="twenty first" value="21" gen="TRUE"/>
+	<entity pattern="twenty second" value="22" gen="TRUE"/>
+	<entity pattern="twenty third" value="23" gen="TRUE"/>
+	<entity pattern="twenty fourth" value="24" gen="TRUE"/>
+	<entity pattern="twenty fifth" value="25" gen="TRUE"/>
+	<entity pattern="twenty sixth" value="26" gen="TRUE"/>
+	<entity pattern="twenty seventh" value="27" gen="TRUE"/>
+	<entity pattern="twenty eighth" value="28" gen="TRUE"/>
+	<entity pattern="twenty ninth" value="29" gen="TRUE"/>
+	<entity pattern="thirtieth" value="30" gen="TRUE"/>
+	<entity pattern="thirty first" value="31" gen="TRUE"/>
+	<entity pattern="1st" value="01"/>
+	<entity pattern="2nd" value="02"/>
+	<entity pattern="3rd" value="03"/>
+	<entity pattern="4th" value="04"/>
+	<entity pattern="5th" value="05"/>
+	<entity pattern="6th" value="06"/>
+	<entity pattern="7th" value="07"/>
+	<entity pattern="8th" value="08"/>
+	<entity pattern="9th" value="09"/>
+	<entity pattern="10th" value="10"/>
+	<entity pattern="11th" value="11"/>
+	<entity pattern="12th" value="12"/>
+	<entity pattern="13th" value="13"/>
+	<entity pattern="14th" value="14"/>
+	<entity pattern="15th" value="15"/>
+	<entity pattern="16th" value="16"/>
+	<entity pattern="17th" value="17"/>
+	<entity pattern="18th" value="18"/>
+	<entity pattern="19th" value="19"/>
+	<entity pattern="20th" value="20"/>
+	<entity pattern="21st" value="21"/>
+	<entity pattern="22nd" value="22"/>
+	<entity pattern="23rd" value="23"/>
+	<entity pattern="24th" value="24"/>
+	<entity pattern="25th" value="25"/>
+	<entity pattern="26th" value="26"/>
+	<entity pattern="27th" value="27"/>
+	<entity pattern="28th" value="28"/>
+	<entity pattern="29th" value="29"/>
+	<entity pattern="30th" value="30"/>
+	<entity pattern="31st" value="31"/>
+</group>

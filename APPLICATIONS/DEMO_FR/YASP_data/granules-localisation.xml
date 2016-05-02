@@ -1,0 +1,143 @@
+<!-- ############################################################################ -->
+<!-- ### CONTRAINTES DE LOCALISATION                                          ### -->
+<!-- ############################################################################ -->
+
+<declare-feature id="contrainte-localisation"/>
+
+<!-- Les localisations précises -->
+
+<granule concept="localisation-precise:pays" offers="contrainte-localisation">
+	<dependency id="A1" expected="pays"/>
+	<syntax pattern="en A1" gen="TRUE"/>
+	<syntax pattern="au(x) A1"/>
+</granule>
+
+<granule concept="localisation-precise:departement" offers="contrainte-localisation">
+	<dependency id="A1" expected="departement"/>
+	<syntax pattern="en A1" gen="TRUE"/>
+	<syntax pattern="dans le département de/du A1"/>
+	<syntax pattern="dans A1"/>
+</granule>
+
+<granule concept="localisation-precise:ville" offers="contrainte-localisation">
+	<dependency id="A1" expected="ville"/>
+	<syntax pattern="à A1" gen="TRUE"/>
+	<syntax pattern="au A1"/>
+	<syntax pattern="sur A1"/>
+	<syntax pattern="dans la ville de/du/d' A1"/>
+</granule>
+
+<!-- Pour pouvoir exclure dernier comme arrondissement -->
+<declare-feature id="dernier"/>
+
+<granule concept="localisation-precise:arrondissement" offers="contrainte-localisation">
+	<dependency id="A1" expected="rang" rejected="dernier"/>
+	<syntax pattern="dans le A1 arrondissement" gen="TRUE"/>
+	<syntax pattern="dans le A1"/>
+</granule>
+
+<!-- Les localisations cardinales -->
+
+<granule concept="localisation-cardinal:est" offers="contrainte-localisation">
+	<dependency id="A1" expected="lieu"/>
+	<syntax pattern="(à) l' est"/>
+	<syntax pattern="(à) l' est de/du/d' A1"/>
+</granule>
+
+<granule concept="localisation-cardinal:ouest" offers="contrainte-localisation">
+	<dependency id="A1" expected="lieu"/>
+	<syntax pattern="(à) l' ouest"/>
+	<syntax pattern="(à) l' ouest de/du/d' A1"/>
+</granule>
+
+<granule concept="localisation-cardinal:nord" offers="contrainte-localisation">
+	<dependency id="A1" expected="lieu"/>
+	<syntax pattern="le/au nord"/>
+	<syntax pattern="le/au nord de/du/d' A1"/>
+</granule>
+
+<granule concept="localisation-cardinal:sud" offers="contrainte-localisation">
+	<dependency id="A1" expected="lieu"/>
+	<syntax pattern="le/au sud"/>
+	<syntax pattern="le/au sud de/du/d' A1"/>
+</granule>
+
+<!-- Les localisations relatives à la distance -->
+
+<granule concept="localisation-distance:proche" offers="contrainte-localisation">
+	<dependency id="A1" expected="lieu" tag="GN"/>
+	
+	<syntax pattern="(tout) près &DE; A1"/>
+	<syntax pattern="auprès &DE; A1"/>
+	<syntax pattern="autours &DE; A1"/>
+	<syntax pattern="avec (une) vue sur A1"/>
+	<syntax pattern="en bordure &DE; A1"/>						
+	<syntax pattern="aux alentours &DE; A1"/>
+	<syntax pattern="aux environs &DE; A1"/>
+	<syntax pattern="dans le coin/secteur &DE; A1"/>
+	<syntax pattern="dans les environs (immédiats) &DE; A1"/>
+	<syntax pattern="devant A1"/>
+	<syntax pattern="donnant sur A1"/>
+	<syntax pattern="du côté &DE; A1"/>
+	<syntax pattern="en vue &DE; A1"/>
+	<syntax pattern="face à A1"/>
+	<syntax pattern="proche &DE; A1"/>
+	<syntax pattern="sur les bords &DE; A1"/>
+	<syntax pattern="à côté &DE; A1"/>
+	<syntax pattern="à proximité &DE; A1"/>
+	
+	<syntax pattern="avec A1 dans le(s) coin/secteur/environs"/>
+	<syntax pattern="avec A1 pas (trop/très) loin"/>
+	<syntax pattern="avec A1 tout près"/>
+	<syntax pattern="avec A1 à côté/proximité"/>
+	<syntax pattern="avec A1 en bordure/vue"/>
+	
+	<syntax pattern="pas (tout) près &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas auprès &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas autours &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas en bordure &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas aux alentours &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas aux environs &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas dans le coin/secteur &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas dans les environs (immédiats) &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas devant A1" metadata="mode:neg"/>
+	<syntax pattern="pas du côté &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas en vue &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas face à A1" metadata="mode:neg"/>
+	<syntax pattern="pas proche &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas sur les bords &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas à côté &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas à proximité &DE; A1" metadata="mode:neg"/>
+</granule>
+
+<granule concept="localisation-distance:loin" offers="contrainte-localisation">
+	<dependency id="A1" expected="lieu" tag="GN"/>
+	
+	<syntax pattern="loin/éloigné &DE; A1"/>
+	<syntax pattern="à distance &DE; A1"/>
+	
+	<syntax pattern="pas loin &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas trop/très loin &DE; A1" metadata="mode:neg"/>
+	<syntax pattern="pas trop/très éloigné &DE; A1" metadata="mode:neg"/>
+</granule>
+
+<!-- Les itinéraires -->
+
+<declare-role id="depart"/>
+<declare-role id="etape"/>
+<declare-role id="destination"/>
+
+<granule concept="itineraire">
+	<dependency id="A1" expected="lieu" role="depart"/>
+	<dependency id="A2" expected="lieu" role="etape"/>
+	<dependency id="A3" expected="lieu" role="destination"/>
+	
+	<syntax pattern="A1 (à/au/vers) A3"/>
+	<syntax pattern="de/du/depuis A1 à/au/vers A3"/>
+	<syntax pattern="A1 A2 A3"/>
+	<syntax pattern="A1 A3 par/via A2"/>
+	<syntax pattern="A1 A3 en passant par A2"/>
+	<syntax pattern="de/du/depuis A1 à/au/vers A3 par/via A2"/>
+	<syntax pattern="de/du/depuis A1 à/au/vers A3 en passant par A2"/>
+</granule>
+

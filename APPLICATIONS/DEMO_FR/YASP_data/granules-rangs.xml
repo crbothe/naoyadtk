@@ -1,0 +1,136 @@
+<!-- ############################################################################ -->
+<!-- ### RANG                                                                 ### -->
+<!-- ############################################################################ -->
+
+<declare-feature id="rang"/>
+
+<granule concept="rang:1">
+	<syntax pattern="1er(s)"/>
+	<syntax pattern="premier" gen="TRUE" metadata="morpho:masc morpho:sing"/>
+	<syntax pattern="premiers" gen="TRUE" metadata="morpho:masc morpho:plu"/>
+	<syntax pattern="première" gen="TRUE" metadata="morpho:fem morpho:sing"/>
+	<syntax pattern="premières" gen="TRUE" metadata="morpho:fem morpho:plu"/>
+</granule>
+
+<granule concept="rang:dernier">
+	<syntax pattern="dernier" gen="TRUE" metadata="morpho:masc morpho:sing"/>
+	<syntax pattern="derniers" gen="TRUE" metadata="morpho:masc morpho:plu"/>
+	<syntax pattern="dernière" gen="TRUE" metadata="morpho:fem morpho:sing"/>
+	<syntax pattern="dernières" gen="TRUE" metadata="morpho:fem morpho:plu"/>
+</granule>
+
+<granule concept="rang:2">
+	<syntax pattern="2ème"/>
+	<syntax pattern="2ième"/>
+	<syntax pattern="second"/>
+	<syntax pattern="seconde"/>
+	<syntax pattern="deuxième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:3">
+	<syntax pattern="3ème"/>
+	<syntax pattern="3ième"/>
+	<syntax pattern="troisième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:4">
+	<syntax pattern="4ème"/>
+	<syntax pattern="4ième"/>
+	<syntax pattern="quatrième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:5">
+	<syntax pattern="5ème"/>
+	<syntax pattern="5ième"/>
+	<syntax pattern="cinqième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:6">
+	<syntax pattern="6ème"/>
+	<syntax pattern="6ième"/>
+	<syntax pattern="sixième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:7">
+	<syntax pattern="7ème"/>
+	<syntax pattern="7ième"/>
+	<syntax pattern="septième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:8">
+	<syntax pattern="8ème"/>
+	<syntax pattern="8ième"/>
+	<syntax pattern="huitième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:9">
+	<syntax pattern="9ème"/>
+	<syntax pattern="9ième"/>
+	<syntax pattern="neuvième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:10">
+	<syntax pattern="10ème"/>
+	<syntax pattern="10ième"/>
+	<syntax pattern="dixième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:11">
+	<syntax pattern="11ème"/>
+	<syntax pattern="11ième"/>
+	<syntax pattern="onzième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:12">
+	<syntax pattern="12ème"/>
+	<syntax pattern="12ième"/>
+	<syntax pattern="douzième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:13">
+	<syntax pattern="13ème"/>
+	<syntax pattern="13ième"/>
+	<syntax pattern="treizième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:14">
+	<syntax pattern="14ème"/>
+	<syntax pattern="14ième"/>
+	<syntax pattern="quatorzième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:15">
+	<syntax pattern="15ème"/>
+	<syntax pattern="15ième"/>
+	<syntax pattern="quinzième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:16">
+	<syntax pattern="16ème"/>
+	<syntax pattern="16ième"/>
+	<syntax pattern="seizième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:17">
+	<syntax pattern="17ème"/>
+	<syntax pattern="17ième"/>
+	<syntax pattern="dix septième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:18">
+	<syntax pattern="18ème"/>
+	<syntax pattern="18ième"/>
+	<syntax pattern="dix huitième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:19">
+	<syntax pattern="19ème"/>
+	<syntax pattern="19ième"/>
+	<syntax pattern="dix neuvième" gen="TRUE"/>
+</granule>
+
+<granule concept="rang:20">
+	<syntax pattern="20ème"/>
+	<syntax pattern="20ième"/>
+	<syntax pattern="vingtième" gen="TRUE"/>
+</granule>

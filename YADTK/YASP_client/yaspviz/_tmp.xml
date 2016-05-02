@@ -1,0 +1,14 @@
+
+<structure text="i don' t want this room">
+   <mot pos="1" texte="i" lemmes="i"/>
+   <mot pos="2" texte="don'" lemmes="?"/>
+   <mot pos="3" texte="t" lemmes="t"/>
+   <mot pos="4" texte="want" lemmes="want"/>
+   <mot pos="5" texte="this" lemmes="this"/>
+   <mot pos="6" texte="room" lemmes="room"/>
+   <granule id="645" concept="request" code="nil" role="nil" offers="speech-act request" retained="" metadata="mode:neg" text="i don' t want this room" cov="6" pos="1" fin="6" root="TRUE" inferred="FALSE" rescued="FALSE" score="6">
+      <granule id="644" concept="reference:this" code="A1" role="nil" offers="reference this requestable room" retained="requestable reference" metadata="morpho:sing" text="this room" cov="2" pos="5" fin="6" root="FALSE" inferred="FALSE" rescued="FALSE" score="2">
+         <granule id="642" concept="room" code="A1" role="referenced" offers="requestable room" retained="requestable" metadata="morpho:sing" text="room" cov="1" pos="6" fin="6" root="FALSE" inferred="FALSE" rescued="FALSE" score="1"/>
+      </granule>
+   </granule>
+</structure>

@@ -1,0 +1,104 @@
+
+// --------------------------------------------------------------------
+// Détection d'une sous-chaine (test de compréhension)
+
+USER: reset
+YADE: bonjour, que puis-je pour votre service ?
+USER: tititototutu
+YADE: Votr énoncé contient toto.
+
+// --------------------------------------------------------------------
+// Recherche d'un pattern (test de compréhension)
+
+USER: reset
+YADE: bonjour, que puis-je pour votre service ?
+USER: Je suis content
+YADE: Vous m'en voyez ravie.
+
+// --------------------------------------------------------------------
+// Identification d'une structure de granules (test de compréhension)
+
+USER: reset
+YADE: bonjour, que puis-je pour votre service ?
+USER: je voudrais un avocat
+YADE: J'ai détecté une ambiguïté. En voici un bien mûr.
+
+// --------------------------------------------------------------------
+// Détection d'une métadonnée (test de compréhension)
+
+USER: reset
+YADE: bonjour, que puis-je pour votre service ?
+USER: Espèce d'imbécile
+YADE: Excusez-moi mais vous êtes vulgaire ! [stop-dialogue]
+
+// --------------------------------------------------------------------
+// Utilisation d'une post-condition (test de génération)
+
+USER: reset
+YADE: bonjour, que puis-je pour votre service ?
+USER: hello man
+YADE: Hello, what can I do for you ?
+
+// --------------------------------------------------------------------
+// Génération littérale XML (test de génération)
+
+USER: reset
+YADE: bonjour, que puis-je pour votre service ?
+USER: test1
+YADE: je vous propose 2 billets pour paris
+
+// --------------------------------------------------------------------
+// Reformulation d'une structure de granules (test de génération)
+
+USER: reset
+YADE: bonjour, que puis-je pour votre service ?
+USER: test2 je voudrais deux billets pour Paris
+YADE: Je peux vous proposer 2 billets pour paris cela vous convient-il ?
+
+// --------------------------------------------------------------------
+// Système de règles imbriquées à deux niveaux (test de dialogue)
+
+USER: reset
+YADE: bonjour, que puis-je pour votre service ?
+USER: test3
+YADE: Ouverture d'un premier niveau => reg / inc / fin 
+USER: reg
+YADE: On reste dans le premier niveau => reg / inc / fin 
+USER: fin
+YADE: Retour à la normale
+USER: test3
+YADE: Ouverture d'un premier niveau => reg / inc / fin
+USER: inc
+YADE: Ouverture d'un second niveau => reg / fin
+USER: reg
+YADE: On reste dans le second niveau => reg / fin
+USER: fin
+YADE: Retour au premier niveau => reg / inc / fin
+USER: fin
+YADE: Retour à la normale
+
+// --------------------------------------------------------------------
+// Demande de complément + rattachement (règle de dialogue)
+
+USER: reset
+YADE: bonjour, que puis-je pour votre service ?
+USER: test3 je voudrais
+YADE: Je n'ai pas bien compris ce que vous me demandez. Que recherchez-vous exactement ? [timeout:5]
+USER: un billet pour paris
+YADE: un billet pour paris, d'accord.
+
+// --------------------------------------------------------------------
+// Demande de reformulation + compteur (règle de dialogue)
+
+USER: reset
+YADE: bonjour, que puis-je pour votre service ?
+USER: test3 je voudrais
+YADE: Je n'ai pas bien compris ce que vous me demandez. Que recherchez-vous exactement ? [timeout:5]
+USER: foo
+YADE: Pardon mais vous me demandiez quelque chose ?
+USER: bar
+YADE: Que voulez-vous ? Répondez-moi s'il vous plait...
+USER: ooops
+YADE: Désolé mais on ne se comprend décidément pas.
+
+// --------------------------------------------------------------------

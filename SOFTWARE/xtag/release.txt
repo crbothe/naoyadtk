@@ -1,0 +1,127 @@
+
+XTAG English Grammar - Release 2.14.2001
+----------------------------------------
+
+WHAT'S NEW IN THE GRAMMAR
+*************************
+
+This report contains a brief description of the more significant changes
+made to the Xtag grammar since its last release in 1998. Where necessary, a
+reference is made to a more detailed discussion in the relevant part of the
+Technical Report.
+
+I : REMOVAL OF EMPTY ELEMENTS AS ANCHORS
+****************************************
+
+Until recently, the grammar contained trees that were selected by empty
+elements from the lexicon. In the current grammar, some of these entries
+(and in some cases, the tree templates associated with them) have been
+removed.
+
+     (1) Relative clauses: Complementizers in relative clauses were handled
+         earlier with a substitution node labeled COMP built-in into the
+         relative clause tree. An initial tree, alpha-Comp, was selected by
+         complementizer elements from the lexicon and then substituted into
+         the COMP node. The choice between overt and non-overt
+         complementizers was handled by allowing an empty element to select
+         the alpha-Comp tree too, so that we were able to handle relative
+         clauses like "the cat the dog killed". 
+         
+                In removing empty COMP element from the lexicon and
+                maintain the coverage of relative clauses at the same time,
+                we have changed the analysis of complementizers in relative
+                clauses. The COMP node is no longer built-in into the tree
+                (note that this has also eliminated the use of the
+                alpha-Comp initial tree, since it was used only in relative
+                clauses), but is rather handled by adjunction (with the
+                beta-COMPs auxiliary tree), in a manner parallel to
+                sentential complementation. The choice between overt and
+                non-overt COMP is handled simply by either allowing
+                adjunction or not allowing it, and this is taken care of
+                through linguistically motivated feature constraints. The
+                nature of the constraints imposed on the complementizer in
+                relative clauses is of course different from that used for
+                sentential complementation. For a more detailed discussion,
+                see Chapter 8 on Sentential Complementation and Chapter 16
+                on Relative Clauses.
+
+     (2) PRO and empty auxiliary verbs: The Xtag lexicon also contained
+         non-lexical PRO which selected the intial tree alpha-NP and was
+         used to substitute into the subject NP node in
+         infinitivals. Furthermore, this treatment of PRO also motivated
+         simulation of multi-component adjunction for inverted sentences
+         (yes-no questions, wh-questions, and imperatives), in order to
+         handle the proper assignment of case features with inversion. In
+         particular, the auxiliary verb tree (betaVvx), selected by an
+         empty element, adjoined in at VP whenever an auxiliary verb tree
+         (beta-Vs) adjoined at S.
+
+                  In the current analysis for PRO, we have removed the PRO
+                  entry in the lexicon and built separate trees in each
+                  tree family with PRO built-in at the subject NP node. In
+                  particular, there is a PRO tree for every construction
+                  type that can have a PRO subject. Typically, the PRO
+                  trees in a family appear for the declarative construction
+                  and the gerund. To see the distribution of PRO trees in
+                  the different tree families, see Chapters 5 and 6.
+
+                  Removing the analysis of PRO as substitution has also
+                  obviated the need for simulating multi-component
+                  adjunction in inverted sentences. In the current grammar,
+                  therefore, the verbal auxiliary trees that adjoin to VP
+                  (beta-Vvx) are not selected by empty elements.
+                  
+There is still one more empty element in the grammar. This is the empty
+subordinating conjunction which is used to handle bare adjunct clauses like
+"Drinking the wine, Mary walked over to Bill" (see Chapter 17). We are
+currently working towards removing this element too.
+
+
+II : EXTENSION OF IMPERATIVES
+*****************************
+
+Previously, imperatives in the Xtag grammar could only handle affirmative
+imperatives without do-support like "eat!" and "eat the cake!". The
+coverage of this construction has now been extended to include do-support
+("do sit down") and negative imperatives ("Don't touch the
+water!"). Furthermore, as mentioned above, the simulation of
+multi-component adjunction with do-support is no longer present. For more
+discussion, see Chapter 18.
+
+III : ADDITION OF RESULTATIVES
+******************************
+
+The current grammar has been extended to handle Resultative constructions
+("John pounded the metal flat"). The analysis treats the verb and result
+predicate as a complex predicate. Four tree families have been added to the
+grammar for resultatives. In two of the families, the verb in the complex
+predicate is transitive or intransitive, and the result is either
+adjectival or prepositional. In the other two families, the verb is
+ergative and the result is again either adjectival or prepositional. The
+number of lexical items of these complex verb-result predicates that select
+these families will be extended in the next version. For more discussion of
+the resultatives, see Chapter 13.
+
+
+IV : ADDITION OF MORE SEMI-AUXILIARIES
+**************************************
+
+We have added a treatment of semi-auxiliaries that are derived from
+non-verbal elements, like the adverb in "be about to". The adverbial
+semi-auxiliaries are handled by a new auxiliary tree (beta-Vvx-ARB) that is
+anchored by the adverb "about" and which is constrained with features to
+adjoin to an infinitive VP. For more discussion, see Chapter 22, Section
+22.5.2.
+
+V : EXTENSION OF PARTICIPIAL NP PRE-MODIFIERS
+*********************************************
+
+Previously, the grammar could only handle past participial NP modifiers,
+like "the devoured meal", which are derived from transitive verbs and are
+part of the transitive tree family. We have extended the treatment of
+participial NP modifiers to include present-continuous modifiers that are
+derived from intransitive ("the drinking man") and ergative ("the melting
+ice") verbs and are now part of the intransitive and ergative tree families
+respectively. For more discussion, see Chapter 21, Section 21.2.
+
+-----------------------------------------------------------------------

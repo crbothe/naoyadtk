@@ -1,0 +1,373 @@
+
+<!-- ==================================================================================================== -->
+<!-- Exemples d'inférence sur les structures de granules                                                  -->
+<!-- ==================================================================================================== -->
+
+<rule descr="ajout du nombre à un enumérable" example="je voudrais avocat">
+	<conditions>
+		<granule concept="demander" root="TRUE">
+			<granule offer="enumerable" ident="?id">
+				<nogranule concept="nombre"/>
+			</granule>
+		</granule>
+	</conditions>
+	<actions>
+		<reuse-granule ident="?id">
+			<create-granule concept="nombre:1"/>
+		</reuse-granule>
+	</actions>
+</rule>
+
+<rule descr="ajout du mois courant dans une date" example="le vingt">
+	<conditions>
+		<granule concept="temps-date" ident="?id">
+			<granule concept="temps-ordinal"/>
+			<nogranule concept="temps-mois"/>
+		</granule>
+	</conditions>
+	<actions>
+		<reuse-granule ident="?id">
+			<create-granule concept="temps-mois:(get-current-month)"/>
+		</reuse-granule>
+	</actions>
+</rule>
+
+<rule descr="ajout de la ville de départ à un billet" example="un billet pour Paris">
+	<conditions>
+		<granule offer="billet" ident="?id">
+			<granule concept="ville" role="destination"/>
+			<nogranule concept="ville" role="depart"/>
+		</granule>
+	</conditions>
+	<actions>
+		<reuse-granule ident="?id">
+			<create-granule concept="ville:(ville-actuelle)" role="depart"/>
+		</reuse-granule>
+	</actions>
+</rule>
+
+<rule descr="calcul de la date de demain" example="demain">
+	<conditions>
+		<granule concept="temps-dateRelative:demain" ident="?id"/>
+	</conditions>
+	<actions>
+		<remplace-granule ident="?id">
+			<create-granule concept="temps-date">
+				<create-granule concept="temps-ordinal:(+ (get-current-day) 1)"/>
+				<create-granule concept="temps-mois:(get-current-month)"/>
+			</create-granule>
+		</remplace-granule>
+	</actions>
+</rule>
+
+<rule descr="correction d'une date impossible" example="le 35 janvier">
+	<conditions>
+		<granule concept="temps-date">
+			<granule concept="temps-ordinal:?jour" ident="?id1"/>
+			<granule concept="temps-mois:?mois" ident="?id2"/>
+		</granule>
+		<verify test="(date-error ?jour ?mois)"/>
+	</conditions>
+	<actions>
+		<change-granule ident="?id1" concept="temps-ordinal:(correct-day ?jour ?mois)"/>
+		<change-granule ident="?id2" concept="temps-mois:(correct-month ?jour ?mois)"/>
+	</actions>
+</rule>
+
+<rule descr="transformer une interrogation en demande" example="quelle heure est-il ?">
+	<conditions>
+		<nogranule concept="demander">
+			<granule offer="demandable" metadata="mode:inter" ident="?id"/>
+		</nogranule>
+	</conditions>
+	<actions>
+		<create-granule concept="demander">
+			<reuse-granule ident="?id"/>
+		</create-granule>
+	</actions>
+</rule>
+
+<!-- ==================================================================================================== -->
+<!-- Plusieurs méthodes pour interpréter les énoncés de l'usager                                          -->
+<!-- ==================================================================================================== -->
+
+<rule descr="détection d'une sous-chaine" example="tititototutu">
+	<conditions>
+		<input contains="toto"/>
+	</conditions>
+	<actions>
+		<speak text="Votr énoncé contient toto."/>
+	</actions>
+</rule>
+
+<rule descr="recherche d'un pattern" example="je suis content">
+	<conditions>
+		<input pattern="je/j' [être] (très) content+"/>
+	</conditions>
+	<actions>
+		<speak text="Vous m'en voyez ravie."/>
+	</actions>
+</rule>
+
+<rule descr="identification d'une structure de granules" example="je voudrais un avocat">
+	<conditions>
+		<granule concept="demander">
+			<granule concept="fruit:avocat">
+				<granule concept="nombre:1"/>
+			</granule>
+		</granule>
+	</conditions>
+	<actions>
+		<speak text="En voici un bien mûr."/>
+	</actions>
+</rule>
+
+<rule descr="détection d'une métadonnée" example="espèce d'imbécile">
+	<conditions>
+		<granule metadata="lang:vulgaire"/>
+	</conditions>
+	<actions>
+		<speak text="Excusez-moi mais vous êtes vulgaire !"/>
+		<speak text="[expression:worried]"/>
+		<speak text="[stop-dialogue]"/>
+	</actions>
+</rule>
+
+<!-- ==================================================================================================== -->
+<!-- Plusieurs méthodes pour générer les énoncés du système                                               -->
+<!-- ==================================================================================================== -->
+
+<rule descr="utilisation d'une post-condition" example="hello man">
+	<conditions>
+		<granule concept="ouverture" metadata="?metadata"/>
+	</conditions>
+	<actions>
+		<speak text="[expression:smiling]"/>
+		<speak text="Bonjour, que puis-je pour vous ?" test="(not (member lang:en ?metadata))"/>
+		<speak text="Hello, what can I do for you ?" test="(member lang:en ?metadata)"/>
+	</actions>
+</rule>
+
+<rule descr="utilisation d'une expression" example="quelle heure est-il ? / pouvez-vous me donner l'heure ?">
+	<conditions>
+		<granule concept="demander">
+			<granule concept="heure"/>
+		</granule>
+	</conditions>
+	<actions>
+		<speak text="Il est (get-current-time) tout juste."/>
+	</actions>
+</rule>
+
+<rule descr="génération littérale XML" example="test1">
+	<conditions>
+		<input contains="test1"/>
+	</conditions>
+	<actions>
+		<speak>
+			<granule concept="proposer">
+				<granule concept="billet">
+					<granule concept="nombre:2"/>
+					<granule concept="ville:paris" role="destination"/>
+				</granule>
+			</granule>
+		</speak>
+	</actions>
+</rule>
+
+<rule descr="reformulation d'une structure de granules" example="test2 je voudrais deux billets pour Paris">
+	<conditions>
+		<input contains="test2"/>
+		<granule concept="demander">
+			<granule offer="demandable" ident="?id"/>
+		</granule>
+	</conditions>
+	<actions>
+		<speak text="Je peux vous proposer (rephrase ?id) cela vous convient-il ?"/>
+	</actions>
+</rule>
+
+<!-- ==================================================================================================== -->
+<!-- Exemple d'un système de règles imbriquées à 2 niveaux                                                -->
+<!-- ==================================================================================================== -->
+
+<rule descr="demande d'un nombre" example="test3">
+	<conditions>
+		<input contains="test3"/>
+	</conditions>
+	<actions>
+		<speak text="Quel est votre nombre préféré ?"/>
+	</actions>
+    
+	<!-- Règle contextuelle terminale -->
+    
+	<rule terminal="TRUE">
+		<conditions scope="CONTEXT">
+			<granule concept="nombre" ident="?id"/>
+		</conditions>
+		<actions>
+			<speak text="Le (rephrase ?id) est un très beau nombre..."/>
+    		<speak text="Félicitations, vous avez gagné (rephrase ?id) euros !"/>
+		</actions>
+	</rule>
+
+	<!-- Règle contextuelle non-terminale -->
+	
+	<rule descr="relance">
+		<conditions>
+			<nogranule concept="nombre"/>
+		</conditions>
+		<actions>
+    		<speak text="Je vous ai posé une question :"/>
+    		<speak text="Quel est votre nombre préféré ?"/>
+		</actions>
+	</rule>
+</rule>
+
+<!-- ==================================================================================================== -->
+<!-- Exemple d'un système de règles imbriquées à 3 niveaux                                                -->
+<!-- ==================================================================================================== -->
+
+<rule descr="règle incidente de niveau 0">
+	<conditions>
+		<input contains="test4"/>
+	</conditions>
+	<actions>
+		<speak text="Ouverture d'un premier niveau => reg / inc / fin"/>
+	</actions>
+
+	<!-- Règle contextuelle terminale de niveau 1 -->
+
+	<rule terminal="TRUE" descr="règle contextuelle terminale de niveau 1">
+		<conditions scope="CONTEXT">
+			<input contains="fin"/>
+		</conditions>
+		<actions>
+			<speak text="Retour à la normale"/>
+		</actions>
+	</rule>
+
+	<!-- Règle contextuelle non terminale de niveau 1 -->
+
+	<rule descr="règle contextuelle non terminale de niveau 1">
+		<conditions scope="CONTEXT">
+			<input contains="reg"/>
+		</conditions>
+		<actions>
+			<speak text="On reste dans le premier niveau => reg / inc / fin"/>
+		</actions>
+	</rule>
+	
+	<!-- Règle contextuelle incidente de niveau 1 -->
+
+	<rule descr="règle contextuelle incidente de niveau 1">
+		<conditions scope="CONTEXT">
+			<input contains="inc"/>
+		</conditions>
+		<actions>
+			<speak text="Ouverture d'un second niveau => reg / fin"/>
+		</actions>
+		
+		<!-- Règle contextuelle terminale de niveau 2 -->
+
+		<rule terminal="TRUE" descr="règle contextuelle terminale de niveau 2">
+			<conditions scope="CONTEXT">
+				<input contains="fin"/>
+			</conditions>
+			<actions>
+				<speak text="Retour au premier niveau => reg / inc / fin"/>
+			</actions>
+		</rule>
+		
+		<!-- Règle contextuelle non terminale de niveau 2 -->
+
+		<rule descr="règle contextuelle non terminale de niveau 2">
+			<conditions scope="CONTEXT">
+				<input contains="reg"/>
+			</conditions>
+			<actions>
+				<speak text="On reste dans le second niveau => reg / fin"/>
+			</actions>
+		</rule>
+	</rule>
+</rule>
+
+<!-- ==================================================================================================== -->
+<!-- Exemple d'un système de règles imbriquées avec variables + utilisation d'un compteur                 -->
+<!-- ==================================================================================================== -->
+
+<rule descr="demande sans demandable" example="je voudrais">
+	<conditions>
+		<granule concept="demander" ident="?id1">
+			<nogranule/>
+		</granule>
+	</conditions>
+	<actions>
+		<speak text="Je n'ai pas bien compris ce que vous me demandez."/>
+		<speak text="Que recherchez-vous exactement ? [timeout:5]"/>
+	</actions>
+	
+	<!-- Règle contextuelle terminale -->
+	
+	<rule terminal="TRUE" descr="détecte un demandable" example="un avocat">
+		<conditions>
+			<granule offer="demandable" ident="?id2"/>
+		</conditions>
+		<actions>
+			<speak text="(rephrase ?id2), d'accord."/>
+			<reuse-granule ident="?id1">
+				<reuse-granule ident="?id2"/>
+			</reuse-granule>
+		</actions>
+	</rule>
+	
+	<!-- Règle contextuelle non-terminale -->
+	
+	<rule descr="relance" example="toto">
+		<conditions>
+			<nogranule offer="demandable"/>
+			<verify test="(&lt; (counter-value relance) 2)"/>
+		</conditions>
+		<actions>
+			<increase counter="relance"/>
+			<!-- Post-conditions pour introduire de la variabilité -->
+			<speak text="Pardon mais vous me demandiez quelque chose ?" test="(= (counter-value relance) 1)"/>
+			<speak text="Que voulez-vous ? Répondez-moi s'il vous plait..." test="(= (counter-value relance) 2)"/>
+		</actions>
+	</rule>
+	
+	<!-- Règle contextuelle terminale -->
+	
+	<rule terminal="TRUE" descr="trop de relances" example="toto">
+		<conditions>
+			<nogranule offer="demandable"/>
+			<verify test="(= (counter-value relance) 2)"/>
+		</conditions>
+		<actions>
+			<speak text="Désolé mais on ne se comprend décidément pas."/>
+			<remove counter="relance"/>
+		</actions>
+	</rule>
+</rule>
+
+<!-- ==================================================================================================== -->
+<!-- Exemple de la prise en compte d'une ambiguïté non résolue                                            -->
+<!-- ==================================================================================================== -->
+
+<rule descr="détection d'une ambiguïté" example="un avocat">
+	<conditions>
+		<granule ident="?id1"/>
+		<granule ident="?id2"/>
+		<conflict id1="?id1" id2="?id2"/>
+	</conditions>
+	<actions>
+		<speak text="J'ai détecté une ambiguïté."/>
+	</actions>
+	
+	<!-- TODO -->
+
+</rule>
+
+<!-- ==================================================================================================== -->
+
+

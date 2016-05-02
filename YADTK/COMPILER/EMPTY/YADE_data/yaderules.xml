@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE yaderules SYSTEM "../../../YADTK/COMPILER/yaderules.dtd" [
+
+<!ENTITY yaderules-1 SYSTEM "yaderules-1.xml">
+<!ENTITY yaderules-2 SYSTEM "yaderules-2.xml">
+
+]>
+
+<yaderules>
+
+	<set-string name="timeout" value="Hey, are you sleeping ?"/>
+	<set-string name="openning" value="Hi, what can I do for you ?"/>
+	<set-string name="nogranule" value="Sorry, I didn't understand. Can you reformulate please ?"/>
+	<set-string name="noresponse" value="Sorry, but I don't know what to say. I do not have enough dialogue rules..."/>
+	
+	<!--
+	<set-string name="timeout" value="Vous dormez ? Réveillez-vous !"/>
+	<set-string name="openning" value="Bonjour, que puis-je pour votre service ?"/>
+	<set-string name="nogranule" value="Pardon, pourriez-vous reformuler s'il vous plait ?"/>
+	<set-string name="noresponse" value="Pardon, mais je ne sais pas quoi répondre. Je n'ai pas beaucoup de règles de dialogue..."/>
+	-->
+	
+	<initial fact="(tache0)"/>
+	
+	&yaderules-1;
+	&yaderules-2;
+	
+</yaderules>

@@ -1,0 +1,521 @@
+<!-- ############################################################################ -->
+<!-- ### INSULTES ET VULGARITES                                               ### -->
+<!-- ############################################################################ -->
+
+<declare-metadata id="lang:vulgaire"/>
+
+<group concept="insulte">
+	<entity pattern="abruti" metadata="lang:vulgaire"/>
+	<entity pattern="ahuri" metadata="lang:vulgaire"/>
+	<entity pattern="aigrefin" metadata="lang:vulgaire"/>
+	<entity pattern="anachorète" metadata="lang:vulgaire"/>
+	<entity pattern="analphabète" metadata="lang:vulgaire"/>
+	<entity pattern="andouille" metadata="lang:vulgaire"/>
+	<entity pattern="anus de poulpe" metadata="lang:vulgaire"/>
+	<entity pattern="arsouille" metadata="lang:vulgaire"/>
+	<entity pattern="aspirateur a muscadet" metadata="lang:vulgaire"/>
+	<entity pattern="assisté" metadata="lang:vulgaire"/>
+	<entity pattern="asticot" metadata="lang:vulgaire"/>
+	<entity pattern="attardé" metadata="lang:vulgaire"/>
+	<entity pattern="avorton" metadata="lang:vulgaire"/>
+	<entity pattern="babache" metadata="lang:vulgaire"/>
+	<entity pattern="bachibouzouk" metadata="lang:vulgaire"/>
+	<entity pattern="balai de chiottes" metadata="lang:vulgaire"/>
+	<entity pattern="baltringue" metadata="lang:vulgaire"/>
+	<entity pattern="banane" metadata="lang:vulgaire"/>
+	<entity pattern="bandit" metadata="lang:vulgaire"/>
+	<entity pattern="barjot" metadata="lang:vulgaire"/>
+	<entity pattern="batârd" metadata="lang:vulgaire"/>
+	<entity pattern="betterave" metadata="lang:vulgaire"/>
+	<entity pattern="bigleux" metadata="lang:vulgaire"/>
+	<entity pattern="blaireau" metadata="lang:vulgaire"/>
+	<entity pattern="boloss" metadata="lang:vulgaire"/>
+	<entity pattern="bordel" metadata="lang:vulgaire"/>
+	<entity pattern="bordel à cul" metadata="lang:vulgaire"/>
+	<entity pattern="boudin" metadata="lang:vulgaire"/>
+	<entity pattern="bouffon" metadata="lang:vulgaire"/>
+	<entity pattern="bougre d' âne" metadata="lang:vulgaire"/>
+	<entity pattern="bougre d' imbécile" metadata="lang:vulgaire"/>
+	<entity pattern="bougre de congre" metadata="lang:vulgaire"/>
+	<entity pattern="bougre de conne" metadata="lang:vulgaire"/>
+	<entity pattern="boule de pus" metadata="lang:vulgaire"/>
+	<entity pattern="boulet" metadata="lang:vulgaire"/>
+	<entity pattern="bouricot" metadata="lang:vulgaire"/>
+	<entity pattern="bourique" metadata="lang:vulgaire"/>
+	<entity pattern="bourrin" metadata="lang:vulgaire"/>
+	<entity pattern="boursemolle" metadata="lang:vulgaire"/>
+	<entity pattern="boursouflure" metadata="lang:vulgaire"/>
+	<entity pattern="bouseux" metadata="lang:vulgaire"/>
+	<entity pattern="boutonneux" metadata="lang:vulgaire"/>
+	<entity pattern="branleur" metadata="lang:vulgaire"/>
+	<entity pattern="branlotin" metadata="lang:vulgaire"/>
+	<entity pattern="branque" metadata="lang:vulgaire"/>
+	<entity pattern="branquignole" metadata="lang:vulgaire"/>
+	<entity pattern="brigand" metadata="lang:vulgaire"/>
+	<entity pattern="brêle" metadata="lang:vulgaire"/>
+	<entity pattern="brosse à chiottes" metadata="lang:vulgaire"/>
+	<entity pattern="bubon puant" metadata="lang:vulgaire"/>
+	<entity pattern="burne" metadata="lang:vulgaire"/>
+	<entity pattern="butor" metadata="lang:vulgaire"/>
+	<entity pattern="bécasse" metadata="lang:vulgaire"/>
+	<entity pattern="bégueule" metadata="lang:vulgaire"/>
+	<entity pattern="bélitre" metadata="lang:vulgaire"/>
+	<entity pattern="béotien" metadata="lang:vulgaire"/>
+	<entity pattern="bête" metadata="lang:vulgaire"/>
+	<entity pattern="cageot" metadata="lang:vulgaire"/>
+	<entity pattern="cagole" metadata="lang:vulgaire"/>
+	<entity pattern="calice" metadata="lang:vulgaire"/>
+	<entity pattern="canaille" metadata="lang:vulgaire"/>
+	<entity pattern="canaillou" metadata="lang:vulgaire"/>
+	<entity pattern="cancrelat" metadata="lang:vulgaire"/>
+	<entity pattern="caprinophile" metadata="lang:vulgaire"/>
+	<entity pattern="carburateur à beaujolais" metadata="lang:vulgaire"/>
+	<entity pattern="caribou" metadata="lang:vulgaire"/>
+	<entity pattern="casse-pieds" metadata="lang:vulgaire"/>
+	<entity pattern="cassos" metadata="lang:vulgaire"/>
+	<entity pattern="catin" metadata="lang:vulgaire"/>
+	<entity pattern="cave" metadata="lang:vulgaire"/>
+	<entity pattern="cervelle d' huitre" metadata="lang:vulgaire"/>
+	<entity pattern="chacal" metadata="lang:vulgaire"/>
+	<entity pattern="chacal puant" metadata="lang:vulgaire"/>
+	<entity pattern="chafouin," metadata="lang:vulgaire"/>
+	<entity pattern="chameau" metadata="lang:vulgaire"/>
+	<entity pattern="chancreux" metadata="lang:vulgaire"/>
+	<entity pattern="chancre puant" metadata="lang:vulgaire"/>
+	<entity pattern="chaoui" metadata="lang:vulgaire"/>
+	<entity pattern="charogne" metadata="lang:vulgaire"/>
+	<entity pattern="chenapan" metadata="lang:vulgaire"/>
+	<entity pattern="chiassard" metadata="lang:vulgaire"/>
+	<entity pattern="chiasse de caca fondu" metadata="lang:vulgaire"/>
+	<entity pattern="chieur" metadata="lang:vulgaire"/>
+	<entity pattern="chiure de pigeon" metadata="lang:vulgaire"/>
+	<entity pattern="cinglé" metadata="lang:vulgaire"/>
+	<entity pattern="clampin" metadata="lang:vulgaire"/>
+	<entity pattern="cloaque" metadata="lang:vulgaire"/>
+	<entity pattern="cloche" metadata="lang:vulgaire"/>
+	<entity pattern="clodo" metadata="lang:vulgaire"/>
+	<entity pattern="cloporte" metadata="lang:vulgaire"/>
+	<entity pattern="clown" metadata="lang:vulgaire"/>
+	<entity pattern="cochon" metadata="lang:vulgaire"/>
+	<entity pattern="cocu" metadata="lang:vulgaire"/>
+	<entity pattern="con" metadata="lang:vulgaire"/>
+	<entity pattern="conard" metadata="lang:vulgaire"/>
+	<entity pattern="conchieur" metadata="lang:vulgaire"/>
+	<entity pattern="concombre" metadata="lang:vulgaire"/>
+	<entity pattern="connard" metadata="lang:vulgaire"/>
+	<entity pattern="connasse" metadata="lang:vulgaire"/>
+	<entity pattern="conne" metadata="lang:vulgaire"/>
+	<entity pattern="cono" metadata="lang:vulgaire"/>
+	<entity pattern="coprophage" metadata="lang:vulgaire"/>
+	<entity pattern="cornard" metadata="lang:vulgaire"/>
+	<entity pattern="cornegidouille" metadata="lang:vulgaire"/>
+	<entity pattern="corniaud" metadata="lang:vulgaire"/>
+	<entity pattern="cornichon" metadata="lang:vulgaire"/>
+	<entity pattern="couard" metadata="lang:vulgaire"/>
+	<entity pattern="couille de tétard" metadata="lang:vulgaire"/>
+	<entity pattern="couille molle" metadata="lang:vulgaire"/>
+	<entity pattern="couillon" metadata="lang:vulgaire"/>
+	<entity pattern="crapaud de pissotière" metadata="lang:vulgaire"/>
+	<entity pattern="crapule" metadata="lang:vulgaire"/>
+	<entity pattern="crassard" metadata="lang:vulgaire"/>
+	<entity pattern="crasseuse" metadata="lang:vulgaire"/>
+	<entity pattern="crasspouillard!" metadata="lang:vulgaire"/>
+	<entity pattern="crevard" metadata="lang:vulgaire"/>
+	<entity pattern="crevure" metadata="lang:vulgaire"/>
+	<entity pattern="crotte de moineau" metadata="lang:vulgaire"/>
+	<entity pattern="cryptorchide" metadata="lang:vulgaire"/>
+	<entity pattern="crâne d' obus" metadata="lang:vulgaire"/>
+	<entity pattern="crétin" metadata="lang:vulgaire"/>
+	<entity pattern="crétin des alpes" metadata="lang:vulgaire"/>
+	<entity pattern="crétin des iles" metadata="lang:vulgaire"/>
+	<entity pattern="crétin goîtreux" metadata="lang:vulgaire"/>
+	<entity pattern="cuistre" metadata="lang:vulgaire"/>
+	<entity pattern="cul de babouin" metadata="lang:vulgaire"/>
+	<entity pattern="cul terreux" metadata="lang:vulgaire"/>
+	<entity pattern="dégueulasse" metadata="lang:vulgaire"/>
+	<entity pattern="don juan de pissotière" metadata="lang:vulgaire"/>
+	<entity pattern="ducon" metadata="lang:vulgaire"/>
+	<entity pattern="dugenou" metadata="lang:vulgaire"/>
+	<entity pattern="dugland" metadata="lang:vulgaire"/>
+	<entity pattern="dypterosodomite" metadata="lang:vulgaire"/>
+	<entity pattern="débile" metadata="lang:vulgaire"/>
+	<entity pattern="décamerde" metadata="lang:vulgaire"/>
+	<entity pattern="décérébré" metadata="lang:vulgaire"/>
+	<entity pattern="dégueulis" metadata="lang:vulgaire"/>
+	<entity pattern="dégénéré chromozomique" metadata="lang:vulgaire"/>
+	<entity pattern="dégénéré du bulbe" metadata="lang:vulgaire"/>
+	<entity pattern="dépravé" metadata="lang:vulgaire"/>
+	<entity pattern="détritus" metadata="lang:vulgaire"/>
+	<entity pattern="ecervelé" metadata="lang:vulgaire"/>
+	<entity pattern="ectoplasme" metadata="lang:vulgaire"/>
+	<entity pattern="emmerdeur" metadata="lang:vulgaire"/>
+	<entity pattern="empaffé" metadata="lang:vulgaire"/>
+	<entity pattern="emplâtre" metadata="lang:vulgaire"/>
+	<entity pattern="empoté" metadata="lang:vulgaire"/>
+	<entity pattern="enculeur de mouches" metadata="lang:vulgaire"/>
+	<entity pattern="enculé" metadata="lang:vulgaire"/>
+	<entity pattern="enflure" metadata="lang:vulgaire"/>
+	<entity pattern="enfoiré" metadata="lang:vulgaire"/>
+	<entity pattern="erreur de la nature" metadata="lang:vulgaire"/>
+	<entity pattern="eunuque" metadata="lang:vulgaire"/>
+	<entity pattern="face de cul" metadata="lang:vulgaire"/>
+	<entity pattern="face de pet" metadata="lang:vulgaire"/>
+	<entity pattern="face de rat" metadata="lang:vulgaire"/>
+	<entity pattern="faquin" metadata="lang:vulgaire"/>
+	<entity pattern="faraud" metadata="lang:vulgaire"/>
+	<entity pattern="faux jeton" metadata="lang:vulgaire"/>
+	<entity pattern="fesse d' huitre" metadata="lang:vulgaire"/>
+	<entity pattern="fesse de moule" metadata="lang:vulgaire"/>
+	<entity pattern="fesses molles" metadata="lang:vulgaire"/>
+	<entity pattern="fiente" metadata="lang:vulgaire"/>
+	<entity pattern="filou" metadata="lang:vulgaire"/>
+	<entity pattern="fini à l' urine" metadata="lang:vulgaire"/>
+	<entity pattern="fion" metadata="lang:vulgaire"/>
+	<entity pattern="fiote" metadata="lang:vulgaire"/>
+	<entity pattern="flaque de pus" metadata="lang:vulgaire"/>
+	<entity pattern="foireux" metadata="lang:vulgaire"/>
+	<entity pattern="foldingue" metadata="lang:vulgaire"/>
+	<entity pattern="fouille merde" metadata="lang:vulgaire"/>
+	<entity pattern="four à merde" metadata="lang:vulgaire"/>
+	<entity pattern="fourbe" metadata="lang:vulgaire"/>
+	<entity pattern="foutriquet" metadata="lang:vulgaire"/>
+	<entity pattern="frapadingue" metadata="lang:vulgaire"/>
+	<entity pattern="frappe" metadata="lang:vulgaire"/>
+	<entity pattern="freluquet" metadata="lang:vulgaire"/>
+	<entity pattern="fricoteur" metadata="lang:vulgaire"/>
+	<entity pattern="frigide" metadata="lang:vulgaire"/>
+	<entity pattern="fripouille" metadata="lang:vulgaire"/>
+	<entity pattern="frippon" metadata="lang:vulgaire"/>
+	<entity pattern="frustré" metadata="lang:vulgaire"/>
+	<entity pattern="fumier" metadata="lang:vulgaire"/>
+	<entity pattern="fumiste" metadata="lang:vulgaire"/>
+	<entity pattern="furoncle" metadata="lang:vulgaire"/>
+	<entity pattern="félon" metadata="lang:vulgaire"/>
+	<entity pattern="ganache" metadata="lang:vulgaire"/>
+	<entity pattern="gangrène" metadata="lang:vulgaire"/>
+	<entity pattern="garage a bite" metadata="lang:vulgaire"/>
+	<entity pattern="gibier de potence" metadata="lang:vulgaire"/>
+	<entity pattern="gland" metadata="lang:vulgaire"/>
+	<entity pattern="glandeur" metadata="lang:vulgaire"/>
+	<entity pattern="glandus" metadata="lang:vulgaire"/>
+	<entity pattern="globicéphale" metadata="lang:vulgaire"/>
+	<entity pattern="gnome" metadata="lang:vulgaire"/>
+	<entity pattern="godiche" metadata="lang:vulgaire"/>
+	<entity pattern="gogol" metadata="lang:vulgaire"/>
+	<entity pattern="goinfre" metadata="lang:vulgaire"/>
+	<entity pattern="gommeux" metadata="lang:vulgaire"/>
+	<entity pattern="gougnafier" metadata="lang:vulgaire"/>
+	<entity pattern="goujat" metadata="lang:vulgaire"/>
+	<entity pattern="goulu" metadata="lang:vulgaire"/>
+	<entity pattern="gourdasse" metadata="lang:vulgaire"/>
+	<entity pattern="gourgandin/e" metadata="lang:vulgaire"/>
+	<entity pattern="grand cornichon" metadata="lang:vulgaire"/>
+	<entity pattern="grand dépandeur d' andouilles" metadata="lang:vulgaire"/>
+	<entity pattern="gras du bide" metadata="lang:vulgaire"/>
+	<entity pattern="graveleux" metadata="lang:vulgaire"/>
+	<entity pattern="gredin" metadata="lang:vulgaire"/>
+	<entity pattern="grenouille" metadata="lang:vulgaire"/>
+	<entity pattern="gringalet" metadata="lang:vulgaire"/>
+	<entity pattern="grognasse" metadata="lang:vulgaire"/>
+	<entity pattern="gros caca poilu" metadata="lang:vulgaire"/>
+	<entity pattern="gros con" metadata="lang:vulgaire"/>
+	<entity pattern="gros lard" metadata="lang:vulgaire"/>
+	<entity pattern="grosse merde puante" metadata="lang:vulgaire"/>
+	<entity pattern="grosse truie violette" metadata="lang:vulgaire"/>
+	<entity pattern="grue" metadata="lang:vulgaire"/>
+	<entity pattern="gueulard" metadata="lang:vulgaire"/>
+	<entity pattern="gueule de fion" metadata="lang:vulgaire"/>
+	<entity pattern="gueule de raie" metadata="lang:vulgaire"/>
+	<entity pattern="gueux" metadata="lang:vulgaire"/>
+	<entity pattern="gugus" metadata="lang:vulgaire"/>
+	<entity pattern="guignol" metadata="lang:vulgaire"/>
+	<entity pattern="has-been" metadata="lang:vulgaire"/>
+	<entity pattern="hérétique" metadata="lang:vulgaire"/>
+	<entity pattern="histrion" metadata="lang:vulgaire"/>
+	<entity pattern="homoncule" metadata="lang:vulgaire"/>
+	<entity pattern="hostie d' épais" metadata="lang:vulgaire"/>
+	<entity pattern="hurluberlu" metadata="lang:vulgaire"/>
+	<entity pattern="hérétique" metadata="lang:vulgaire"/>
+	<entity pattern="iconoclaste" metadata="lang:vulgaire"/>
+	<entity pattern="idiot" metadata="lang:vulgaire"/>
+	<entity pattern="ignare" metadata="lang:vulgaire"/>
+	<entity pattern="illettré" metadata="lang:vulgaire"/>
+	<entity pattern="imbibé" metadata="lang:vulgaire"/>
+	<entity pattern="imbécile" metadata="lang:vulgaire"/>
+	<entity pattern="impuissant" metadata="lang:vulgaire"/>
+	<entity pattern="infâme raie de cul" metadata="lang:vulgaire"/>
+	<entity pattern="ironie de la création" metadata="lang:vulgaire"/>
+	<entity pattern="ivrogne" metadata="lang:vulgaire"/>
+	<entity pattern="jaune" metadata="lang:vulgaire"/>
+	<entity pattern="jean-foutre" metadata="lang:vulgaire"/>
+	<entity pattern="jobard" metadata="lang:vulgaire"/>
+	<entity pattern="jobastre" metadata="lang:vulgaire"/>
+	<entity pattern="judas" metadata="lang:vulgaire"/>
+	<entity pattern="kroumir" metadata="lang:vulgaire"/>
+	<entity pattern="kéké" metadata="lang:vulgaire"/>
+	<entity pattern="laideron" metadata="lang:vulgaire"/>
+	<entity pattern="larve" metadata="lang:vulgaire"/>
+	<entity pattern="lavedu" metadata="lang:vulgaire"/>
+	<entity pattern="lépreux" metadata="lang:vulgaire"/>
+	<entity pattern="loboto" metadata="lang:vulgaire"/>
+	<entity pattern="loutre analphabète" metadata="lang:vulgaire"/>
+	<entity pattern="lèche-cul" metadata="lang:vulgaire"/>
+	<entity pattern="malandrin" metadata="lang:vulgaire"/>
+	<entity pattern="malotru" metadata="lang:vulgaire"/>
+	<entity pattern="malpropre" metadata="lang:vulgaire"/>
+	<entity pattern="manant" metadata="lang:vulgaire"/>
+	<entity pattern="manche à couille" metadata="lang:vulgaire"/>
+	<entity pattern="mange merde" metadata="lang:vulgaire"/>
+	<entity pattern="maquereau" metadata="lang:vulgaire"/>
+	<entity pattern="maquerelle" metadata="lang:vulgaire"/>
+	<entity pattern="maraud" metadata="lang:vulgaire"/>
+	<entity pattern="marchand de tapis" metadata="lang:vulgaire"/>
+	<entity pattern="margoulin" metadata="lang:vulgaire"/>
+	<entity pattern="merdaillon" metadata="lang:vulgaire"/>
+	<entity pattern="merdasse" metadata="lang:vulgaire"/>
+	<entity pattern="merde" metadata="lang:vulgaire"/>
+	<entity pattern="merde molle" metadata="lang:vulgaire"/>
+	<entity pattern="merdophile" metadata="lang:vulgaire"/>
+	<entity pattern="merlan frit" metadata="lang:vulgaire"/>
+	<entity pattern="microcéphale" metadata="lang:vulgaire"/>
+	<entity pattern="minable" metadata="lang:vulgaire"/>
+	<entity pattern="minus" metadata="lang:vulgaire"/>
+	<entity pattern="miteux" metadata="lang:vulgaire"/>
+	<entity pattern="moins que rien" metadata="lang:vulgaire"/>
+	<entity pattern="molasson" metadata="lang:vulgaire"/>
+	<entity pattern="mongol" metadata="lang:vulgaire"/>
+	<entity pattern="mononeuronal" metadata="lang:vulgaire"/>
+	<entity pattern="mont de brin" metadata="lang:vulgaire"/>
+	<entity pattern="morbleu" metadata="lang:vulgaire"/>
+	<entity pattern="morfale" metadata="lang:vulgaire"/>
+	<entity pattern="morille" metadata="lang:vulgaire"/>
+	<entity pattern="morpion" metadata="lang:vulgaire"/>
+	<entity pattern="mortecouille" metadata="lang:vulgaire"/>
+	<entity pattern="morue" metadata="lang:vulgaire"/>
+	<entity pattern="morveux" metadata="lang:vulgaire"/>
+	<entity pattern="motherfucker" metadata="lang:vulgaire"/>
+	<entity pattern="mou du bulbe" metadata="lang:vulgaire"/>
+	<entity pattern="mou du genou" metadata="lang:vulgaire"/>
+	<entity pattern="mou du gland" metadata="lang:vulgaire"/>
+	<entity pattern="moudlabite" metadata="lang:vulgaire"/>
+	<entity pattern="moule à gauffre" metadata="lang:vulgaire"/>
+	<entity pattern="mouton de panurge" metadata="lang:vulgaire"/>
+	<entity pattern="méchant." metadata="lang:vulgaire"/>
+	<entity pattern="mécréant" metadata="lang:vulgaire"/>
+	<entity pattern="mérule" metadata="lang:vulgaire"/>
+	<entity pattern="nabot" metadata="lang:vulgaire"/>
+	<entity pattern="nain de jardin" metadata="lang:vulgaire"/>
+	<entity pattern="nanar" metadata="lang:vulgaire"/>
+	<entity pattern="naze" metadata="lang:vulgaire"/>
+	<entity pattern="nazillon" metadata="lang:vulgaire"/>
+	<entity pattern="necropédophile" metadata="lang:vulgaire"/>
+	<entity pattern="neuneu" metadata="lang:vulgaire"/>
+	<entity pattern="nez de boeuf" metadata="lang:vulgaire"/>
+	<entity pattern="niais, niaiseux" metadata="lang:vulgaire"/>
+	<entity pattern="nigaud" metadata="lang:vulgaire"/>
+	<entity pattern="niguedouille" metadata="lang:vulgaire"/>
+	<entity pattern="noob" metadata="lang:vulgaire"/>
+	<entity pattern="nounouille" metadata="lang:vulgaire"/>
+	<entity pattern="nécrophile" metadata="lang:vulgaire"/>
+	<entity pattern="obsédé" metadata="lang:vulgaire"/>
+	<entity pattern="oiseau de mauvaise augure" metadata="lang:vulgaire"/>
+	<entity pattern="olibrius" metadata="lang:vulgaire"/>
+	<entity pattern="ordure purulente" metadata="lang:vulgaire"/>
+	<entity pattern="outre à pisse" metadata="lang:vulgaire"/>
+	<entity pattern="outrecuidant" metadata="lang:vulgaire"/>
+	<entity pattern="pachyderme" metadata="lang:vulgaire"/>
+	<entity pattern="paltoquet" metadata="lang:vulgaire"/>
+	<entity pattern="panaris" metadata="lang:vulgaire"/>
+	<entity pattern="parasite" metadata="lang:vulgaire"/>
+	<entity pattern="parbleu" metadata="lang:vulgaire"/>
+	<entity pattern="parvenu" metadata="lang:vulgaire"/>
+	<entity pattern="patate" metadata="lang:vulgaire"/>
+	<entity pattern="paumé" metadata="lang:vulgaire"/>
+	<entity pattern="pauvre con" metadata="lang:vulgaire"/>
+	<entity pattern="paysan" metadata="lang:vulgaire"/>
+	<entity pattern="peau de bite" metadata="lang:vulgaire"/>
+	<entity pattern="peau de vache" metadata="lang:vulgaire"/>
+	<entity pattern="pecore" metadata="lang:vulgaire"/>
+	<entity pattern="peigne-cul" metadata="lang:vulgaire"/>
+	<entity pattern="peine a jouir" metadata="lang:vulgaire"/>
+	<entity pattern="peine à jouir" metadata="lang:vulgaire"/>
+	<entity pattern="pendard" metadata="lang:vulgaire"/>
+	<entity pattern="pervers" metadata="lang:vulgaire"/>
+	<entity pattern="pet de moule" metadata="lang:vulgaire"/>
+	<entity pattern="petite merde" metadata="lang:vulgaire"/>
+	<entity pattern="petzouille" metadata="lang:vulgaire"/>
+	<entity pattern="phlegmon" metadata="lang:vulgaire"/>
+	<entity pattern="pigeon" metadata="lang:vulgaire"/>
+	<entity pattern="pignolo" metadata="lang:vulgaire"/>
+	<entity pattern="pignouf" metadata="lang:vulgaire"/>
+	<entity pattern="pimbêche" metadata="lang:vulgaire"/>
+	<entity pattern="pinailleur" metadata="lang:vulgaire"/>
+	<entity pattern="pine d' ours" metadata="lang:vulgaire"/>
+	<entity pattern="pine d' huitre" metadata="lang:vulgaire"/>
+	<entity pattern="pintade" metadata="lang:vulgaire"/>
+	<entity pattern="pipistrelle puante" metadata="lang:vulgaire"/>
+	<entity pattern="piqueniquedouille" metadata="lang:vulgaire"/>
+	<entity pattern="pisse froid" metadata="lang:vulgaire"/>
+	<entity pattern="pisse-vinaigre" metadata="lang:vulgaire"/>
+	<entity pattern="pisseuse" metadata="lang:vulgaire"/>
+	<entity pattern="pissure" metadata="lang:vulgaire"/>
+	<entity pattern="piètre" metadata="lang:vulgaire"/>
+	<entity pattern="planqué" metadata="lang:vulgaire"/>
+	<entity pattern="playboy de superette" metadata="lang:vulgaire"/>
+	<entity pattern="pleutre" metadata="lang:vulgaire"/>
+	<entity pattern="plouc" metadata="lang:vulgaire"/>
+	<entity pattern="poire" metadata="lang:vulgaire"/>
+	<entity pattern="poireau" metadata="lang:vulgaire"/>
+	<entity pattern="poivrot" metadata="lang:vulgaire"/>
+	<entity pattern="polisson" metadata="lang:vulgaire"/>
+	<entity pattern="poltron" metadata="lang:vulgaire"/>
+	<entity pattern="pompe a merde" metadata="lang:vulgaire"/>
+	<entity pattern="porc" metadata="lang:vulgaire"/>
+	<entity pattern="pot de chambre" metadata="lang:vulgaire"/>
+	<entity pattern="pouacre, pouacreux" metadata="lang:vulgaire"/>
+	<entity pattern="pouffe" metadata="lang:vulgaire"/>
+	<entity pattern="pouffiasse" metadata="lang:vulgaire"/>
+	<entity pattern="poufieux" metadata="lang:vulgaire"/>
+	<entity pattern="pouilleux" metadata="lang:vulgaire"/>
+	<entity pattern="pourceau" metadata="lang:vulgaire"/>
+	<entity pattern="pourriture" metadata="lang:vulgaire"/>
+	<entity pattern="pousse mégot" metadata="lang:vulgaire"/>
+	<entity pattern="punaise" metadata="lang:vulgaire"/>
+	<entity pattern="putassière" metadata="lang:vulgaire"/>
+	<entity pattern="pute au rabais" metadata="lang:vulgaire"/>
+	<entity pattern="pute borgne" metadata="lang:vulgaire"/>
+	<entity pattern="putréfaction" metadata="lang:vulgaire"/>
+	<entity pattern="pygocéphale" metadata="lang:vulgaire"/>
+	<entity pattern="pécore" metadata="lang:vulgaire"/>
+	<entity pattern="pédale" metadata="lang:vulgaire"/>
+	<entity pattern="péquenot" metadata="lang:vulgaire"/>
+	<entity pattern="pétasse" metadata="lang:vulgaire"/>
+	<entity pattern="pétassoïde conassiforme" metadata="lang:vulgaire"/>
+	<entity pattern="pétochard" metadata="lang:vulgaire"/>
+	<entity pattern="quadrizomique" metadata="lang:vulgaire"/>
+	<entity pattern="queutard" metadata="lang:vulgaire"/>
+	<entity pattern="quiche" metadata="lang:vulgaire"/>
+	<entity pattern="raclure de bidet" metadata="lang:vulgaire"/>
+	<entity pattern="raclure de chiotte" metadata="lang:vulgaire"/>
+	<entity pattern="radasse" metadata="lang:vulgaire"/>
+	<entity pattern="radin" metadata="lang:vulgaire"/>
+	<entity pattern="ramassis de chiure de moineau" metadata="lang:vulgaire"/>
+	<entity pattern="rambo de pacotille" metadata="lang:vulgaire"/>
+	<entity pattern="rastaquouère" metadata="lang:vulgaire"/>
+	<entity pattern="renégat" metadata="lang:vulgaire"/>
+	<entity pattern="roquet" metadata="lang:vulgaire"/>
+	<entity pattern="roublard" metadata="lang:vulgaire"/>
+	<entity pattern="rouge" metadata="lang:vulgaire"/>
+	<entity pattern="roulure" metadata="lang:vulgaire"/>
+	<entity pattern="résidu de fausse couche" metadata="lang:vulgaire"/>
+	<entity pattern="résidus de partouze" metadata="lang:vulgaire"/>
+	<entity pattern="sabraque" metadata="lang:vulgaire"/>
+	<entity pattern="sac à brin" metadata="lang:vulgaire"/>
+	<entity pattern="sac à foutre" metadata="lang:vulgaire"/>
+	<entity pattern="sac à gnole" metadata="lang:vulgaire"/>
+	<entity pattern="sac à merde" metadata="lang:vulgaire"/>
+	<entity pattern="sac à viande" metadata="lang:vulgaire"/>
+	<entity pattern="sac à vin" metadata="lang:vulgaire"/>
+	<entity pattern="sacrebleu" metadata="lang:vulgaire"/>
+	<entity pattern="sacrement" metadata="lang:vulgaire"/>
+	<entity pattern="sacripan" metadata="lang:vulgaire"/>
+	<entity pattern="sagouin" metadata="lang:vulgaire"/>
+	<entity pattern="salaud" metadata="lang:vulgaire"/>
+	<entity pattern="saleté" metadata="lang:vulgaire"/>
+	<entity pattern="saligaud" metadata="lang:vulgaire"/>
+	<entity pattern="salopard" metadata="lang:vulgaire"/>
+	<entity pattern="salope" metadata="lang:vulgaire"/>
+	<entity pattern="saloperie" metadata="lang:vulgaire"/>
+	<entity pattern="salopiaud" metadata="lang:vulgaire"/>
+	<entity pattern="saltinbanque" metadata="lang:vulgaire"/>
+	<entity pattern="saperlipopette" metadata="lang:vulgaire"/>
+	<entity pattern="saperlotte" metadata="lang:vulgaire"/>
+	<entity pattern="sauvage" metadata="lang:vulgaire"/>
+	<entity pattern="scaphandrier d' eau de vaiselle" metadata="lang:vulgaire"/>
+	<entity pattern="scatophile" metadata="lang:vulgaire"/>
+	<entity pattern="scelerat" metadata="lang:vulgaire"/>
+	<entity pattern="schnock" metadata="lang:vulgaire"/>
+	<entity pattern="schpountz" metadata="lang:vulgaire"/>
+	<entity pattern="serpillière à foutre" metadata="lang:vulgaire"/>
+	<entity pattern="sinistrose ambulante" metadata="lang:vulgaire"/>
+	<entity pattern="sinoque" metadata="lang:vulgaire"/>
+	<entity pattern="sodomite" metadata="lang:vulgaire"/>
+	<entity pattern="sombre conne" metadata="lang:vulgaire"/>
+	<entity pattern="sombre crétin" metadata="lang:vulgaire"/>
+	<entity pattern="sot" metadata="lang:vulgaire"/>
+	<entity pattern="souillon" metadata="lang:vulgaire"/>
+	<entity pattern="sous merde" metadata="lang:vulgaire"/>
+	<entity pattern="spermatozoide avarié" metadata="lang:vulgaire"/>
+	<entity pattern="spermiducte" metadata="lang:vulgaire"/>
+	<entity pattern="suintance" metadata="lang:vulgaire"/>
+	<entity pattern="sybarite" metadata="lang:vulgaire"/>
+	<entity pattern="syphonné" metadata="lang:vulgaire"/>
+	<entity pattern="tabarnak" metadata="lang:vulgaire"/>
+	<entity pattern="tabernacle" metadata="lang:vulgaire"/>
+	<entity pattern="tâcheron" metadata="lang:vulgaire"/>
+	<entity pattern="tafiole" metadata="lang:vulgaire"/>
+	<entity pattern="tanche" metadata="lang:vulgaire"/>
+	<entity pattern="tartignole" metadata="lang:vulgaire"/>
+	<entity pattern="taré" metadata="lang:vulgaire"/>
+	<entity pattern="tas de saindoux" metadata="lang:vulgaire"/>
+	<entity pattern="tasse à foutre" metadata="lang:vulgaire"/>
+	<entity pattern="thon" metadata="lang:vulgaire"/>
+	<entity pattern="tire couilles" metadata="lang:vulgaire"/>
+	<entity pattern="tocard" metadata="lang:vulgaire"/>
+	<entity pattern="tonnerre de brest" metadata="lang:vulgaire"/>
+	<entity pattern="toqué" metadata="lang:vulgaire"/>
+	<entity pattern="trainé" metadata="lang:vulgaire"/>
+	<entity pattern="traîne savate" metadata="lang:vulgaire"/>
+	<entity pattern="tricard" metadata="lang:vulgaire"/>
+	<entity pattern="triple buse" metadata="lang:vulgaire"/>
+	<entity pattern="tromblon" metadata="lang:vulgaire"/>
+	<entity pattern="tronche de cake" metadata="lang:vulgaire"/>
+	<entity pattern="trou de balle" metadata="lang:vulgaire"/>
+	<entity pattern="trou du cul" metadata="lang:vulgaire"/>
+	<entity pattern="troubignole" metadata="lang:vulgaire"/>
+	<entity pattern="truand" metadata="lang:vulgaire"/>
+	<entity pattern="trumeaux" metadata="lang:vulgaire"/>
+	<entity pattern="tuberculeux" metadata="lang:vulgaire"/>
+	<entity pattern="tudieu" metadata="lang:vulgaire"/>
+	<entity pattern="tétârd" metadata="lang:vulgaire"/>
+	<entity pattern="tête d' ampoule" metadata="lang:vulgaire"/>
+	<entity pattern="tête de bite" metadata="lang:vulgaire"/>
+	<entity pattern="tête de chibre" metadata="lang:vulgaire"/>
+	<entity pattern="tête de con" metadata="lang:vulgaire"/>
+	<entity pattern="tête de noeud" metadata="lang:vulgaire"/>
+	<entity pattern="tête à claques" metadata="lang:vulgaire"/>
+	<entity pattern="usurpateur" metadata="lang:vulgaire"/>
+	<entity pattern="va nu pieds" metadata="lang:vulgaire"/>
+	<entity pattern="va te faire" metadata="lang:vulgaire"/>
+	<entity pattern="vandale" metadata="lang:vulgaire"/>
+	<entity pattern="vaurien" metadata="lang:vulgaire"/>
+	<entity pattern="vautour" metadata="lang:vulgaire"/>
+	<entity pattern="ventrebleu" metadata="lang:vulgaire"/>
+	<entity pattern="vermine" metadata="lang:vulgaire"/>
+	<entity pattern="veule" metadata="lang:vulgaire"/>
+	<entity pattern="vicelard" metadata="lang:vulgaire"/>
+	<entity pattern="vieille baderne" metadata="lang:vulgaire"/>
+	<entity pattern="vieille poule" metadata="lang:vulgaire"/>
+	<entity pattern="vieille taupe" metadata="lang:vulgaire"/>
+	<entity pattern="vieux chnoque" metadata="lang:vulgaire"/>
+	<entity pattern="vieux con" metadata="lang:vulgaire"/>
+	<entity pattern="vieux fossile" metadata="lang:vulgaire"/>
+	<entity pattern="vieux tableau" metadata="lang:vulgaire"/>
+	<entity pattern="vieux tromblon" metadata="lang:vulgaire"/>
+	<entity pattern="vilain" metadata="lang:vulgaire"/>
+	<entity pattern="vilain comme une couvée de singe" metadata="lang:vulgaire"/>
+	<entity pattern="vioque" metadata="lang:vulgaire"/>
+	<entity pattern="vipère lubrique" metadata="lang:vulgaire"/>
+	<entity pattern="voleur" metadata="lang:vulgaire"/>
+	<entity pattern="vorace" metadata="lang:vulgaire"/>
+	<entity pattern="voyou" metadata="lang:vulgaire"/>
+	<entity pattern="vérole" metadata="lang:vulgaire"/>
+	<entity pattern="wisigoth" metadata="lang:vulgaire"/>
+	<entity pattern="yéti baveux" metadata="lang:vulgaire"/>
+	<entity pattern="zigomar" metadata="lang:vulgaire"/>
+	<entity pattern="zigoto" metadata="lang:vulgaire"/>
+	<entity pattern="zonard" metadata="lang:vulgaire"/>
+	<entity pattern="zouave" metadata="lang:vulgaire"/>
+	<entity pattern="zoulou" metadata="lang:vulgaire"/>
+	<entity pattern="zozo" metadata="lang:vulgaire"/>
+</group>

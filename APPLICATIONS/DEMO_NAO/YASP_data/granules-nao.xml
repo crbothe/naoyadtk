@@ -1,0 +1,113 @@
+
+<declare-feature id="politeness"/>
+<declare-feature id="direction"/>
+<declare-feature id="dialogue"/>
+<declare-feature id="property"/>
+<declare-feature id="action"/>
+<declare-feature id="relationshipofwords"/>
+
+<granule concept="openning" offers="politeness">
+    <syntax pattern="hello/hi"/>
+</granule>
+
+<granule concept="relation" offers="relationshipofwords">
+	<syntax pattern="relation"/>
+</granule>
+
+<granule concept="color" offers="property">
+	<syntax pattern="(the) color/colour"/>
+</granule>
+
+<granule concept="distance" offers="property">
+	<syntax pattern="(the) distance"/>
+</granule>
+
+<granule concept="walking" offers="action">
+	<syntax pattern="walk"/>
+</granule>
+
+<granule concept="stopping" offers="action">
+	<syntax pattern="stop"/>
+</granule>
+
+<granule concept="asking" offers="dialogue">
+	<dependency id="A1" expected="property"/>
+	<syntax pattern="what is A1"/>
+	<syntax pattern="what' s A1"/>
+</granule>
+
+<!-- Question Chandrakant -->
+
+<declare-feature id="execution"/>
+<declare-feature id="order"/>
+
+<granule concept="sit" offers="order">
+	<syntax pattern="sit (down)"/>
+</granule>
+<granule concept="stand" offers="order">
+	<syntax pattern="stand (up)"/>
+</granule>
+
+<granule concept="ordering" offers="execution">
+	<dependency id="A2" expected="order"/>
+	<syntax pattern="can you (A2)"/>
+</granule>
+
+<granule concept="right" offers="direction">
+	<syntax pattern="(to) (the/your) right"/>
+</granule>
+
+<granule concept="left" offers="direction">
+	<syntax pattern="(to) (the/your) left"/>
+</granule>
+
+<granule concept="turnleft" offers="order">
+	<syntax pattern="turn left"/>
+</granule>
+
+<granule concept="turnright" offers="order">
+	<syntax pattern="turn right"/>
+</granule>
+
+<granule concept="turnaround" offers="order">
+	<syntax pattern="turn around"/>
+</granule>
+
+<granule concept="moveleft" offers="order">
+	<syntax pattern="move/go/come left"/>
+</granule>
+
+<granule concept="moveright" offers="order">
+	<syntax pattern="move/go/come right"/>
+</granule>
+
+<granule concept="forward" offers="order">
+	<syntax pattern="(move/go/come) forward"/>
+</granule>
+
+<granule concept="backward" offers="order">
+	<syntax pattern="move/go/come backward/back/backwards"/>
+</granule>
+
+<granule concept="asknumber" offers="order">
+	<syntax pattern="(a) number (remember)"/>
+</granule>
+
+<granule concept="findwall" offers="order">
+	<syntax pattern="(a) find/search wall"/>
+</granule>
+
+<granule concept="findfirstwall" offers="order">
+	<syntax pattern="find/search (a) first wall"/>
+</granule>
+
+<granule concept="findsecondwall" offers="order">
+	<syntax pattern="find/search (a) second wall"/>
+</granule>
+
+<granule concept="findthirdwall" offers="order">
+	<syntax pattern="find/search (a) third wall"/>
+</granule>
+
+
+

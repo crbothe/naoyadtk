@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE granules SYSTEM "../../../YADTK/COMPILER/granules.dtd" [
+
+<!ENTITY granules-1 SYSTEM "granules-1.xml">
+<!ENTITY granules-2 SYSTEM "granules-2.xml">
+
+]>
+
+<granules>
+	
+<!-- Do not remove the following lines -->
+    
+    <declare-feature id="NONE"/>
+    <declare-feature id="A1"/>
+    <declare-feature id="A2"/>
+    <declare-feature id="A3"/>
+    <declare-feature id="A4"/>
+    <declare-feature id="A5"/>
+    <declare-feature id="A6"/>
+    <declare-feature id="A7"/>
+    <declare-feature id="A8"/>
+    <declare-feature id="A9"/>
+    
+    <declare-metadata id="mode:neg"/>
+    <declare-metadata id="mode:inter"/>
+    <declare-metadata id="morpho:masc"/>
+    <declare-metadata id="morpho:fem"/>
+    <declare-metadata id="morpho:sing"/>
+    <declare-metadata id="morpho:plu"/>
+
+	<!-- User definitions -->
+
+	&granules-1;
+	&granules-2;
+	
+</granules>

@@ -1,0 +1,364 @@
+<!-- ############################################################################ -->
+<!-- ### CONTRAINTES TEMPORELLES                                              ### -->
+<!-- ############################################################################ -->
+
+<declare-feature id="contrainte-temporelle"/>
+
+<declare-feature id="temps-date"/>
+<declare-feature id="temps-duree"/>
+<declare-feature id="temps-periode"/>
+<declare-feature id="temps-axeTps"/>
+<declare-feature id="temps-unite"/>
+<declare-feature id="temps-plageTps"/>
+<declare-feature id="temps-dateRelative"/>
+<declare-feature id="temps-plageRelative"/>
+
+<!-- Granules générés dans module_dates_fr -->
+
+<granule concept="temps-ordinal"/>
+<granule concept="temps-annee"/>
+<granule concept="heure"/>
+<granule concept="minute"/>
+
+<declare-role id="mini"/>
+<declare-role id="maxi"/>
+<declare-role id="date-debut"/>
+<declare-role id="date-fin"/>
+<declare-role id="heure-debut"/>
+<declare-role id="heure-fin"/>
+<declare-role id="nombre-temps"/>
+<declare-role id="rang-temps"/>
+<declare-role id="unite"/>
+<declare-role id="mois"/>
+
+<!-- Les jours de la semaine -->
+
+<group concept="temps-jour">
+	<entity pattern="lundi"/>
+	<entity pattern="mardi"/>
+	<entity pattern="mercredi"/>
+	<entity pattern="jeudi"/>
+	<entity pattern="vendredi"/>
+	<entity pattern="samedi"/>
+	<entity pattern="dimanche"/>
+</group>
+
+<!-- Les mois de l'année -->
+
+<group concept="temps-mois">
+	<entity pattern="janvier" value="1"/>
+	<entity pattern="février" value="2"/>
+	<entity pattern="mars" value="3"/>
+	<entity pattern="avril" value="4"/>
+	<entity pattern="mai" value="5"/>
+	<entity pattern="juin" value="6"/>
+	<entity pattern="juillet" value="7"/>
+	<entity pattern="août" value="8"/>
+	<entity pattern="septembre" value="9"/>
+	<entity pattern="actobre" value="10"/>
+	<entity pattern="novembre" value="11"/>
+	<entity pattern="décembre" value="12"/>
+</group>
+
+<!-- Les horaires -->
+
+<granule concept="temps-heure" offers="contrainte-temporelle">
+	<dependency id="A1" expected="heure"/>
+	<dependency id="A2" expected="minute"/>
+	<syntax pattern="A1 heure" toA1="morpho:sing" gen="TRUE"/>
+	<syntax pattern="A1 heures" toA1="morpho:plu" gen="TRUE"/>
+	<syntax pattern="A1 heure A2" toA1="morpho:sing" gen="TRUE"/>
+	<syntax pattern="A1 heures A2" toA1="morpho:plu" gen="TRUE"/>
+</granule>
+
+<!-- Les dates -->
+
+<!--granule concept="date" offers="temps-date contrainte-temporelle"-->
+
+<granule concept="date">
+	<dependency id="A1" expected="temps-jour"/>
+	<dependency id="A2" expected="temps-ordinal"/>
+	<dependency id="A3" expected="temps-mois"/>
+	<dependency id="A4" expected="temps-annee"/>
+	<syntax pattern="A1" example="dimanche" gen="TRUE"/>
+	<syntax pattern="A1 A2" example="dimanche 25" gen="TRUE"/>
+	<syntax pattern="A1 A2 A3" example="dimanche 25 août" gen="TRUE"/>
+	<syntax pattern="A1 A2 A3 A4" example="dimanche 25 août 2013" gen="TRUE"/>
+	<syntax pattern="A2" example="25" gen="TRUE"/>	
+	<syntax pattern="A2 A3" example="25 août" gen="TRUE"/>
+	<syntax pattern="A2 A3 A4" example="25 août 2013" gen="TRUE"/>
+</granule>
+
+<granule concept="date-rang" offers="date temps-date contrainte-temporelle">
+	<dependency id="A1" expected="rang"/>
+	<dependency id="A2" expected="temps-jour"/>
+	<dependency id="A3" expected="temps-mois"/>
+	<syntax pattern="A1 A2 de A3" example="premier jeudi de janvier" gen="TRUE"/>
+	<syntax pattern="A1 A2 du mois de A3" example="premier jeudi du mois de janvier"/>
+</granule>
+
+<granule concept="date-plage" offers="date temps-date contrainte-temporelle">
+	<dependency id="A1" expected="date"/>
+	<dependency id="A2" expected="temps-plageTps"/>
+	<syntax pattern="A1 A2" example="25 août dans la matinée" gen="TRUE"/>
+	<syntax pattern="A2 de/du A1" example="dans la matinée du 25 août"/>
+</granule>
+
+<!-- Les dates modifiées -->
+
+<granule concept="date-precise" offers="temps-date contrainte-temporelle">
+	<dependency id="A1" expected="date"/>
+	<syntax pattern="(pour) le A1" example="le 25 août" gen="TRUE"/>
+</granule>
+
+<granule concept="date-environ" offers="temps-date contrainte-temporelle">
+	<dependency id="A1" expected="date"/>
+	<syntax pattern="vers le A1" example="vers le 25 août" gen="TRUE"/>
+	<syntax pattern="autour du A1" example="autour du 25 août"/>
+</granule>
+
+<!-- Les heures modifiées -->
+
+<granule concept="heure-precise" offers="contrainte-temporelle">
+	<dependency id="A1" expected="temps-heure"/>
+	<syntax pattern="à A1 (précise+)" example="à quinze heures" gen="TRUE"/>
+</granule>
+
+<granule concept="heure-environ" offers="contrainte-temporelle">
+	<dependency id="A1" expected="temps-heure"/>
+	<syntax pattern="vers A1" example="vers quinze heures" gen="TRUE"/>
+	<syntax pattern="autour de A1" example="autour de quinze heures"/>
+</granule>
+
+<!-- Les durées -->
+
+<granule concept="duree" offers="temps-duree contrainte-temporelle">
+	<dependency id="A1" expected="nombre"/>
+	<dependency id="A2" expected="temps-unite"/>
+	<syntax pattern="A1 A2" example="deux nuits" gen="TRUE"/>
+</granule>
+
+<granule concept="duree-floue" offers="temps-duree contrainte-temporelle">
+	<dependency id="A1" expected="nombre" role="mini"/>
+	<dependency id="A2" expected="nombre" role="maxi"/>
+	<dependency id="A3" expected="temps-unite"/>
+	<syntax pattern="A1 A2 A3" example="deux trois nuits" gen="TRUE"/>
+</granule>
+
+<granule concept="duree-environ" offers="temps-duree contrainte-temporelle">
+	<dependency id="A1" expected="duree"/>
+	<syntax pattern="A1 environ" example="deux nuits environ" gen="TRUE"/>
+	<syntax pattern="à peu près A1"/>
+	<syntax pattern="A1 à peu près"/>
+	<syntax pattern="environ A1"/>
+</granule>
+
+<!-- Les périodes -->
+
+<granule concept="periode-heures" offers="temps-periode contrainte-temporelle">
+	<dependency id="A1" expected="temps-heure" role="heure-debut"/>
+	<dependency id="A2" expected="temps-heure" role="heure-fin"/>
+	<syntax pattern="de A1 à A2" example="de 2 heures à 3 heures" gen="TRUE"/>
+</granule>
+
+<granule concept="periode-dates" offers="temps-periode contrainte-temporelle">
+	<dependency id="A1" expected="date" role="date-debut"/>
+	<dependency id="A2" expected="date" role="date-fin"/>
+	<syntax pattern="du A1 au A2" example="du lundi 12 au vendredi 16" gen="TRUE"/>
+	<syntax pattern="de A1 à A2" example="de lundi à vendredi"/>
+</granule>
+
+<granule concept="periode-semaine-date" offers="temps-periode contrainte-temporelle">
+	<dependency id="A1" expected="date"/>
+	<syntax pattern="la semaine du A1" example="la semaine du 5 novembre" gen="TRUE"/>
+</granule>
+
+<granule concept="periode-mois-plage" offers="temps-periode contrainte-temporelle">
+	<dependency id="A1" expected="temps-plageRelative"/>
+	<dependency id="A2" expected="temps-mois"/>
+	<syntax pattern="mois de A2" example="mois de janvier" gen="TRUE"/>
+	<syntax pattern="A1 A2" example="début mars" gen="TRUE"/>
+	<syntax pattern="A1 du mois de A2" example="début du mois de janvier"/>
+</granule>
+
+<granule concept="periode-mois-rang" offers="temps-periode contrainte-temporelle">
+	<dependency id="A1" expected="nombre" role="nombre-temps"/>
+	<dependency id="A2" expected="rang" role="rang-temps"/>
+	<dependency id="A3" expected="temps-unite" role="unite"/>
+	<dependency id="A4" expected="temps-mois" role="mois"/>
+	<syntax pattern="la/les A1 A2 A3 de A4" example="deux premières semaines de juillet" gen="TRUE"/>
+	<syntax pattern="la/les A2 A3 de A4" example="deuxième quinzaine de juillet" gen="TRUE"/>	
+</granule>
+
+<granule concept="periode-jours:2" offers="temps-periode contrainte-temporelle">
+	<dependency id="A1" expected="temps-ordinal"/>
+	<dependency id="A2" expected="temps-ordinal"/>
+	<dependency id="A3" expected="temps-mois" />
+	<syntax pattern="le A1 et le A2 A3" example="le 15 et le 16 janvier" gen="TRUE"/>
+	<syntax pattern="les A1 (et) A2 A3" example="les 15 et 16 janvier"/>
+</granule>
+
+<granule concept="periode-jours:3" offers="temps-periode contrainte-temporelle">
+	<dependency id="A1" expected="temps-ordinal"/>
+	<dependency id="A2" expected="temps-ordinal"/>
+	<dependency id="A3" expected="temps-ordinal"/>
+	<dependency id="A4" expected="temps-mois" />
+	<syntax pattern="le A1 le A2 et le A3 A4" example="le 15 le 16 et le 17 janvier" gen="TRUE"/>
+	<syntax pattern="les A1 A2 (et) A3 A4" example="les 15 16 et 17 janvier"/>
+</granule>
+
+<!-- Les périodes de vacances -->
+
+<granule concept="temps-jourFerie:noel" offers="temps-periode contrainte-temporelle">
+	<syntax pattern="noël"/>
+	<syntax pattern="(les) vacances de noël" gen="TRUE"/>
+</granule>
+
+<granule concept="temps-jourFerie:paques" offers="temps-periode contrainte-temporelle">
+	<syntax pattern="pâques"/>
+	<syntax pattern="(les) vacances de pâques" gen="TRUE"/>
+</granule>
+
+<granule concept="temps-jourFerie:toussaint" offers="temps-periode contrainte-temporelle">
+	<syntax pattern="toussaint"/>
+	<syntax pattern="(les) vacances de (la) toussaint" gen="TRUE"/>
+</granule>
+
+<!-- Les plages de la journée -->
+
+<granule concept="temps-plageTps:apresMidi">
+	<syntax pattern="après midi"/>
+	<syntax pattern="dans l' après midi" gen="TRUE"/>
+</granule>
+
+<granule concept="temps-plageTps:journee">
+	<syntax pattern="journée"/>
+	<syntax pattern="en journée"/>
+	<syntax pattern="dans la journée" gen="TRUE"/>
+</granule>
+
+<granule concept="temps-plageTps:matin">
+	<syntax pattern="matin/matinée"/>
+	<syntax pattern="au matin"/>
+	<syntax pattern="en matinée"/>
+	<syntax pattern="dans la matinée" gen="TRUE"/>
+</granule>
+
+<granule concept="temps-plageTps:soir">
+	<syntax pattern="soir/soirée"/>
+	<syntax pattern="au soir"/>
+	<syntax pattern="en soirée"/>
+	<syntax pattern="dans la soirée" gen="TRUE"/>
+</granule>
+
+<!-- Les dates relatives -->
+
+<granule concept="temps-dateRelative:aujourdhui" offers="temps-date contrainte-temporelle">
+	<syntax pattern="aujourdhui"/>
+	<syntax pattern="aujourd' hui" gen="TRUE"/>
+</granule>
+
+<granule concept="temps-dateRelative:demain" offers="temps-date contrainte-temporelle">
+	<syntax pattern="demain" gen="TRUE"/>
+</granule>
+
+<granule concept="temps-dateRelative:hier" offers="temps-date contrainte-temporelle">
+	<syntax pattern="hier" gen="TRUE"/>
+</granule>
+
+<granule concept="temps-dateRelative:futur" offers="temps-date contrainte-temporelle">
+	<dependency id="A1" expected="nombre"/>
+	<dependency id="A2" expected="temps-unite" role="unite"/>
+	<syntax pattern="dans A1 A2" gen="TRUE"/>
+</granule>
+
+<granule concept="temps-dateRelative:passe" offers="temps-date contrainte-temporelle">
+	<dependency id="A1" expected="nombre"/>
+	<dependency id="A2" expected="temps-unite" role="unite"/>
+	<syntax pattern="il y a A1 A2" gen="TRUE"/>
+</granule>
+
+<!-- Les plages relatives -->
+
+<granule concept="temps-plageRelative:debut">
+	<syntax pattern="début" gen="TRUE"/>
+</granule>
+
+<granule concept="temps-plageRelative:milieu">
+	<syntax pattern="milieu"/>
+	<syntax pattern="mi" gen="TRUE"/>
+</granule>
+
+<granule concept="temps-plageRelative:fin">
+	<syntax pattern="fin" gen="TRUE"/>
+</granule>
+
+<!-- Les unités du temps -->
+
+<granule concept="temps-unite:heure">
+	<syntax pattern="heure" gen="TRUE" metadata="morpho:masc morpho:sing"/>
+	<syntax pattern="heures" gen="TRUE" metadata="morpho:masc morpho:plu"/>
+</granule>
+
+<granule concept="temps-unite:minute">
+	<syntax pattern="minute" gen="TRUE" metadata="morpho:masc morpho:sing"/>
+	<syntax pattern="minutes" gen="TRUE" metadata="morpho:masc morpho:plu"/>
+</granule>
+
+<granule concept="temps-unite:jour">
+	<syntax pattern="jour" gen="TRUE" metadata="morpho:masc morpho:sing"/>
+	<syntax pattern="jours" gen="TRUE" metadata="morpho:masc morpho:plu"/>
+</granule>
+
+<granule concept="temps-unite:nuit">
+	<syntax pattern="nuit" gen="TRUE" metadata="morpho:fem morpho:sing"/>
+	<syntax pattern="nuits" gen="TRUE" metadata="morpho:fem morpho:plu"/>
+</granule>
+
+<granule concept="temps-unite:semaine">
+	<syntax pattern="semaine" gen="TRUE" metadata="morpho:fem morpho:sing"/>
+	<syntax pattern="semaines" gen="TRUE" metadata="morpho:fem morpho:plu"/>
+</granule>
+
+<granule concept="temps-unite:quinzaine">
+	<syntax pattern="quinzaine" gen="TRUE" metadata="morpho:fem morpho:sing"/>
+	<syntax pattern="quinzaines" gen="TRUE" metadata="morpho:fem morpho:plu"/>
+</granule>
+
+<granule concept="temps-unite:mois">
+	<syntax pattern="mois" gen="TRUE" metadata="morpho:sing"/>
+</granule>
+
+<granule concept="temps-unite:weekend">
+	<syntax pattern="week end" gen="TRUE"/>
+</granule>
+
+<!-- Les axes du temps -->
+
+<granule concept="temps-axe:durant" offers="temps-periode">
+	<dependency id="A1" expected="temps-periode"/>
+	<syntax pattern="durant A1" example="durant les vacances de pâques"/>
+	<syntax pattern="pendant A1" gen="TRUE"/>
+	<syntax pattern="au cours de/d'/des A1"/>
+</granule>
+
+<granule concept="temps-axe::prochain" offers="temps-periode contrainte-temporelle">
+	<dependency id="A1" expected="temps-date"/>
+	<dependency id="A2" expected="temps-unite"/>
+	<syntax pattern="A1 prochain+" example="lundi prochain"/>		
+	<syntax pattern="le/la/les prochain+ A2" example="les prochains jours"/>
+</granule>
+
+<granule concept="temps-axe:suivant" offers="temps-periode contrainte-temporelle">
+	<dependency id="A1" expected="nombre"/>
+	<dependency id="A2" expected="temps-unite"/>
+	<syntax pattern="(le/la/les) A1 A2 suivant+" example="les deux nuits suivantes"/>		
+	<syntax pattern="(le/la/les) A2 suivant+" example="la semaine suivante"/>
+</granule>
+
+<granule concept="temps-axe:precedent" offers="temps-periode contrainte-temporelle">
+	<dependency id="A1" expected="nombre"/>
+	<dependency id="A2" expected="temps-unite"/>
+	<syntax pattern="(le/la/les) A1 A2 précédent+" example="les deux nuits précédentes"/>		
+	<syntax pattern="(le/la/les) A2 précédent+" example="la semaine précédente"/>		
+</granule>

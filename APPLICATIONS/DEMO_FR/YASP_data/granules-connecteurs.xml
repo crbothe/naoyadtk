@@ -1,0 +1,148 @@
+<!-- ############################################################################ -->
+<!-- ### CONNECTEURS & REFERENCES                                             ### -->
+<!-- ############################################################################ -->
+
+<declare-feature id="connecteur"/>
+<declare-feature id="reference"/>
+<declare-feature id="reference:singulier"/>
+<declare-feature id="reference:pluriel"/>
+
+<!-- connectAttr -->
+
+<granule concept="connectAttr:addition2" offers="connecteur" offerexpr="(intersection ?offersA1 ?offersA2)">
+	<dependency id="A1"/>
+	<dependency id="A2"/>
+	<constraint test="(intersectp ?offersA1 ?offersA2)"/>
+	<syntax pattern="A1 et A2" gen="TRUE"/>
+	<syntax pattern="A1 puis A2"/>
+	<syntax pattern="A1 et puis A2"/>
+</granule>
+
+<granule concept="connectAttr:alternative2" offers="connecteur" offerexpr="(intersection ?offersA1 ?offersA2)">
+	<dependency id="A1"/>
+	<dependency id="A2"/>
+	<constraint test="(intersectp ?offersA1 ?offersA2)"/>
+	<syntax pattern="A1 ou A2" gen="TRUE"/>
+	<syntax pattern="A1 soit A2"/>
+	<syntax pattern="soit A1 soit A2"/>
+</granule>
+
+<!-- connectProp -->
+
+<granule concept="connectProp:alternative" offers="connecteur">
+	<syntax pattern="ou" gen="TRUE"/>
+	<syntax pattern="ou alors"/>
+	<syntax pattern="ou bien"/>
+	<syntax pattern="ou bien alors"/>
+</granule>
+
+<granule concept="connectProp:opposition" offers="connecteur">
+	<syntax pattern="mais" gen="TRUE"/>					
+	<syntax pattern="par contre"/>
+	<syntax pattern="en revanche"/>
+</granule>
+
+<granule concept="connectProp:addition" offers="connecteur">
+	<syntax pattern="et" gen="TRUE"/>
+	<syntax pattern="(et) puis"/>
+	<syntax pattern="(et) ensuite"/>
+	<syntax pattern="plus"/>
+	<syntax pattern="également"/>
+	<syntax pattern="ainsi que"/>
+</granule>
+
+<granule concept="connectProp:explique" offers="connecteur">
+	<syntax pattern="car" gen="TRUE"/>
+	<syntax pattern="étant donné (que/qu')"/>
+	<syntax pattern="parce que/qu'"/>
+	<syntax pattern="puisque/puisqu'"/>
+	<syntax pattern="à condition que/qu'"/>
+	<syntax pattern="compte tenu de/que/qu'"/>
+	<syntax pattern="c' est à dire que/qu'"/>
+</granule>
+
+<granule concept="connectProp:implique" offers="connecteur">
+	<syntax pattern="donc" gen="TRUE"/>			
+	<syntax pattern="alors"/>
+	<syntax pattern="si"/>
+	<syntax pattern="par conséquent"/>
+</granule>
+
+<!-- Marqueurs de référence (offres reportées depuis un granule fils) -->
+
+<granule concept="lienRef-coRef:singulier" offers="reference reference:singulier A1">
+	<dependency id="A1" expected="enumerable" role="reference" tag="GN"/>
+	<syntax pattern="le A1" gen="TRUE" metadata="morpho:masc morpho:sing"/>
+	<syntax pattern="la A1" gen="TRUE" metadata="morpho:fem morpho:sing"/>
+	<syntax pattern="l' A1" gen="TRUE" metadata="morpho:voy morpho:sing"/>
+	<syntax pattern="ce/cet/cette A1" example="cette chambre"/>
+	<syntax pattern="celui/celle là/ci" example="celle là"/>
+	<syntax pattern="le/la même A1" example="la même chambre"/>
+</granule>		
+
+<granule concept="lienRef-coRef:pluriel" offers="reference reference:pluriel A2">
+	<dependency id="A1" expected="nombre" role="nombre"/>
+	<dependency id="A2" expected="enumerable" role="reference" tag="GN"/>
+	<syntax pattern="les A2" gen="TRUE" metadata="morpho:plu"/>
+	<syntax pattern="ces A2" example="ces chambres"/>
+	<syntax pattern="les A1 A2" gen="TRUE" metadata="morpho:plu"/>
+	<syntax pattern="ces A1 A2" example="ces deux chambres"/>
+	<syntax pattern="les mêmes A2" example="les mêmes chambres"/>
+	<syntax pattern="ceux/celles là/ci"/>
+</granule>
+
+<granule concept="lienRef-elsEns:singulier" offers="reference reference:singulier A2">
+	<dependency id="A1" expected="rang" role="rang"/>
+	<dependency id="A2" expected="enumerable" role="reference" tag="GN"/>
+	<syntax pattern="(le) A1 (A2)" gen="TRUE" metadata="morpho:masc morpho:sing" example="le premier hôtel"/>
+	<syntax pattern="(la) A1 (A2)" gen="TRUE" metadata="morpho:fem morpho:sing" example="la première chambre"/>
+	<syntax pattern="un des A2" example="une des chambres"/>
+	<syntax pattern="une des A2" example="une des chambres"/>	
+</granule>
+
+<granule concept="lienRef-elsEns:pluriel" offers="reference reference:pluriel A3">
+	<dependency id="A1" expected="nombre" role="nombre"/>
+	<dependency id="A2" expected="rang" role="rang"/>
+	<dependency id="A3" expected="enumerable" role="reference" tag="GN"/>
+	<syntax pattern="les/des A2" example="les premières"/>
+	<syntax pattern="les/des A2 A3" example="les premières chambres"/>
+	<syntax pattern="les/des A1 A2 A3" example="les deux premières chambres"/>
+</granule>
+
+<granule concept="lienRef-coDom:singulier" offers="reference reference:singulier A1">
+	<dependency id="A1" expected="enumerable" role="reference" tag="GN"/>
+	<dependency id="A2" expected="ordre" role="ordre"/>
+	<syntax pattern="autre chose"/>
+	<syntax pattern="un/une/l' autre" example="une autre"/>
+	<syntax pattern="un/une/l' autre A1" example="une autre chambre"/>
+	<syntax pattern="le/la A2" example="la suivante"/>
+	<syntax pattern="le/la A1 A2" example="la chambre suivante"/>
+</granule>
+
+<granule concept="lienRef-coDom:pluriel" offers="reference reference:pluriel A2">
+	<dependency id="A1" expected="nombre" role="nombre"/>
+	<dependency id="A2" expected="enumerable" role="reference" tag="GN"/>
+	<dependency id="A3" expected="ordre" role="ordre"/>
+	<syntax pattern="(les/des) A1 autres" example="les deux autres"/>
+	<syntax pattern="(les/des) A1 autres A2" example="les deux autres chambres"/>
+	<syntax pattern="les/des/d' autres" example="les autres"/>
+	<syntax pattern="les/des/d' autres A2" example="les autres chambres"/>
+	<syntax pattern="les/des A3" example="les suivantes"/>
+	<syntax pattern="les/des A1 A3" example="les deux suivantes"/>
+	<syntax pattern="les/des A2 A3" example="les chambres suivantes"/>
+	<syntax pattern="les/des A1 A2 A3" example="les deux chambres suivantes"/>
+</granule>
+
+<!-- Dépendance ordre des concepts lienRef-coDom -->
+
+<declare-feature id="ordre"/>
+
+<granule concept="ordre:apres" offers="ordre">
+	<syntax pattern="(d') après"/>
+	<syntax pattern="suivant+"/>
+</granule>
+
+<granule concept="ordre:avant" offers="ordre">
+	<syntax pattern="(d') avant"/>
+	<syntax pattern="précédent+"/>
+</granule>

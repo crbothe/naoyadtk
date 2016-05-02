@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exemples>
+
+<structure text="j' aimerais savoir quelle est la superficie de ce pays">
+   <mot pos="1" texte="j'" lemmes="je"/>
+   <mot pos="2" texte="aimerais" lemmes="aimer"/>
+   <mot pos="3" texte="savoir" lemmes="savoir"/>
+   <mot pos="4" texte="quelle" lemmes="quelle"/>
+   <mot pos="5" texte="est" lemmes="être est"/>
+   <mot pos="6" texte="la" lemmes="la"/>
+   <mot pos="7" texte="superficie" lemmes="superficie"/>
+   <mot pos="8" texte="de" lemmes="de"/>
+   <mot pos="9" texte="ce" lemmes="ce"/>
+   <mot pos="10" texte="pays" lemmes="pays"/>
+   <granule id="64" concept="acte:questionner" code="nil" role="nil" offers="acte questionner" retained="" metadata="" text="j' aimerais savoir quelle est la superficie de ce pays" cov="10" pos="1" fin="10" root="TRUE" inferred="FALSE" rescued="FALSE" score="1">
+      <granule id="63" concept="attribution" code="A1" role="nil" offers="questionnable attribution" retained="questionnable" metadata="mode:inter" text="quelle est la superficie de ce pays" cov="7" pos="4" fin="10" root="FALSE" inferred="FALSE" rescued="FALSE" score="7">
+         <granule id="58" concept="attribut:superficie" code="A1" role="nil" offers="attribut superficie" retained="attribut" metadata="" text="la superficie" cov="2" pos="6" fin="7" root="FALSE" inferred="FALSE" rescued="FALSE" score="2"/>
+         <granule id="4" concept="inferred" code="A2" role="nil" offers="objet evenement" retained="" metadata="" text="ce pays" cov="2" pos="9" fin="10" root="FALSE" inferred="TRUE" rescued="FALSE" score=""/>
+      </granule>
+   </granule>
+</structure>
+
+<structure text="j' aimerais savoir si paris est la capitale de la france">
+   <mot pos="1" texte="j'" lemmes="je"/>
+   <mot pos="2" texte="aimerais" lemmes="aimer"/>
+   <mot pos="3" texte="savoir" lemmes="savoir"/>
+   <mot pos="4" texte="si" lemmes="si"/>
+   <mot pos="5" texte="paris" lemmes="pari"/>
+   <mot pos="6" texte="est" lemmes="être est"/>
+   <mot pos="7" texte="la" lemmes="la"/>
+   <mot pos="8" texte="capitale" lemmes="capitale capital"/>
+   <mot pos="9" texte="de" lemmes="de"/>
+   <mot pos="10" texte="la" lemmes="la"/>
+   <mot pos="11" texte="france" lemmes="france"/>
+   <granule id="153" concept="acte:demande-confirmation" code="nil" role="nil" offers="acte demande-confirmation" retained="" metadata="" text="j' aimerais savoir si paris est la capitale de la france" cov="11" pos="1" fin="11" root="TRUE" inferred="FALSE" rescued="FALSE" score="11">
+      <granule id="152" concept="definition" code="A1" role="nil" offers="confirmable definition" retained="confirmable" metadata="" text="paris est la capitale de la france" cov="7" pos="5" fin="11" root="FALSE" inferred="FALSE" rescued="FALSE" score="7">
+         <granule id="109" concept="inferred" code="A1" role="nil" offers="sujet" retained="" metadata="" text="paris" cov="1" pos="5" fin="5" root="FALSE" inferred="TRUE" rescued="FALSE" score=""/>
+         <granule id="151" concept="attribution" code="A2" role="nil" offers="questionnable attribution" retained="attribution" metadata="" text="la capitale de la france" cov="5" pos="7" fin="11" root="FALSE" inferred="FALSE" rescued="FALSE" score="5">
+            <granule id="145" concept="attribut:capitale" code="A1" role="nil" offers="attribut capitale" retained="attribut" metadata="" text="la capitale" cov="2" pos="7" fin="8" root="FALSE" inferred="FALSE" rescued="FALSE" score="2"/>
+            <granule id="80" concept="inferred" code="A2" role="nil" offers="objet evenement" retained="" metadata="" text="la france" cov="2" pos="10" fin="11" root="FALSE" inferred="TRUE" rescued="FALSE" score=""/>
+         </granule>
+      </granule>
+   </granule>
+</structure>
+
+<structure text="je voudrais savoir quand paris a été libérée">
+   <mot pos="1" texte="je" lemmes="je"/>
+   <mot pos="2" texte="voudrais" lemmes="vouloir"/>
+   <mot pos="3" texte="savoir" lemmes="savoir"/>
+   <mot pos="4" texte="quand" lemmes="quand"/>
+   <mot pos="5" texte="paris" lemmes="pari"/>
+   <mot pos="6" texte="a" lemmes="avoir a"/>
+   <mot pos="7" texte="été" lemmes="être été"/>
+   <mot pos="8" texte="libérée" lemmes="libérer libéré"/>
+   <granule id="209" concept="acte:questionner" code="nil" role="nil" offers="acte questionner" retained="" metadata="" text="je voudrais savoir quand paris a été libérée" cov="8" pos="1" fin="8" root="TRUE" inferred="FALSE" rescued="FALSE" score="8">
+      <granule id="208" concept="datation" code="A1" role="nil" offers="questionnable datation" retained="questionnable" metadata="" text="quand paris a été libérée" cov="5" pos="4" fin="8" root="FALSE" inferred="FALSE" rescued="FALSE" score="5">
+         <granule id="193" concept="inferred" code="A1" role="nil" offers="evenement" retained="" metadata="" text="paris a été libérée" cov="4" pos="5" fin="8" root="FALSE" inferred="TRUE" rescued="FALSE" score=""/>
+      </granule>
+   </granule>
+</structure>
+
+<structure text="quelle est la date de libération de paris ?">
+   <mot pos="1" texte="quelle" lemmes="quelle"/>
+   <mot pos="2" texte="est" lemmes="être est"/>
+   <mot pos="3" texte="la" lemmes="la"/>
+   <mot pos="4" texte="date" lemmes="dater date"/>
+   <mot pos="5" texte="de" lemmes="de"/>
+   <mot pos="6" texte="libération" lemmes="libération"/>
+   <mot pos="7" texte="de" lemmes="de"/>
+   <mot pos="8" texte="paris" lemmes="pari"/>
+   <mot pos="9" texte="?" lemmes="?"/>
+   <granule id="267" concept="attribution" code="nil" role="nil" offers="questionnable attribution" retained="" metadata="mode:inter" text="quelle est la date de libération de paris" cov="8" pos="1" fin="8" root="TRUE" inferred="FALSE" rescued="FALSE" score="8">
+      <granule id="265" concept="attribut:date" code="A1" role="nil" offers="attribut date" retained="attribut" metadata="" text="la date" cov="2" pos="3" fin="4" root="FALSE" inferred="FALSE" rescued="FALSE" score="2"/>
+      <granule id="223" concept="inferred" code="A2" role="nil" offers="objet evenement" retained="" metadata="" text="libération de paris" cov="3" pos="6" fin="8" root="FALSE" inferred="TRUE" rescued="FALSE" score=""/>
+   </granule>
+</structure>
+
+<structure text="quelle est la hauteur de la tour eiffel ?">
+   <mot pos="1" texte="quelle" lemmes="quelle"/>
+   <mot pos="2" texte="est" lemmes="être est"/>
+   <mot pos="3" texte="la" lemmes="la"/>
+   <mot pos="4" texte="hauteur" lemmes="hauteur"/>
+   <mot pos="5" texte="de" lemmes="de"/>
+   <mot pos="6" texte="la" lemmes="la"/>
+   <mot pos="7" texte="tour" lemmes="tour"/>
+   <mot pos="8" texte="eiffel" lemmes="?"/>
+   <mot pos="9" texte="?" lemmes="?"/>
+   <granule id="317" concept="attribution" code="nil" role="nil" offers="questionnable attribution" retained="" metadata="mode:inter" text="quelle est la hauteur de la tour" cov="7" pos="1" fin="7" root="TRUE" inferred="FALSE" rescued="FALSE" score="7">
+      <granule id="314" concept="attribut:hauteur" code="A1" role="nil" offers="attribut hauteur" retained="attribut" metadata="" text="la hauteur" cov="2" pos="3" fin="4" root="FALSE" inferred="FALSE" rescued="FALSE" score="2"/>
+      <granule id="276" concept="inferred" code="A2" role="nil" offers="objet evenement" retained="" metadata="" text="la tour" cov="2" pos="6" fin="7" root="FALSE" inferred="TRUE" rescued="FALSE" score=""/>
+   </granule>
+</structure>
+
+<structure text="quelle est l' année de naissance de napoléon bonaparte ?">
+   <mot pos="1" texte="quelle" lemmes="quelle"/>
+   <mot pos="2" texte="est" lemmes="être est"/>
+   <mot pos="3" texte="l'" lemmes="le"/>
+   <mot pos="4" texte="année" lemmes="année"/>
+   <mot pos="5" texte="de" lemmes="de"/>
+   <mot pos="6" texte="naissance" lemmes="naissance"/>
+   <mot pos="7" texte="de" lemmes="de"/>
+   <mot pos="8" texte="napoléon" lemmes="napoléon"/>
+   <mot pos="9" texte="bonaparte" lemmes="?"/>
+   <mot pos="10" texte="?" lemmes="?"/>
+   <granule id="365" concept="attribution" code="nil" role="nil" offers="questionnable attribution" retained="" metadata="mode:inter" text="quelle est l' année de naissance de napoléon" cov="8" pos="1" fin="8" root="TRUE" inferred="FALSE" rescued="FALSE" score="8">
+      <granule id="363" concept="attribut:naissance" code="A1" role="nil" offers="attribut naissance" retained="attribut" metadata="" text="l' année de naissance" cov="4" pos="3" fin="6" root="FALSE" inferred="FALSE" rescued="FALSE" score="4"/>
+      <granule id="323" concept="inferred" code="A2" role="nil" offers="objet evenement" retained="" metadata="" text="napoléon" cov="1" pos="8" fin="8" root="FALSE" inferred="TRUE" rescued="FALSE" score=""/>
+   </granule>
+</structure>
+
+<structure text="savoir quand napoléon est né">
+   <mot pos="1" texte="savoir" lemmes="savoir"/>
+   <mot pos="2" texte="quand" lemmes="quand"/>
+   <mot pos="3" texte="napoléon" lemmes="napoléon"/>
+   <mot pos="4" texte="est" lemmes="être est"/>
+   <mot pos="5" texte="né" lemmes="né naître"/>
+   <granule id="608" concept="acte:questionner" code="nil" role="nil" offers="acte questionner" retained="" metadata="" text="savoir quand napoléon est né" cov="5" pos="1" fin="5" root="TRUE" inferred="FALSE" rescued="FALSE" score="5">
+      <granule id="607" concept="datation" code="A1" role="nil" offers="questionnable datation" retained="questionnable" metadata="" text="quand napoléon est né" cov="4" pos="2" fin="5" root="FALSE" inferred="FALSE" rescued="FALSE" score="4">
+         <granule id="601" concept="inferred" code="A1" role="nil" offers="evenement" retained="" metadata="" text="napoléon est né" cov="3" pos="3" fin="5" root="FALSE" inferred="TRUE" rescued="FALSE" score=""/>
+      </granule>
+   </granule>
+</structure>
+
+<structure text="je voudrais savoir si qui a reçu le dernier prix nobel de la paix">
+   <mot pos="1" texte="je" lemmes="je"/>
+   <mot pos="2" texte="voudrais" lemmes="vouloir"/>
+   <mot pos="3" texte="savoir" lemmes="savoir"/>
+   <mot pos="4" texte="si" lemmes="si"/>
+   <mot pos="5" texte="qui" lemmes="qui"/>
+   <mot pos="6" texte="a" lemmes="avoir a"/>
+   <mot pos="7" texte="reçu" lemmes="reçu recevoir"/>
+   <mot pos="8" texte="le" lemmes="le"/>
+   <mot pos="9" texte="dernier" lemmes="dernier"/>
+   <mot pos="10" texte="prix" lemmes="prix"/>
+   <mot pos="11" texte="nobel" lemmes="?"/>
+   <mot pos="12" texte="de" lemmes="de"/>
+   <mot pos="13" texte="la" lemmes="la"/>
+   <mot pos="14" texte="paix" lemmes="paix"/>
+   <granule id="688" concept="acte:demande-identification" code="nil" role="nil" offers="acte demande-identification" retained="" metadata="" text="je voudrais savoir qui a reçu le dernier prix" cov="9" pos="1" fin="10" root="TRUE" inferred="FALSE" rescued="FALSE" score="7.5">
+      <granule id="643" concept="inferred" code="A1" role="nil" offers="identifiable" retained="" metadata="" text="a reçu le dernier prix" cov="5" pos="6" fin="10" root="FALSE" inferred="TRUE" rescued="FALSE" score=""/>
+   </granule>
+</structure>
+
+</exemples>

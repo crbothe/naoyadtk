@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+# This file is part of the YADTK Toolkit (Yet Another Dialogue Toolkit)
+# Copyright © Jérôme Lehuen 2010-2015 - Jerome.Lehuen@univ-lemans.fr
+#
+# This software is governed by the CeCILL license under French law and
+# abiding by the rules of distribution of free software. You can use,
+# modify and/or redistribute the software under the terms of the CeCILL
+# license as circulated by CEA, CNRS and INRIA (http://www.cecill.info).
+#
+# As a counterpart to the access to the source code and rights to copy,
+# modify and redistribute granted by the license, users are provided only
+# with a limited warranty and the software's author, the holder of the
+# economic rights, and the successive licensors have only limited
+# liability.
+#
+# In this respect, the user's attention is drawn to the risks associated
+# with loading, using, modifying and/or developing or reproducing the
+# software by the user in light of its specific status of free software,
+# that may mean that it is complicated to manipulate, and that also
+# therefore means that it is reserved for developers and experienced
+# professionals having in-depth computer knowledge. Users are therefore
+# encouraged to load and test the software's suitability as regards their
+# requirements in conditions enabling the security of their systems and/or
+# data to be ensured and, more generally, to use and operate it in the
+# same conditions as regards security.
+#
+# The fact that you are presently reading this means that you have had
+# knowledge of the CeCILL license and that you accept its terms.
+##############################################################################
+
+# This free software is registered at the Agence de Protection des Programmes.
+# For further information or commercial purpose, please contact the author.
+-->
+
+<!DOCTYPE configurations SYSTEM "YADTK/COMMON/xml/configurations.dtd">
+
+<configurations>
+	
+	<!-- Examples of configurations for dialogue testing -->
+
+	<config id="demo_yade_fr" knowledge="DEMO_FR">
+		<server-yasp position="500+030" port="12345" trace="TRUE" debug="FALSE" leven="FALSE" tagger="TRUE" lang="fr"/>
+		<server-yage position="500+400" port="12346" trace="TRUE" debug="FALSE"/>
+		<server-yade position="600+100" port="12347" trace="TRUE" debug="FALSE" mirror="FALSE"/>
+		<client-yade position="600+470" script="yadeclient.py" visualization="TRUE">
+			<import module="control" position="30+400"/>
+            <import module="database" base="hotel"/>
+            <import module="expression" face="woman" position="30+50"/>
+			<import module="google_asr" lang="fr-FR"/>
+			<import module="apple_tts" voice="Aurelie"/>
+		</client-yade>
+	</config>
+	
+	<config id="demo_yade_en" knowledge="DEMO_EN">
+		<server-yasp position="500+030" port="12345" trace="TRUE" debug="FALSE" leven="FALSE" tagger="TRUE" lang="en"/>
+		<server-yage position="500+400" port="12346" trace="TRUE" debug="FALSE"/>
+		<server-yade position="600+100" port="12347" trace="TRUE" debug="FALSE" mirror="FALSE"/>
+		<client-yade position="600+470" script="yadeclient.py" visualization="TRUE">
+			<import module="control" position="30+50"/>
+			<import module="keyboard" lang="en-US"/>
+			<import module="mary_tts" voice="Karen"/>
+		</client-yade>
+	</config>
+	
+	<config id="nao" knowledge="DEMO_NAO">
+		<server-yasp position="500+030" port="12345" trace="TRUE" debug="FALSE" leven="FALSE" tagger="TRUE" lang="en"/>
+		<server-yage position="500+400" port="12346" trace="TRUE" debug="FALSE"/>
+		<server-yade position="600+100" port="12347" trace="TRUE" debug="FALSE" mirror="FALSE"/>
+		<client-yade position="600+470" script="yadeclient.py" visualization="TRUE">
+			<import module="control" position="30+50"/>
+			<import module="keyboard" lang="en-US"/>
+			<import module="mary_tts" voice="Karen"/>
+		</client-yade>
+	</config>
+	<!-- Example of configuration for a dialogue with Nao -->
+    
+	<config id="demo_nao" knowledge="DEMO_NAO">
+		<server-yasp position="500+030" port="12345" trace="TRUE" debug="FALSE" leven="FALSE" tagger="TRUE" lang="en"/>
+		<server-yage position="500+400" port="12346" trace="TRUE" debug="FALSE"/>
+		<server-yade position="600+100" port="12347" trace="TRUE" debug="FALSE" mirror="FALSE"/>
+		<client-yade position="600+470" script="yadeclient.py" visualization="FALSE">
+            <import module="naoqi" robot="192.168.104.130:9559"/>
+			<import module="control" position="30+50"/>
+			<import module="keyboard" lang="en-US"/>
+			<import module="nao_output"/>
+		</client-yade>
+	</config>
+    
+	<!-- Examples of configurations for YASPML unitary testing -->
+
+	<config id="demo_yasp_fr" knowledge="DEMO_FR">
+		<server-yasp position="500+030" port="12345" trace="TRUE" debug="FALSE" leven="FALSE" tagger="TRUE" lang="fr"/>
+		<client-yasp position="500+400" script="yaspclient.py" visualization="TRUE">
+			<import module="control" position="30+50"/>
+			<import module="keyboard"/>
+		</client-yasp>
+	</config>
+	
+	<config id="demo_yasp_en" knowledge="DEMO_EN">
+		<server-yasp position="500+030" port="12345" trace="TRUE" debug="FALSE" leven="FALSE" tagger="TRUE" lang="en"/>
+		<client-yasp position="500+400" script="yaspclient.py" visualization="TRUE">
+			<import module="control" position="30+50"/>
+			<import module="keyboard"/>
+		</client-yasp>
+	</config>
+	
+	<config id="demo_yage" knowledge="DEMO_FR">
+		<server-yage position="500+030" port="12345" trace="TRUE" debug="FALSE"/>
+		<client-yage position="500+400" script="yageclient.py"/>
+	</config>
+	
+	<config id="mirror" knowledge="DEMO_FR">
+		<server-yasp position="500+030" port="12345" trace="TRUE" debug="FALSE" leven="FALSE" tagger="TRUE" lang="fr"/>
+		<server-yage position="500+400" port="12346" trace="TRUE" debug="FALSE"/>
+		<server-yade position="600+100" port="12347" trace="TRUE" debug="FALSE" mirror="TRUE"/>
+		<client-yade position="600+470" script="yadeclient.py" visualization="TRUE">
+			<import module="control" position="30+50"/>
+			<import module="apple_tts" voice="Aurelie"/>
+			<import module="keyboard"/>
+		</client-yade>
+	</config>
+	
+	<!-- Example of configuration for batched parsing -->
+	<!-- You can specify an absolute path for the input files -->
+	
+	<config id="demo_batch" knowledge="DEMO_FR">
+		<server-yasp position="500+030" port="12345" trace="TRUE" debug="FALSE" leven="FALSE" tagger="TRUE" lang="fr"/>
+		<client-yasp position="500+400" script="yaspclient_batch.py" input="APPLICATIONS/DEMO_FR/data/corpus_input.txt" pdf="TRUE"/>
+	</config>
+	
+	<!-- Examples of configurations for non-regression testing -->
+	<!-- You can specify an absolute path for the input files -->
+
+	<config id="demo_yasp_nrt" knowledge="DEMO_FR">
+		<server-yasp position="500+030" port="12345" trace="TRUE" debug="FALSE" leven="FALSE" tagger="TRUE" lang="fr"/>
+		<client-yasp position="500+400" script="yaspclient_nrt.py" input="APPLICATIONS/DEMO_FR/data/yasp_nrt.xml"/>
+	</config>
+	
+	<config id="demo_yade_nrt" knowledge="DEMO_FR">
+		<server-yasp position="500+030" port="12345" trace="TRUE" debug="FALSE" leven="FALSE" tagger="TRUE" lang="fr"/>
+		<server-yage position="500+400" port="12346" trace="TRUE" debug="FALSE"/>
+		<server-yade position="600+100" port="12347" trace="TRUE" debug="FALSE" mirror="FALSE"/>
+		<client-yade position="600+470" script="yadeclient_nrt.py" input="APPLICATIONS/DEMO_FR/data/yade_nrt.txt"/>
+	</config>
+	
+</configurations>

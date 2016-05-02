@@ -1,0 +1,61 @@
+<!-- ############################################################################ -->
+<!-- ### ACTES DE LANGAGE                                                     ### -->
+<!-- ############################################################################ -->
+
+<granule concept="acte:demander">
+	<dependency id="A1" expected="demandable"/>
+	<syntax pattern="pourrais je avoir (A1)" gen="TRUE"/>
+	<syntax pattern="je/j' [vouloir]/[désirer]/[chercher]/[rechercher]/[souhaiter]/[aimer] (A1)"/>
+	<syntax pattern="j' aurais voulu (A1)"/>
+	<syntax pattern="il faut/faudrait (A1)"/>
+	<syntax pattern="avez/auriez vous (A1)" metadata="mode:inter"/>
+	<syntax pattern="est ce que vous avez/auriez (A1)" metadata="mode:inter"/>
+	<syntax pattern="pouvez vous me donner/fournir (A1)" metadata="mode:inter"/>
+</granule>
+
+<granule concept="acte:confirmer">	
+	<syntax pattern="oui" gen="TRUE"/>
+	<syntax pattern="ouais" gen="TRUE" metadata="lang:familier"/>
+	<syntax pattern="c' est (bien) cela/ça"/>
+	<syntax pattern="c' est d' accord"/>
+	<syntax pattern="absolument"/>
+	<syntax pattern="entendu"/>
+	<syntax pattern="bien sûr"/>
+	<syntax pattern="effectivement"/>
+	<syntax pattern="exact/exactement"/>
+	<syntax pattern="parfait"/>
+	<syntax pattern="tout à fait"/>
+</granule>
+
+<granule concept="acte:infirmer">
+	<syntax pattern="non" gen="TRUE"/>
+	<syntax pattern="niet" gen="TRUE" metadata="lang:familier"/>
+	<syntax pattern="c' est pas cela/ça"/>
+	<syntax pattern="c' est pas d' accord"/>
+	<syntax pattern="absolument pas"/>
+	<syntax pattern="pas sûr"/>
+	<syntax pattern="pas exact"/>
+	<syntax pattern="pas tout à fait"/>
+</granule>
+
+<granule concept="acte:accepter">
+	<dependency id="A1" expected="demandable"/>
+	<syntax pattern="(très) bien"/>
+	<syntax pattern="d' accord"/>
+	<syntax pattern="d' accord pour A1"/>
+	<syntax pattern="ok pour A1"/>
+	<syntax pattern="cela/ça (me) convient"/>
+	<syntax pattern="A1 (me) convient"/>
+	<syntax pattern="A1 peut convenir"/>
+</granule>
+
+<granule concept="acte:refuser">
+	<dependency id="A1" expected="demandable"/>
+	<syntax pattern="je refuse (A1)"/>
+	<syntax pattern="je ne veux pas (de) (A1)"/>
+	<syntax pattern="cela/ça ne (me) convient pas"/>
+	<syntax pattern="cela/ça ne va pas"/>
+	<syntax pattern="A1 ne (me) convient pas"/>
+	<syntax pattern="A1 ne va pas"/>
+</granule>
+

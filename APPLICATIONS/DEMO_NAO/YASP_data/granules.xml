@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE granules SYSTEM "../../../YADTK/COMPILER/granules.dtd" [
+
+<!ENTITY granules-nao SYSTEM "granules-nao.xml">
+
+]>
+
+<granules>
+	
+	<!-- Do not remove the following lines -->
+
+	<declare-feature id="NONE"/>
+	<declare-feature id="A1"/>
+	<declare-feature id="A2"/>
+	<declare-feature id="A3"/>
+	<declare-feature id="A4"/>
+	<declare-feature id="A5"/>
+	<declare-feature id="A6"/>
+	<declare-feature id="A7"/>
+	<declare-feature id="A8"/>
+	<declare-feature id="A9"/>
+
+	<!-- User definitions -->
+
+	&granules-nao;
+		
+</granules>

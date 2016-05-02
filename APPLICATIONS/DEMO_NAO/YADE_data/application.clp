@@ -1,0 +1,11 @@
+
+; Write here the user-functions:
+
+(deffunction MAIN::get-color ()) ;; Function defined in the file application.py
+
+(deffunction MAIN::get-relatedWord ()) ;; Function defined in the file application.py
+
+(deffunction MAIN::get-distance ()
+	(return "15 inches"))
+
+

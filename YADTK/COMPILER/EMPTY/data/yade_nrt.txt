@@ -1,0 +1,11 @@
+
+// Write here the dialogue tests examples using the following syntax:
+
+USER: reset
+YADE: Hi, what can I do for you ?
+USER: hello
+YADE: hello world
+
+USER: reset
+YADE: Hi, what can I do for you ?
+

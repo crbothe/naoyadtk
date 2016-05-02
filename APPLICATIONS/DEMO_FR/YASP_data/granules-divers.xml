@@ -1,0 +1,122 @@
+<!-- ############################################################################ -->
+<!-- ### GRANULES DIVERS                                                      ### -->
+<!-- ############################################################################ -->
+
+<!-- Accords en genre et en nombre -->
+
+<granule concept="billet" offers="demandable enumerable">
+	<dependency id="A1" expected="nombre"/>
+	<dependency id="A2" expected="ville" role="depart"/>
+	<dependency id="A3" expected="ville lieu" role="destination"/>
+	<syntax pattern="(A1) billet" metadata="morpho:masc morpho:sing" gen="TRUE"/>
+	<syntax pattern="(A1) billet A2 A3" metadata="morpho:masc morpho:sing" gen="TRUE"/>
+	<syntax pattern="(A1) billet pour A3" metadata="morpho:masc morpho:sing" gen="TRUE"/>
+	<syntax pattern="(A1) billet à destination de A3" metadata="morpho:masc morpho:sing"/>
+	<syntax pattern="(A1) billets" metadata="morpho:masc morpho:plu" gen="TRUE"/>
+	<syntax pattern="(A1) billets A2 A3" metadata="morpho:masc morpho:plu" gen="TRUE"/>
+	<syntax pattern="(A1) billets pour A3" metadata="morpho:masc morpho:plu" gen="TRUE"/>
+	<syntax pattern="(A1) billets à destination de A3" metadata="morpho:masc morpho:plu"/>
+	<syntax pattern="A1 A2 A3"/>
+</granule>
+
+<!-- Quantités particulières -->
+
+<granule concept="nombreNonDigit:quelques" offers="nombre">
+	<syntax pattern="quelques" gen="TRUE" metadata="morpho:plu"/>
+</granule>
+
+<granule concept="nombreNonDigit:plusieurs" offers="nombre">
+	<syntax pattern="des" gen="TRUE" metadata="morpho:plu"/>
+	<syntax pattern="un certain nombre de/d'"/>
+	<syntax pattern="plusieurs"/>
+</granule>
+
+<!-- Granules de politesse -->
+
+<declare-feature id="politesse"/>
+
+<granule concept="ouverture" offers="politesse">
+	<syntax pattern="bonjour" gen="TRUE"/>
+	<syntax pattern="salut" gen="TRUE" metadata="lang:familier"/>
+	<syntax pattern="hello/hi" metadata="lang:en"/>
+</granule>
+
+<granule concept="cloture" offers="politesse">
+	<syntax pattern="au revoir" gen="TRUE"/>
+	<syntax pattern="aurevoir"/>
+	<syntax pattern="bye (bye)" metadata="lang:en"/>
+</granule>
+
+<granule concept="svp" offers="politesse">
+	<syntax pattern="s' il vous plaît" gen="TRUE"/>
+	<syntax pattern="svp"/>
+</granule>
+
+<granule concept="remerciement" offers="politesse">
+	<syntax pattern="merci" gen="TRUE"/>
+	<syntax pattern="merci bien/beaucoup"/>
+	<syntax pattern="je te/vous remercie (beaucoup)"/>
+</granule>
+
+<!-- Pour associer une contrainte temporelle et une contrainte de localisation -->
+
+<granule concept="date-localisation" offers="contrainte-temporelle contrainte-localisation">
+	<dependency id="A1" expected="contrainte-temporelle" rejected="date-localisation connecteur"/>
+	<dependency id="A2" expected="contrainte-localisation" rejected="date-localisation connecteur"/>
+	<syntax pattern="A1 A2" example="du 2 au 3 janvier à marseille" gen="TRUE"/>
+	<syntax pattern="A2 A1"/>
+</granule>
+
+<!-- Exemple de résolution des ambiguïtés lexicales -->
+
+<declare-feature id="qualifieur-comestible"/>
+<declare-feature id="qualifieur-personne"/>
+
+<granule concept="fruit:avocat" offers="demandable enumerable">
+	<dependency id="A1" expected="nombre"/>
+	<dependency id="A2" expected="qualifieur-comestible"/>
+	<syntax pattern="(A1) avocat(s) (A2)"/>
+</granule>
+
+<granule concept="personne:avocat" offers="demandable enumerable">
+	<dependency id="A1" expected="nombre"/>
+	<dependency id="A2" expected="qualifieur-personne"/>
+	<syntax pattern="(A1) avocat(s) (A2)"/>
+</granule>
+
+<granule concept="mur" offers="qualifieur-comestible">
+	<syntax pattern="(bien) mûr"/>
+</granule>
+
+<granule concept="competent" offers="qualifieur-personne">
+	<syntax pattern="(très) compétent"/>
+</granule>
+
+<!-- Exemple de production de granules hypothétiques -->
+
+<declare-feature id="texte"/>
+<declare-feature id="objet"/>
+<declare-feature id="rangement"/>
+
+<granule concept="festival" offers="evenement">
+	<dependency id="A1" expected="texte" tag="GN"/>
+	<syntax pattern="(le) festival (A1)"/>
+</granule>
+
+<granule concept="action:ranger">
+	<dependency id="A1" expected="objet" tag="GN"/>
+	<dependency id="A2" expected="rangement" tag="GN"/>
+	<syntax pattern="ranger A1 dans A2"/>
+</granule>
+
+<granule concept="frigo" offers="rangement">
+	<syntax pattern="le frigo"/>
+</granule>
+
+<!-- Test du report -->
+
+<granule concept="test-report" offers="A1">
+	<dependency id="A1"/>
+	<syntax pattern="report A1"/>
+</granule>
+

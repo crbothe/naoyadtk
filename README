@@ -1,0 +1,59 @@
+ ##############################################################################
+# This file is part of the YADTK Toolkit (Yet Another Dialogue Toolkit)
+# Copyright © Jérôme Lehuen 2010-2015 - Jerome.Lehuen@univ-lemans.fr
+#
+# This software is governed by the CeCILL license under French law and
+# abiding by the rules of distribution of free software. You can use,
+# modify and/or redistribute the software under the terms of the CeCILL
+# license as circulated by CEA, CNRS and INRIA (http://www.cecill.info).
+#
+# As a counterpart to the access to the source code and rights to copy,
+# modify and redistribute granted by the license, users are provided only
+# with a limited warranty and the software's author, the holder of the
+# economic rights, and the successive licensors have only limited
+# liability.
+#
+# In this respect, the user's attention is drawn to the risks associated
+# with loading, using, modifying and/or developing or reproducing the
+# software by the user in light of its specific status of free software,
+# that may mean that it is complicated to manipulate, and that also
+# therefore means that it is reserved for developers and experienced
+# professionals having in-depth computer knowledge. Users are therefore
+# encouraged to load and test the software's suitability as regards their
+# requirements in conditions enabling the security of their systems and/or
+# data to be ensured and, more generally, to use and operate it in the
+# same conditions as regards security.
+#
+# The fact that you are presently reading this means that you have had
+# knowledge of the CeCILL license and that you accept its terms.
+##############################################################################
+
+# This free software is registered at the Agence de Protection des Programmes.
+# For further information or commercial purpose, please contact the author.
+
+YADTK is an open-source toolkit to develop rule-based spoken dialogue systems.
+
+Its documentation is available at http://www-lium.univ-lemans.fr/~lehuen/yadtk/
+
+Here are the main scripts you will need to use:
+
+- The script install-macos.bash installs YADTK on MacOS platforms. It not
+  requires any Internet connection.
+
+- The script install-ubuntu.bash installs YADTK on Ubuntu platforms. It requires
+  an Internet connection. You can configure a proxy at the beginning of the script.
+
+- The script newapp.bash <application> allows you to create a new application.
+  It creates data folders that contains a new basic knowledge. Use this script
+  only if you want to create a new application.
+
+- The script compiler.bash <application> compiles and deploys an existing
+  knowledge into the target data folders. You must launch this script at least
+  once and after any change on a knowledge file.
+
+- The script run.bash configurations.xml <ident> launches the YADTK
+  configuration which is identified by <ident> in the configuration file.
+  You can edit this file in order to specify your own configurations.
+
+- The script graphmaker.bash <application> [<concept>] [<depth>] builds a
+  graphical representation of a YASPML knowledge, using the Graphviz toolkit.

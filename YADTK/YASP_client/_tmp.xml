@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<stats>
+<parse words="1" granules="1" roots="1" leaves="1" links="0" cov="1" cov-rate="100" cons-rate="100" granularity="1"/>
+<parse words="1" granules="1" roots="1" leaves="1" links="0" cov="1" cov-rate="100" cons-rate="100" granularity="1"/>
+<parse words="3" granules="1" roots="1" leaves="1" links="0" cov="3" cov-rate="100" cons-rate="100" granularity="0.333333333333333"/>
+<parse words="5" granules="3" roots="1" leaves="1" links="2" cov="5" cov-rate="100" cons-rate="100" granularity="0.6"/>
+<parse words="8" granules="4" roots="1" leaves="2" links="3" cov="5" cov-rate="62.5" cons-rate="100" granularity="0.5"/>
+<parse words="11" granules="6" roots="1" leaves="3" links="5" cov="5" cov-rate="45.4545454545455" cons-rate="100" granularity="0.545454545454545"/>
+<parse words="8" granules="5" roots="1" leaves="2" links="4" cov="5" cov-rate="62.5" cons-rate="100" granularity="0.625"/>
+<parse words="13" granules="10" roots="1" leaves="4" links="9" cov="5" cov-rate="38.4615384615385" cons-rate="100" granularity="0.769230769230769"/>
+<parse words="11" granules="10" roots="1" leaves="5" links="9" cov="5" cov-rate="45.4545454545455" cons-rate="100" granularity="0.909090909090909"/>
+<parse words="13" granules="12" roots="1" leaves="6" links="11" cov="5" cov-rate="38.4615384615385" cons-rate="100" granularity="0.923076923076923"/>
+<parse words="20" granules="18" roots="1" leaves="9" links="17" cov="5" cov-rate="25" cons-rate="100" granularity="0.9"/>
+<parse words="28" granules="25" roots="1" leaves="12" links="24" cov="5" cov-rate="17.8571428571429" cons-rate="100" granularity="0.892857142857143"/>
+<parse words="34" granules="28" roots="1" leaves="14" links="27" cov="5" cov-rate="14.7058823529412" cons-rate="100" granularity="0.823529411764706"/>
+<parse words="4" granules="3" roots="1" leaves="1" links="2" cov="4" cov-rate="100" cons-rate="100" granularity="0.75"/>
+<parse words="6" granules="3" roots="1" leaves="1" links="2" cov="6" cov-rate="100" cons-rate="100" granularity="0.5"/>
+</stats>

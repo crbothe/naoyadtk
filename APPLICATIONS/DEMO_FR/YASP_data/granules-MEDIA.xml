@@ -1,0 +1,548 @@
+<!-- ############################################################################ -->
+<!-- ### GRANULES MEDIA                                                       ### -->
+<!-- ############################################################################ -->
+
+<declare-feature id="reservable"/>
+
+<granule concept="MEDIA:chambre" offers="demandable reservable enumerable">
+	<dependency id="A1" expected="nombre"/>
+	<dependency id="A2" expected="contrainte-chambre contrainte-sejour contrainte-localisation contrainte-temporelle contrainte-tarif" mult="TRUE"/>
+	<syntax pattern="(A1) chambre (A2)" gen="TRUE" metadata="morpho:fem morpho:sing"/>
+	<syntax pattern="(A1) chambres (A2)" gen="TRUE" metadata="morpho:fem morpho:plu"/>
+	<syntax pattern="(A1) piaule (A2)" gen="TRUE" metadata="morpho:fem morpho:sing lang:argotique"/>
+	<syntax pattern="(A1) piaules (A2)" gen="TRUE" metadata="morpho:fem morpho:plu lang:argotique"/>
+</granule>
+
+<granule concept="MEDIA:hotel" offers="demandable reservable enumerable">
+	<dependency id="A1" expected="nombre"/>
+	<dependency id="A2" expected="hotel-marque"/>
+	<dependency id="A3" expected="contrainte-hotel contrainte-sejour contrainte-localisation contrainte-temporelle contrainte-tarif" mult="TRUE"/>
+	<syntax pattern="A1 hôtel (A3)" metadata="morpho:masc morpho:sing" gen="TRUE"/>
+	<syntax pattern="hôtel(s)"/>
+	<syntax pattern="hôtel(s) A2"/>
+	<syntax pattern="A1 (hôtel(s)) A2" example="un Ibis"/>	
+	<syntax pattern="A2"/>	
+</granule>
+
+<granule concept="MEDIA:reservation" offers="demandable enumerable">
+	<dependency id="A1" expected="nombre"/>
+	<dependency id="A2" expected="reservable"/>
+	<dependency id="A3" expected="contrainte-sejour contrainte-localisation contrainte-temporelle date-localisation" mult="TRUE"/>
+	<syntax pattern="A1 réservation(s)"/>
+	<syntax pattern="A1 réservation(s) pour A2"/>
+	<syntax pattern="réserver"/>
+	<syntax pattern="réserver (pour) A2"/>
+</granule>
+
+<!-- ############################################################################ -->
+<!-- ### CONTRAINTES / CHAMBRE                                                ### -->
+<!-- ############################################################################ -->
+
+<declare-feature id="contrainte-chambre"/>
+
+<granule concept="chambre-type:simple" offers="contrainte-chambre">
+	<syntax pattern="simple" gen="TRUE" metadata="morpho:sing"/>
+	<syntax pattern="simples" gen="TRUE" metadata="morpho:plu"/>
+	<syntax pattern="single(s)"/>
+	<syntax pattern="individuelle(s)"/>
+	<syntax pattern="(avec) un lit simple"/>
+	<syntax pattern="pour une personne"/>
+</granule>
+
+<granule concept="chambre-type:double" offers="contrainte-chambre">
+	<syntax pattern="double" gen="TRUE" metadata="morpho:sing"/>
+	<syntax pattern="doubles" gen="TRUE" metadata="morpho:plu"/>
+	<syntax pattern="(avec) un grand lit"/>
+	<syntax pattern="(avec) un lit double"/>
+</granule>
+
+<granule concept="chambre-fumeur:non" offers="contrainte-chambre">
+	<syntax pattern="non fumeur(s)"/>
+</granule>
+
+<granule concept="chambre-fumeur:oui" offers="contrainte-chambre">
+	<syntax pattern="fumeur(s)"/>
+	<syntax pattern="fumeurs autorisé" gen="TRUE"/>
+</granule>
+
+<granule concept="chambre-equipement:TVSatelliteCable" offers="contrainte-chambre">
+	<syntax pattern="(avec) la/une télé/télévision"/>
+	<syntax pattern="pas de/la télé/télévision" metadata="mode:neg"/>
+	<syntax pattern="sans (la) télé/télévision" metadata="mode:neg"/>
+</granule>
+
+<granule concept="chambre-equipement:bain" offers="contrainte-chambre">
+	<syntax pattern="(avec) baignoire"/>
+</granule>
+
+<granule concept="chambre-equipement:douche" offers="contrainte-chambre">
+	<syntax pattern="(avec) douche"/>
+</granule>
+
+<granule concept="chambre-equipement:salleDeBain" offers="contrainte-chambre">
+	<syntax pattern="avec salle de bain" gen="TRUE"/>
+	<syntax pattern="(avec) (une) salle(s) de bain(s)"/>
+</granule>
+
+<granule concept="chambre-equipement:climatisation" offers="contrainte-chambre">
+	<syntax pattern="(avec) la/une climatisation"/>
+	<syntax pattern="(avec) l' air conditionné"/>			
+	<syntax pattern="climatisé+"/>
+	<syntax pattern="pas de/la climatisation" metadata="mode:neg"/>
+	<syntax pattern="pas l' air conditionné" metadata="mode:neg"/>
+	<syntax pattern="sans (la) climatisation" metadata="mode:neg"/>
+	<syntax pattern="sans l' air conditionné" metadata="mode:neg"/>
+	<syntax pattern="pas climatisé+" metadata="mode:neg"/>
+</granule>
+
+<granule concept="chambre-equipement:telephone" offers="contrainte-chambre">
+	<syntax pattern="(avec) le/un téléphone"/>
+	<syntax pattern="pas de/le téléphone" metadata="mode:neg"/>
+	<syntax pattern="sans (le) téléphone" metadata="mode:neg"/>
+</granule>
+
+<granule concept="chambre-equipement:ligneHautDebit" offers="contrainte-chambre">
+	<syntax pattern="(avec) (l') internet"/>
+	<syntax pattern="(avec) (le) wifi"/>
+	<syntax pattern="(avec) (une) connexion internet/wifi"/>
+	<syntax pattern="(avec) (un) accès internet/wifi"/>
+</granule>
+
+<granule concept="chambre-standing:bon" offers="contrainte-chambre">
+	<syntax pattern="de standing"/>
+	<syntax pattern="(de) bon standing"/>
+</granule>
+
+<granule concept="chambre-standing:tresBon" offers="contrainte-chambre">
+	<syntax pattern="(de) (très) grand standing"/>
+	<syntax pattern="haut de gamme"/>
+</granule>
+
+<granule concept="chambre-voisine:oui" offers="contrainte-chambre">
+	<syntax pattern="(chambres) voisine(s)"/>
+	<syntax pattern="(sur) même étage"/>
+	<syntax pattern="(sur) même palier"/>
+	<syntax pattern="l' une à côté de l' autre"/>
+</granule>
+
+<!-- ############################################################################ -->
+<!-- ### CONTRAINTES / HOTEL                                                  ### -->
+<!-- ############################################################################ -->
+
+<declare-feature id="hotel-marque"/>
+<declare-feature id="contrainte-hotel"/>
+
+<granule concept="hotel-marque:Campanile" offers="hotel-marque">
+	<syntax pattern="Campanile"/>
+</granule>
+
+<granule concept="hotel-marque:EtapHotel" offers="hotel-marque">
+	<syntax pattern="EtapHôtel"/>
+	<syntax pattern="Etap Hôtel"/>
+</granule>
+
+<granule concept="hotel-marque:Formule1" offers="hotel-marque">
+	<syntax pattern="Formule1"/>
+	<syntax pattern="Formule 1"/>
+</granule>
+
+<granule concept="hotel-marque:HolidayInn" offers="hotel-marque">
+	<syntax pattern="HolidayInn"/>
+	<syntax pattern="Holiday Inn"/>
+</granule>
+
+<granule concept="hotel-marque:Ibis" offers="hotel-marque">
+	<syntax pattern="Ibis"/>
+</granule>
+
+<granule concept="hotel-marque:Mercure" offers="hotel-marque">
+	<syntax pattern="Mercure"/>
+</granule>
+
+<granule concept="hotel-marque:Meridien" offers="hotel-marque">
+	<syntax pattern="Méridien"/>
+</granule>
+
+<granule concept="hotel-marque:Novotel" offers="hotel-marque">
+	<syntax pattern="Novotel"/>
+</granule>
+
+<granule concept="hotel-marque:Sofitel" offers="hotel-marque">
+	<syntax pattern="Sofitel"/>
+</granule>
+
+<granule concept="hotel-etoile:1etoile" offers="contrainte-hotel">
+	<syntax pattern="1/une étoile"/>
+</granule>
+
+<granule concept="hotel-etoile:2etoile" offers="contrainte-hotel">
+	<syntax pattern="2/deux étoiles"/>
+</granule>
+
+<granule concept="hotel-etoile:3etoile" offers="contrainte-hotel">
+	<syntax pattern="3/trois étoiles"/>
+</granule>
+
+<granule concept="hotel-etoile:4etoile" offers="contrainte-hotel">
+	<syntax pattern="4/quatre étoiles"/>
+</granule>
+
+<granule concept="hotel-etoile:luxe" offers="contrainte-hotel">
+	<syntax pattern="luxueux"/>
+	<syntax pattern="de luxe"/>
+</granule>
+
+<granule concept="nom-hotel" offers="contrainte-hotel">
+	<syntax pattern="quel hôtel" metadata="mode:inter"/>
+	<syntax pattern="hôtel comment" metadata="mode:inter"/>
+	<syntax pattern="hôtel s' appelle" metadata="mode:inter"/>
+	<syntax pattern="hôtel s' appelle comment" metadata="mode:inter"/>
+	<syntax pattern="comment s' appelle l' hôtel" metadata="mode:inter"/>
+</granule>
+
+<granule concept="hotel-services:accessibilite" offers="contrainte-hotel">
+	<syntax pattern="(avec) (un) accès handicapé(s)"/>
+	<syntax pattern="pour un/une/des/les handicapé+"/>
+	<syntax pattern="je suis handicapé(e)"/>
+</granule>
+
+<granule concept="hotel-services:breakfast" offers="contrainte-hotel">
+	<syntax pattern="le/les petit(s) déjeuner(s)"/>
+</granule>
+
+<granule concept="hotel-services:breakfastInclude" offers="contrainte-hotel">
+	<syntax pattern="(avec) petit(s) déjeuner(s) compris/inclus"/>
+	<syntax pattern="le/les petit(s) déjeuner(s) est/sont il(s) compris/inclus" metadata="mode:inter"/>
+</granule>
+
+<granule concept="hotel-services:climatisation" offers="contrainte-hotel"> 
+	<syntax pattern="(avec) la/une climatisation"/>
+	<syntax pattern="(avec) l' air conditionné"/>			
+	<syntax pattern="climatisé+"/>
+	<syntax pattern="pas de/la climatisation" metadata="mode:neg"/>
+	<syntax pattern="pas l' air conditionné" metadata="mode:neg"/>
+	<syntax pattern="sans (la) climatisation" metadata="mode:neg"/>
+	<syntax pattern="sans l' air conditionné" metadata="mode:neg"/>
+	<syntax pattern="pas climatisé+" metadata="mode:neg"/>
+</granule>
+
+<granule concept="hotel-services:jacuzzi" offers="contrainte-hotel">
+	<syntax pattern="(avec) (un) jacuzzi"/>
+	<syntax pattern="il y a (un) jacuzzi"/>
+	<syntax pattern="sans jacuzzi" metadata="mode:neg"/>
+	<syntax pattern="pas de jacuzzi" metadata="mode:neg"/>
+</granule>
+
+<granule concept="hotel-services:sauna" offers="contrainte-hotel">
+	<syntax pattern="(avec) (un) sauna"/>
+	<syntax pattern="pas de sauna" metadata="mode:neg"/>
+</granule>
+
+<granule concept="hotel-services:piscine" offers="contrainte-hotel">
+	<syntax pattern="(avec) (une) piscine"/>
+	<syntax pattern="sans piscine" metadata="mode:neg"/>
+	<syntax pattern="pas de piscine" metadata="mode:neg"/>
+</granule>
+
+<granule concept="hotel-services:piscineCouverte" offers="contrainte-hotel">
+	<syntax pattern="(avec) (une) piscine couverte"/>
+	<syntax pattern="pas de piscine couverte" metadata="mode:neg"/>
+</granule>
+
+<granule concept="hotel-services:salleMusculation" offers="contrainte-hotel">
+	<syntax pattern="(avec) (une) salle(s) de sport/gym/fitness/muscu+"/>
+	<syntax pattern="pas de salle de sport/gym/fitness/muscu+" metadata="mode:neg"/>
+</granule>
+
+<granule concept="hotel-services:tennis" offers="contrainte-hotel">
+	<syntax pattern="(avec) (un/des) tennis"/>
+	<syntax pattern="(avec) (un/des) terrain(s)/court(s) de tennis"/>
+	<syntax pattern="jouer au tennis"/>
+	<syntax pattern="pas de tennis" metadata="mode:neg"/>
+</granule>
+
+<granule concept="hotel-services:restaurant" offers="contrainte-hotel">
+	<syntax pattern="(avec) (un) restau+"/>
+	<syntax pattern="(avec) (une) salle de restau+"/>
+	<syntax pattern="sans restau+" metadata="mode:neg"/>
+	<syntax pattern="pas de restau+" metadata="mode:neg"/>
+</granule>
+
+<granule concept="hotel-services:parking" offers="contrainte-hotel">
+	<syntax pattern="(avec) une place pour ma voiture"/>
+	<syntax pattern="(avec) une place de parking"/>
+	<syntax pattern="(avec) (un) parking"/>
+	<syntax pattern="garer ma voiture"/>
+	<syntax pattern="pas de parking" metadata="mode:neg"/>
+</granule>
+
+<granule concept="hotel-services:salleReunion" offers="contrainte-hotel">
+	<syntax pattern="(avec) (une/des) salle(s) de réunion(s)/conférence(s)/séminaire(s)"/>
+	<syntax pattern="pas de salle(s) de réunion(s)/conférence(s)/séminaire(s)" metadata="mode:neg"/>
+</granule>
+
+<granule concept="hotel-services:animation" offers="contrainte-hotel">
+	<syntax pattern="(avec) (des) animations/jeux"/>		
+</granule>
+
+<granule concept="hotel-services:animaux" offers="contrainte-hotel">
+	<dependency id="A1" expected="_animal"/>
+	<syntax pattern="les A1 sont admis/autorisés"/>
+	<syntax pattern="ils acceptent les A1"/>
+	<syntax pattern="est ce que les A1 sont admis/autorisés" metadata="mode:inter"/>
+	<syntax pattern="les A1 sont ils admis/autorisés" metadata="mode:inter"/>
+	<syntax pattern="mon A1 est il admis/autorisé" metadata="mode:inter"/>
+</granule>
+
+<declare-feature id="_animal"/>
+
+<granule offers="_animal">
+	<syntax pattern="animal/animaux"/>
+	<syntax pattern="chien(s)"/>
+	<syntax pattern="chat(s)"/>
+	<syntax pattern="chaton(s)"/>
+	<syntax pattern="serpent(s)"/>
+</granule>
+
+<!-- ############################################################################ -->
+<!-- ### CONTRAINTES / SEJOUR                                                 ### -->
+<!-- ############################################################################ -->
+
+<declare-feature id="contrainte-sejour"/>
+
+<granule concept="sejour-nbPersonne" offers="contrainte-sejour">
+	<dependency id="A1" expected="nombre"/>
+	<syntax pattern="(pour) A1 personne(s)"/>
+</granule>
+
+<granule concept="sejour-nbAdulte" offers="contrainte-sejour">
+	<dependency id="A1" expected="nombre"/>
+	<syntax pattern="(pour) A1 adulte(s)"/>
+</granule>
+
+<granule concept="sejour-nbCouple" offers="contrainte-sejour">
+	<dependency id="A1" expected="nombre"/>
+	<dependency id="A2" expected="nombre"/>
+	<syntax pattern="(pour) A1 couple(s)"/>
+</granule>
+
+<granule concept="sejour-nbEnfant" offers="contrainte-sejour">
+	<dependency id="A1" expected="nombre"/>
+	<syntax pattern="A1 enfant(s)"/>					
+	<syntax pattern="A1 bébé(s)"/>
+</granule>
+
+<granule concept="sejour-nbEnfant:1" offers="contrainte-sejour">
+	<syntax pattern="notre enfant/bébé"/>				
+	<syntax pattern="avec enfant/bébé"/>				
+</granule>
+	
+<granule concept="sejour-nbEnfant:0" offers="contrainte-sejour">
+	<syntax pattern="sans/aucun/zéro enfant(s)"/>
+	<syntax pattern="pas d' enfant(s)"/>
+</granule>
+
+<granule concept="sejour-nbLitBebe" offers="contrainte-sejour">
+	<dependency id="A1" expected="nombre"/>
+	<syntax pattern="A1 lit(s) bébé(s)"/>
+</granule>
+
+<!-- ############################################################################ -->
+<!-- ### CONTRAINTES / TARIF                                                  ### -->
+<!-- ############################################################################ -->
+
+<declare-feature id="montant"/>
+<declare-feature id="contrainte-tarif"/>
+
+<granule concept="montant:euros">
+	<dependency id="A1" expected="nombre" role="montant"/>
+	<syntax pattern="A1 euro(s)"/>
+</granule>
+
+<granule concept="montant:dollard">
+	<dependency id="A1" expected="nombre" role="montant"/>
+	<syntax pattern="A1 dollard(s)"/>
+</granule>
+
+<granule concept="comparatif-montant:environ" offers="contrainte-tarif">
+	<dependency id="A1" expected="montant"/>
+	<syntax pattern="A1 environ"/>
+	<syntax pattern="A1 à peu près"/>
+	<syntax pattern="A1 plus ou moins"/>
+	<syntax pattern="A1 approximativement"/>
+	<syntax pattern="environ A1"/>
+	<syntax pattern="à peu près A1"/>
+	<syntax pattern="plus ou moins A1"/>
+	<syntax pattern="approximativement A1"/>
+	<syntax pattern="dans les A1"/>
+	<syntax pattern="prix moyen de A1"/>
+</granule>
+
+<granule concept="comparatif-montant:superieur" offers="contrainte-tarif">
+	<dependency id="A1" expected="montant"/>
+	<syntax pattern="supérieur à A1"/>		
+	<syntax pattern="A1 ou plus"/>	
+	<syntax pattern="plus de A1"/>
+	<syntax pattern="pas moins de A1"/>
+	<syntax pattern="au dessus de A1"/>
+	<syntax pattern="minimum A1"/>
+	<syntax pattern="A1 minimum"/>
+</granule>
+
+<granule concept="comparatif-montant:inferieur" offers="contrainte-tarif">
+	<dependency id="A1" expected="montant"/>
+	<syntax pattern="inférieur à A1"/>			
+	<syntax pattern="moins de A1"/>
+	<syntax pattern="A1 ou moins"/>
+	<syntax pattern="pas plus de A1"/>
+	<syntax pattern="en dessous de A1"/>
+	<syntax pattern="maximum A1"/>
+	<syntax pattern="A1 maximum"/>
+	<syntax pattern="ne pas dépasser A1"/>
+</granule>
+
+<granule concept="comparatif-montant:moins" offers="contrainte-tarif">
+	<syntax pattern="moins cher(s)"/>
+	<syntax pattern="moins chère(s)"/>
+</granule>
+
+<granule concept="comparatif-montant:plus" offers="contrainte-tarif">
+	<syntax pattern="plus cher(s)"/>
+	<syntax pattern="plus chère(s)"/>
+</granule>
+
+<granule concept="comparatif-montant:minimum" offers="contrainte-tarif">
+	<syntax pattern="le/les moins cher(s)"/>
+	<syntax pattern="la/les moins chère(s)"/>
+</granule>
+
+<granule concept="comparatif-montant:maximum" offers="contrainte-tarif">
+	<syntax pattern="le/les plus cher(s)"/>
+	<syntax pattern="la/les plus chère(s)"/>
+</granule>
+
+<granule concept="qualificatif-montant:cher" offers="contrainte-tarif">
+	<syntax pattern="(trop) cher(s)/chère(s)"/>
+	<syntax pattern="un peu cher(s)/chère(s)"/>
+	<syntax pattern="prix (trop) élevé"/>
+	<syntax pattern="ça dépasse mon budget"/>
+	<syntax pattern="ça fait beaucoup"/>
+	<syntax pattern="ça fait trop"/>
+	<syntax pattern="pas (trop/très) cher(s)" metadata="mode:neg"/>
+	<syntax pattern="pas (trop/très) chère(s)" metadata="mode:neg"/>
+</granule>
+
+<granule concept="qualificatif-montant:abordable" offers="contrainte-tarif">
+	<syntax pattern="prix raisonnable"/>
+	<syntax pattern="abordable"/>
+</granule>
+
+<!-- Commandes dialogiques MEDIA -->
+
+<declare-feature id="command-dial"/>
+
+<granule concept="attente" offers="command-dial">
+	<syntax pattern="attendez" gen="TRUE"/>
+	<syntax pattern="patientez"/>			
+	<syntax pattern="un instant"/>
+</granule>
+
+<granule concept="pasCompris" offers="command-dial">
+	<syntax pattern="pardon"/>
+	<syntax pattern="je ne comprends pas" gen="TRUE"/>
+	<syntax pattern="je n' ai pas (bien) compris"/>
+	<syntax pattern="je n' ai pas/mal entendu"/>
+	<syntax pattern="j' ai pas (bien) compris"/>
+	<syntax pattern="j' ai pas/mal entendu"/>
+</granule>
+
+<granule concept="peutEtre" offers="command-dial">
+	<syntax pattern="peut être" gen="TRUE"/>
+	<syntax pattern="éventuellement"/>
+	<syntax pattern="c' est possible"/>
+	<syntax pattern="ça dépend"/>
+</granule>
+
+<granule concept="jeSaisPas" offers="command-dial">
+	<syntax pattern="je ne sais pas" gen="TRUE"/>
+	<syntax pattern="je sais pas"/>
+	<syntax pattern="sans importance"/>
+	<syntax pattern="pas d' importance"/>
+	<syntax pattern="peut importe"/>
+	<syntax pattern="aucune préférence"/>
+	<syntax pattern="pas de préférence"/>
+	<syntax pattern="ça m' est égal"/>
+</granule>
+
+<granule concept="rien" offers="command-dial">
+	<syntax pattern="rien" gen="TRUE"/>
+	<syntax pattern="aucun(e)"/>
+</granule>
+
+<granule concept="erreur" offers="command-dial">
+	<syntax pattern="il y a une erreur" gen="TRUE"/>
+	<syntax pattern="il y a erreur"/>
+	<syntax pattern="ce n' est pas ça"/>
+</granule>
+
+<granule concept="erreur-locuteur" offers="command-dial">
+	<syntax pattern="pardon"/>
+	<syntax pattern="désolé"/>
+	<syntax pattern="rectification"/>
+	<syntax pattern="je me suis trompé(e)"/>
+	<syntax pattern="j' ai fais (une) erreur"/>
+	<syntax pattern="je veux/peux corriger/rectifier"/>
+	<syntax pattern="puis je corriger/rectifier" metadata="mode:inter"/>
+</granule>
+
+<granule concept="modification" offers="command-dial">
+	<dependency id="A1" expected="_changer"/>
+	<syntax pattern="je A1"/>
+	<syntax pattern="je vais A1"/>
+	<syntax pattern="je veux A1"/>
+	<syntax pattern="j' aimerais A1"/>
+	<syntax pattern="je préfère A1"/>
+	<syntax pattern="il faut A1"/>
+	<syntax pattern="il faudrait A1"/>
+	<syntax pattern="je voudrais A1"/>
+	<syntax pattern="pas A1" metadata="mode:neg"/>
+</granule>
+
+<declare-feature id="_changer"/>
+
+<granule offers="_changer">
+	<syntax pattern="change/changer"/>
+	<syntax pattern="modifie/modifier"/>
+	<syntax pattern="bouge/bouger"/>
+</granule>
+
+<granule concept="repetition-annonce" offers="command-dial">
+	<dependency id="A1" expected="_repeter"/>
+	<syntax pattern="je A1"/>
+	<syntax pattern="je vais A1"/>
+</granule>
+
+<granule concept="repetition-demande" offers="command-dial">
+	<dependency id="A1" expected="_repeter"/>
+	<syntax pattern="pourriez vous A1"/>
+	<syntax pattern="pouvez vous A1"/>
+	<syntax pattern="vous pouvez A1"/>
+	<syntax pattern="veuillez A1"/>
+	<syntax pattern="rappelez moi"/>
+	<syntax pattern="redonnez moi"/>
+	<syntax pattern="vous avez dit"/>
+	<syntax pattern="vous aviez dit"/>
+</granule>
+
+<declare-feature id="_repeter"/>
+
+<granule offers="_repeter">
+	<syntax pattern="redire"/>
+	<syntax pattern="rappeler"/>
+	<syntax pattern="redonner"/>
+	<syntax pattern="récapituler"/>
+	<syntax pattern="répéter"/>
+	<syntax pattern="reprendre"/>
+	<syntax pattern="recommencer"/>
+</granule>
+

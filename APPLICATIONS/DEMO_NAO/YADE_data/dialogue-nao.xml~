@@ -1,0 +1,143 @@
+
+<!-- Some simple rules (initiative from the user) -->
+
+<rule descr="hello world rule" example="hello">
+	<conditions>
+		<granule concept="openning"/>
+	</conditions>
+	<actions>
+		<speak text="Hello world."/>
+	</actions>
+</rule>
+
+<rule descr="related word rule" example="Can you tell us, if is related to this then?">
+	<conditions>
+		<granule concept="relation">
+		</granule>
+	</conditions>
+	<actions>
+		<speak text="Yes sure, I will try my best, I think [nao:getRelation]."/>
+	</actions>
+</rule>
+
+<rule descr="color rule" example="what's the color of this wall ?">
+	<conditions>
+		<granule concept="asking">
+			<granule concept="color"/>
+		</granule>
+	</conditions>
+	<actions>
+		<speak text="The wall is a (get-color) one."/>
+	</actions>
+</rule>
+
+<rule descr="distance rule" example="what's the distance ?">
+	<conditions>
+		<granule concept="asking">
+			<granule concept="distance"/>
+		</granule>
+	</conditions>
+	<actions>
+		<speak text="It's (get-distance)."/>
+	</actions>
+</rule>
+
+<rule descr="command to walk" example="walk">
+	<conditions>
+		<granule concept="order">
+			<granule concept="walking"/>
+		</granule>
+	</conditions>
+	<actions>
+        <speak text="Ok, I'm walking. [nao:walkForward]"/>
+	</actions>
+</rule>
+
+<rule descr="command to stop" example="stop">
+	<conditions>
+		<granule concept="order">
+			<granule concept="stopping"/>
+		</granule>
+	</conditions>
+	<actions>
+        <speak text="OK, I'm stopping. [nao:stop]"/>
+	</actions>
+</rule>
+
+<rule descr="timeout rule">
+	<conditions>
+		<input contains="_timeout_"/>
+	</conditions>
+	<actions>
+		<speak text="Hey, are you sleeping?"/>
+	</actions>
+</rule>
+
+<!-- Example of a system of rules (initiative from Nao) -->
+
+<rule descr="rigth-left question">
+	<conditions>
+		<input contains="right_left_question"/>
+	</conditions>
+	<actions>
+		<speak text="Oh, there's a wall in front of me."/>
+		<speak text="Should I go on my right or on my left ? [timeout:5]"/>
+	</actions>
+	
+	<!-- Terminal rule -->
+	
+	<rule terminal="TRUE" descr="rigth choice" example="to your right">
+		<conditions>
+			<granule concept="right"/>
+		</conditions>
+		<actions>
+			<speak text="OK, let's go to the right."/>
+		</actions>
+	</rule>
+	
+	<!-- Terminal rule -->
+	
+	<rule terminal="TRUE" descr="left choice" example="to your left">
+		<conditions>
+			<granule concept="left"/>
+		</conditions>
+		<actions>
+			<speak text="OK, let's go to the left."/>
+		</actions>
+	</rule>
+	
+	<!-- Non-terminal rule -->
+	
+	<rule descr="no direction" example="hello">
+		<conditions>
+			<nogranule offer="direction"/>
+		</conditions>
+		<actions>
+			<speak text="Please answer me: right or left ? [timeout:5]"/>
+		</actions>
+	</rule>
+	
+</rule>
+
+
+
+
+<!--
+<rule descr="sitting rule" example="can you sit down">
+
+	<conditions>
+		<granule concept="ordering">
+			<granule concept="sit"/>
+		</granule>
+	</conditions>
+    
+	<conditions>
+		<granule concept="sit"/>
+	</conditions>
+    
+	<actions>
+		<speak text="Yeah. Answered to Can you sit down?"/>
+	</actions>
+</rule>
+-->
+

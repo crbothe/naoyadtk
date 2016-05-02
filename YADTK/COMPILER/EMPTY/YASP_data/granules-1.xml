@@ -1,0 +1,33 @@
+
+<!-- Write here some YASPML definitions -->
+
+<declare-feature id="politeness"/>
+
+<granule concept="openning" offers="politeness">
+    <syntax pattern="hello"/>
+</granule>
+
+<group concept="day">
+	<entity pattern="monday" gen="TRUE"/>
+	<entity pattern="tuesday" gen="TRUE"/>
+	<entity pattern="wednesday" gen="TRUE"/>
+	<entity pattern="thursday" gen="TRUE"/>
+	<entity pattern="friday" gen="TRUE"/>
+	<entity pattern="saturday" gen="TRUE"/>
+	<entity pattern="sunday" gen="TRUE"/>
+</group>
+
+<group concept="month">
+	<entity pattern="january" value="01" gen="TRUE"/>
+	<entity pattern="february" value="02" gen="TRUE"/>
+	<entity pattern="march" value="03" gen="TRUE"/>
+	<entity pattern="april" value="04" gen="TRUE"/>
+	<entity pattern="may" value="05" gen="TRUE"/>
+	<entity pattern="june" value="06" gen="TRUE"/>
+	<entity pattern="july" value="07" gen="TRUE"/>
+	<entity pattern="august" value="08" gen="TRUE"/>
+	<entity pattern="september" value="09" gen="TRUE"/>
+	<entity pattern="october" value="10" gen="TRUE"/>
+	<entity pattern="november" value="11" gen="TRUE"/>
+	<entity pattern="december" value="12" gen="TRUE"/>
+</group>

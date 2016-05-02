@@ -1,0 +1,342 @@
+<!-- ############################################################################ -->
+<!-- ### QUELQUES LIEUX                                                       ### -->
+<!-- ############################################################################ -->
+
+<declare-feature id="lieu"/>
+
+<granule concept="localisation-lieuRelatif:mer" offers="lieu">
+	<syntax pattern="la mer"/>
+	<syntax pattern="une/la/des/les plage(s)"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:ville" offers="lieu">
+	<syntax pattern="une/la ville"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:centreVille" offers="lieu">
+	<syntax pattern="un/le centre ville"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:campagne" offers="lieu">
+	<syntax pattern="une/la campagne"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:port" offers="lieu">
+	<syntax pattern="un/le port"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:aeroport" offers="lieu">
+	<syntax pattern="un/l' aéroport"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:casino" offers="lieu">
+	<syntax pattern="un/le/des/les casino(s)"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:centreCommercial" offers="lieu">
+	<syntax pattern="un/le/des/les centre(s) commercia+"/>
+	<syntax pattern="un/le/des/les commerce(s)"/>
+	<syntax pattern="une/la/des/les boutique(s)"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:cinema" offers="lieu">
+	<syntax pattern="un/le/des/les cinéma(s)"/>
+	<syntax pattern="un/le/des/les ciné(s)"/>			
+</granule>
+
+<granule concept="localisation-lieuRelatif:gare" offers="lieu">
+	<syntax pattern="une/la gare"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:mairie" offers="lieu">
+	<syntax pattern="la mairie"/>
+	<syntax pattern="l' hôtel de ville"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:metro" offers="lieu">
+	<syntax pattern="un/le métro"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:tramway" offers="lieu">
+	<syntax pattern="un/le tramway"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:musee" offers="lieu">
+	<syntax pattern="un/le/des/les musée(s)"/>
+	<syntax pattern="une/l'/des/les exposition(s)"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:chateau" offers="lieu">
+	<syntax pattern="un/le/des/les château(x)"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:cathedrale" offers="lieu">
+	<syntax pattern="une/la/des/les cathédrale(s)"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:parcJardinBaseDeLoisir" offers="lieu">
+	<syntax pattern="un/le/des/les parc(s)"/>
+	<syntax pattern="un/le/des/les jardin(s)"/>
+	<syntax pattern="une/la/des/les base(s) de loisir(s)"/>
+	<syntax pattern="une/l'/des/les aire(s) de jeu(x)"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:quartierAnime" offers="lieu">
+	<syntax pattern="un/des/le/les quartier(s) animé(s)"/>
+	<syntax pattern="un/des/le/les endroit(s) animé(s)"/>
+	<syntax pattern="un/des/le/les lieu(x) animé(s)"/>
+</granule>
+		
+<granule concept="localisation-lieuRelatif:restaurant" offers="lieu">
+	<syntax pattern="un/des/le/les restau+"/>
+	<syntax pattern="une/des/la/les crêperie(s)"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:tennis" offers="lieu">
+	<syntax pattern="un/des/le/les terrain(s) de tennis"/>
+	<syntax pattern="un/des/le/les court(s) de tennis"/>
+</granule>
+
+<granule concept="localisation-lieuRelatif:stadeComplexeSportif" offers="lieu">
+	<syntax pattern="un/des/le/les stade(s)"/>
+	<syntax pattern="un/des/le/les complexe(s) sportif(s)"/>
+</granule>
+
+<granule concept="localisation-nommee" offers="lieu">
+	<dependency id="A1" expected="NONE" tag="GN"/>
+	
+	<syntax pattern="le centre A1"/>
+	<syntax pattern="le château A1"/>
+	<syntax pattern="le cimetière A1"/>
+	<syntax pattern="le cinéma A1"/>
+	<syntax pattern="la gare A1"/>
+	<syntax pattern="l' île A1"/>
+	<syntax pattern="le jardin A1"/>
+	<syntax pattern="le lac A1"/>
+	<syntax pattern="le marché A1"/>
+	<syntax pattern="le musée A1"/>
+	<syntax pattern="le palais A1"/>
+	<syntax pattern="le parc A1"/>
+	<syntax pattern="la place A1"/>
+	<syntax pattern="la porte A1"/>
+	<syntax pattern="le stade A1"/>
+	<syntax pattern="la tour A1"/>
+	<syntax pattern="la gallerie A1"/>
+	<syntax pattern="l' avenue A1"/>
+	<syntax pattern="la rue A1"/>
+</granule>
+
+<group concept="pays" offers="lieu">
+	<entity pattern="(l') allemagne"/>
+	<entity pattern="(l') angleterre"/>
+	<entity pattern="(la) belgique"/>
+	<entity pattern="(l') espagne"/>
+	<entity pattern="(la) france"/>
+	<entity pattern="(l') italie"/>
+	<entity pattern="(le) portugal"/>
+	<entity pattern="(la) suisse"/>
+</group>
+
+<group concept="departement" offers="lieu">
+	<entity pattern="(le) doubs"/>
+	<entity pattern="(l') eure"/>
+	<entity pattern="(le) jura"/>
+	<entity pattern="(le) loiret"/>
+	<entity pattern="(la) mayenne"/>
+	<entity pattern="(la) sarthe"/>
+	<entity pattern="(le) var"/>
+</group>
+
+<group concept="ville" offers="lieu">
+	<entity pattern="agen"/>
+	<entity pattern="aix en provence"/>
+	<entity pattern="aix les bains"/>
+	<entity pattern="albi"/>
+	<entity pattern="alès"/>
+	<entity pattern="amiens"/>
+	<entity pattern="angers"/>
+	<entity pattern="angoulême"/>
+	<entity pattern="annecy"/>
+	<entity pattern="arles"/>
+	<entity pattern="arras"/>
+	<entity pattern="auxerre"/>
+	<entity pattern="avignon"/>
+	<entity pattern="barjouville"/>
+	<entity pattern="bar le duc"/>
+	<entity pattern="bayonne"/>
+	<entity pattern="belfort"/>
+	<entity pattern="belle ile en mer"/>
+	<entity pattern="besançon"/>  
+	<entity pattern="bordeaux"/>
+	<entity pattern="bourg en bresse"/>
+	<entity pattern="bourges"/>
+	<entity pattern="brest"/>
+	<entity pattern="béziers"/>
+	<entity pattern="cambrai"/>
+	<entity pattern="cannes"/>
+	<entity pattern="carcassonne"/>
+	<entity pattern="carpentras"/>
+	<entity pattern="carry"/>
+	<entity pattern="cassis"/>
+	<entity pattern="chaise dieu"/>
+	<entity pattern="chalon sur saône"/>
+	<entity pattern="chalon"/>
+	<entity pattern="chambéry"/>
+	<entity pattern="charleville"/>
+	<entity pattern="chartres"/>
+	<entity pattern="chaumont"/>
+	<entity pattern="châlons en champagne"/>
+	<entity pattern="châteauroux"/>
+	<entity pattern="châtellerault"/>
+	<entity pattern="clermont ferrand"/>
+	<entity pattern="colmar"/>
+	<entity pattern="concarneau"/>
+	<entity pattern="deauville"/>
+	<entity pattern="dijon"/>
+	<entity pattern="dole"/>
+	<entity pattern="douai"/>
+	<entity pattern="draguignan"/>
+	<entity pattern="dreux"/>
+	<entity pattern="épernay"/>
+	<entity pattern="epinal"/>
+	<entity pattern="epinay"/>
+	<entity pattern="evreux"/>
+	<entity pattern="gap"/>
+	<entity pattern="grasse"/>
+	<entity pattern="grenoble"/>
+	<entity pattern="hendaye"/>
+	<entity pattern="ivry"/>
+	<entity pattern="laval"/>
+	<entity pattern="lille"/>
+	<entity pattern="limoges"/>
+	<entity pattern="lorient"/>
+	<entity pattern="lunéville"/>
+	<entity pattern="lyon"/>
+	<entity pattern="manosque"/>
+	<entity pattern="mans" value="le_mans" gen="FALSE"/>
+	<entity pattern="le mans" value="le_mans"/>
+	<entity pattern="marseille"/>
+	<entity pattern="melun"/>
+	<entity pattern="mende"/>
+	<entity pattern="menton"/>
+	<entity pattern="mont de marsan"/>
+	<entity pattern="montauban"/>
+	<entity pattern="montbéliard"/>
+	<entity pattern="montluçon"/>
+	<entity pattern="montpellier"/>
+	<entity pattern="montélimar"/>
+	<entity pattern="moulins"/>
+	<entity pattern="mulhouse"/>
+	<entity pattern="mâcon"/>
+	<entity pattern="nancy"/>
+	<entity pattern="nantes"/>
+	<entity pattern="narbonne"/>
+	<entity pattern="nevers"/>
+	<entity pattern="niort"/>
+	<entity pattern="nice"/>
+	<entity pattern="nogent sur marne"/>
+	<entity pattern="nogent sur oise"/>
+	<entity pattern="nogent sur seine"/>
+	<entity pattern="nogent"/>
+	<entity pattern="nîmes"/>
+	<entity pattern="orange"/>
+	<entity pattern="orléans"/>
+	<entity pattern="paris"/>
+	<entity pattern="passy"/>
+	<entity pattern="poitiers"/>
+	<entity pattern="rennes"/>
+	<entity pattern="roanne"/>
+	<entity pattern="roche sur yon"/>
+	<entity pattern="rochefort"/>
+	<entity pattern="rodez"/>
+	<entity pattern="roissy"/>
+	<entity pattern="rouen"/>
+	<entity pattern="saint dizier"/>
+	<entity pattern="saint nazaire"/>
+	<entity pattern="saint régis"/>
+	<entity pattern="saint rémy de provence"/>
+	<entity pattern="saintes"/>
+	<entity pattern="sceaux"/>
+	<entity pattern="sedan"/>
+	<entity pattern="sens"/>
+	<entity pattern="soissons"/>
+	<entity pattern="sète"/>
+	<entity pattern="tarbes"/>
+	<entity pattern="thiers"/>
+	<entity pattern="thonon les bains"/>
+	<entity pattern="toulon"/>
+	<entity pattern="toulouse"/>
+	<entity pattern="tours"/>
+	<entity pattern="tulle"/>
+	<entity pattern="valenciennes"/>
+	<entity pattern="vannes"/>
+	<entity pattern="versailles"/>
+	<entity pattern="vichy"/>
+	<entity pattern="vierzon"/>
+	<entity pattern="vélizy"/>
+	<entity pattern="épernay"/>
+	<entity pattern="épinal"/>
+	<entity pattern="évreux"/>
+</group>
+
+<group concept="quartier" offers="lieu">
+	<entity pattern="alésia"/>
+	<entity pattern="bastille"/>
+	<entity pattern="gambetta"/>
+	<entity pattern="(les) halles"/>
+	<entity pattern="(la) joliette"/>
+	<entity pattern="latin"/>
+	<entity pattern="montparnasse"/>
+	<entity pattern="(l') opéra"/>
+	<entity pattern="saint germain des prés"/>
+	<entity pattern="saint lazare"/>
+	<entity pattern="(l') île de la cité"/>
+	<entity pattern="(l') île saint louis"/>
+</group>
+
+<group concept="place" offers="lieu">
+	<entity pattern="(la) place d' italie"/>
+	<entity pattern="(la) place de la nation"/>
+	<entity pattern="(la) place des vosges"/>
+	<entity pattern="(la) place gambetta"/>
+	<entity pattern="(la) place stanislas"/>
+	<entity pattern="(la) place vendôme"/>
+	<entity pattern="(la) place de la concorde"/>
+</group>
+
+<group concept="monument" offers="lieu">
+	<entity pattern="(l') arc de triomphe"/>
+	<entity pattern="(le) château de versailles"/>
+	<entity pattern="(la) tour eiffel"/>
+	<entity pattern="(la) tour montparnasse"/>
+	<entity pattern="notre dame de paris"/>
+</group>
+
+<group concept="musee" offers="lieu">
+	<entity pattern="(le) centre pompidou"/>
+	<entity pattern="(le) musée de l' automobile"/>
+	<entity pattern="(le) musée de l' histoire"/>
+	<entity pattern="(le) musée du jouet"/>
+	<entity pattern="(le) musée lorrain"/>
+</group>
+
+<group concept="gare" offers="lieu">
+	<entity pattern="(la) gare de lyon"/>
+	<entity pattern="(la) gare du nord"/>
+	<entity pattern="(la) gare de l' est"/>
+	<entity pattern="(la) gare montparnasse"/>
+	<entity pattern="(la) gare saint lazare"/>
+</group>
+
+<group concept="jardin" offers="lieu">
+	<entity pattern="(le) jardin des plantes"/>
+	<entity pattern="(le) jardin des tuileries"/>
+	<entity pattern="(le) parc montsouris"/>
+	<entity pattern="(le) parc saint augustin"/>
+</group>
+
+<granule concept="arrondissement" offers="lieu">
+	<dependency id="A1" expected="rang" rejected="dernier"/>
+	<syntax pattern="le A1 arrondissement" gen="TRUE"/>
+	<syntax pattern="le A1"/>
+</granule>

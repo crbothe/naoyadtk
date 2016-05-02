@@ -1,0 +1,48 @@
+
+Version modifiée de LEFFF 2.1 (Lehuen 09/03/15)
+-----------------------------------------------
+
+- Passer tout en minuscules
+- Suppression du début du lexique jusqu'à ADSL
+- Remplacement de la double tabulation par un point-virgule
+- Remplacement de la tabulation suivie de [ par un point-virgule
+- Remplacement de tabulation 50 tabulation par une point-virgule
+- Suppression de pred='
+- Remplacement de _____ par ;_____
+- Mettre les tag grammaticaux en majuscule
+- Identifier les verbes à l'infinitif avec TextWrangler: ^(?P<MOT>.*);V;(?P=MOT); ===> \1;VINF;\1
+- Identifier les pronoms avec TextWrangler: ^(?P<MOT>.*);cla;pro' ===> \1;PRO;\1
+                                            ^(?P<MOT>.*);pro;pro'.* ===> \1;PRO;\1
+                                            ^(?P<MOT>.*);prel;prorel'.* ===> \1;PROREL;\1
+- Identifier les pronoms interrogatifs: ^(?P<MOT>.*);pri;pro' ===> \1;PRI;\1
+- Identifier les prépositions: 	120	prep ==> ;PREP;
+- Identifier les bonnes entrées: ^([a-zA-Záàâäãåçéèêëíìîïñóòôöõúùûüýÿ]*);(.*);([a-zA-Záàâäãåçéèêëíìîïñóòôöõúùûüýÿ]*);.*$ ===> \1;\2;\3
+- Supprimer les fins de ligne ___.*$
+- Supprimer les entrées avec des espaces: ^.* .*;.* ===> rien
+- Supprimer les entrées avec des traits: ^.*-.*;.* ===> rien
+- Identifier les auxiliaires avoir: ;auxavoir.* ===> ;AUXAVOIR;avoir
+- Identifier les auxiliaires être: ;auxetre.* ===> ;AUXETRE;être
+- Remplacer 	300	v; ===> ;V;
+- Dans TextWrangler: "Sort Lines Removing Duplicates" puis virer les lignes blanches
+- Finir à la main pour les trucs restants (@)
+- Ajouter les NUM extraits de BDLex
+- Découper le lexique avec split.bash
+- Fusionner les fichiers e é è ê puis a à
+- Dans TextWrangler: "Sort Lines Removing Duplicates" sur le fichier e.txt
+
+NC = nom commun
+NP = nom propre
+V = verbe conjugué
+VINF = verbe à l'infinitif
+DET = déterminant
+NUM = nombre
+ADJ = adjectif
+ADV = adverbe
+PRO = pronom
+PRI = pronom interrogatifs
+PROREL = pronom relatif
+PREP = préposition
+CONJ = conjonction de coordination
+PRES = ?
+AUXAVOIR = auxiliaire avoir
+AUXETRE = auxiliaire être

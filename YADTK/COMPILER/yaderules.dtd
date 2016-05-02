@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##############################################################################
+# This file is part of the YADTK Toolkit (Yet Another Dialogue Toolkit)
+# Copyright © Jérôme Lehuen 2010-2015 - Jerome.Lehuen@univ-lemans.fr
+#
+# This software is governed by the CeCILL license under French law and
+# abiding by the rules of distribution of free software. You can use,
+# modify and/or redistribute the software under the terms of the CeCILL
+# license as circulated by CEA, CNRS and INRIA (http://www.cecill.info).
+#
+# As a counterpart to the access to the source code and rights to copy,
+# modify and redistribute granted by the license, users are provided only
+# with a limited warranty and the software's author, the holder of the
+# economic rights, and the successive licensors have only limited
+# liability.
+#
+# In this respect, the user's attention is drawn to the risks associated
+# with loading, using, modifying and/or developing or reproducing the
+# software by the user in light of its specific status of free software,
+# that may mean that it is complicated to manipulate, and that also
+# therefore means that it is reserved for developers and experienced
+# professionals having in-depth computer knowledge. Users are therefore
+# encouraged to load and test the software's suitability as regards their
+# requirements in conditions enabling the security of their systems and/or
+# data to be ensured and, more generally, to use and operate it in the
+# same conditions as regards security.
+#
+# The fact that you are presently reading this means that you have had
+# knowledge of the CeCILL license and that you accept its terms.
+##############################################################################
+
+# This free software is registered at the Agence de Protection des Programmes.
+# For further information or commercial purpose, please contact the author.
+-->
+
+<!ENTITY % booleen "(TRUE|FALSE) 'FALSE'">
+
+<!ENTITY % level "(LOW|NORMAL|HIGH) 'NORMAL'">
+<!ENTITY % typescope "(INDICE|CONTEXT|GLOBAL|NONE) 'NONE'">
+<!ENTITY % typeglobal "(string|integer|token) 'token'">
+
+<!ELEMENT yaderules (set-string*,set-symbol*,initial*,rule*)>
+
+<!ELEMENT initial EMPTY>
+<!ATTLIST initial fact CDATA #REQUIRED>
+
+<!-- Le modèle des règles de dialogue -->
+
+<!ELEMENT rule (conditions+,actions,rule*)>
+<!ATTLIST rule descr CDATA #IMPLIED>
+<!ATTLIST rule example CDATA #IMPLIED>
+<!ATTLIST rule terminal %booleen;>
+<!ATTLIST rule priority %level;>
+<!ATTLIST rule salience CDATA #IMPLIED>
+<!ATTLIST rule request %booleen;>
+
+<!ELEMENT conditions (granule|nogranule|exists|notexists|conflict|catch|detect|verify|input|stop)*>
+<!ATTLIST conditions accept-used-granules %booleen;>
+<!ATTLIST conditions ordered %booleen;>
+<!ATTLIST conditions nearest %booleen;>
+<!ATTLIST conditions scope %typescope;>
+
+<!ELEMENT actions (
+	speak|
+	command|
+	assert|
+	retract|
+	increase|
+	remove|
+	bind|
+	ctrl|
+	set-string|
+	set-symbol|
+	connect-granule|
+	disconnect-granule|
+	delete-granule|
+	forget-granule|
+	change-granule|
+	create-granule|
+	reuse-granule|
+	clone-granule|
+	remplace-granule)*>
+
+<!-- Les motifs de granules -->
+
+<!ELEMENT granule (granule|nogranule|reuse-granule)*>
+<!ATTLIST granule concept CDATA #IMPLIED>
+<!ATTLIST granule offer CDATA #IMPLIED>
+<!ATTLIST granule reject CDATA #IMPLIED>
+<!ATTLIST granule code CDATA #IMPLIED>
+<!ATTLIST granule role CDATA #IMPLIED> <!-- Ne pas mettre de valeur par défaut pour ne pas forcément imposer une valeur  -->
+<!ATTLIST granule root (TRUE|FALSE) #IMPLIED> <!-- Ne pas utiliser le type booléen pour ne pas forcément imposer une valeur -->
+<!ATTLIST granule inferred (TRUE|FALSE) #IMPLIED> <!-- Ne pas utiliser le type booléen pour ne pas forcément imposer une valeur -->
+<!ATTLIST granule ident CDATA #IMPLIED>
+<!ATTLIST granule metadata CDATA #IMPLIED>
+<!ATTLIST granule modifiers CDATA #IMPLIED> <!-- Uniquement pour la génération littérale -->
+<!ATTLIST granule scope %typescope;>
+
+<!ELEMENT nogranule (granule*)>
+<!ATTLIST nogranule concept CDATA #IMPLIED>
+<!ATTLIST nogranule offer CDATA #IMPLIED>
+<!ATTLIST nogranule role CDATA #IMPLIED>
+<!ATTLIST nogranule root (TRUE|FALSE) #IMPLIED> <!-- Ne pas utiliser le type booléen pour ne pas forcément imposer une valeur -->
+<!ATTLIST nogranule metadata CDATA #IMPLIED>
+<!ATTLIST nogranule scope %typescope;>
+
+<!-- Les autres préconditions -->
+
+<!ELEMENT exists EMPTY>
+<!ATTLIST exists fact CDATA #REQUIRED>
+<!ATTLIST exists ref CDATA #IMPLIED>
+
+<!ELEMENT notexists EMPTY>
+<!ATTLIST notexists fact CDATA #REQUIRED>
+
+<!ELEMENT conflict EMPTY>
+<!ATTLIST conflict id1 CDATA #REQUIRED>
+<!ATTLIST conflict id2 CDATA #REQUIRED>
+
+<!ELEMENT catch EMPTY>
+<!ATTLIST catch fact CDATA #REQUIRED>
+
+<!ELEMENT verify EMPTY>
+<!ATTLIST verify test CDATA #REQUIRED>
+
+<!ELEMENT input EMPTY>
+<!ATTLIST input contains CDATA #IMPLIED>
+<!ATTLIST input pattern CDATA #IMPLIED>
+<!ATTLIST input regexp CDATA #IMPLIED>
+
+<!ELEMENT detect EMPTY>
+<!ATTLIST detect indicator NMTOKEN #REQUIRED>
+<!ATTLIST detect value CDATA #IMPLIED>
+
+<!ELEMENT stop EMPTY>
+
+<!-- Actions générales -->
+
+<!ELEMENT set-string EMPTY>
+<!ATTLIST set-string name NMTOKEN #REQUIRED>
+<!ATTLIST set-string value CDATA #REQUIRED>
+<!ATTLIST set-string test CDATA #IMPLIED>
+
+<!ELEMENT set-symbol EMPTY>
+<!ATTLIST set-symbol name NMTOKEN #REQUIRED>
+<!ATTLIST set-symbol value CDATA #REQUIRED>
+<!ATTLIST set-symbol test CDATA #IMPLIED>
+
+<!ELEMENT speak (granule*)>
+<!ATTLIST speak text CDATA #IMPLIED>
+<!ATTLIST speak test CDATA #IMPLIED>
+
+<!ELEMENT command EMPTY>
+<!ATTLIST command expr CDATA #IMPLIED>
+<!ATTLIST command test CDATA #IMPLIED>
+
+<!ELEMENT assert EMPTY>
+<!ATTLIST assert fact CDATA #REQUIRED>
+<!ATTLIST assert test CDATA #IMPLIED>
+
+<!ELEMENT retract EMPTY>
+<!ATTLIST retract ref CDATA #IMPLIED>
+<!ATTLIST retract all CDATA #IMPLIED>
+<!ATTLIST retract test CDATA #IMPLIED>
+
+<!ELEMENT reset EMPTY>
+<!ATTLIST reset counter NMTOKEN #REQUIRED>
+<!ATTLIST reset test CDATA #IMPLIED>
+
+<!ELEMENT increase EMPTY>
+<!ATTLIST increase counter NMTOKEN #REQUIRED>
+<!ATTLIST increase test CDATA #IMPLIED>
+
+<!ELEMENT remove EMPTY>
+<!ATTLIST remove counter NMTOKEN #REQUIRED>
+
+<!ELEMENT bind EMPTY>
+<!ATTLIST bind var CDATA #IMPLIED>
+<!ATTLIST bind value CDATA #IMPLIED>
+<!ATTLIST bind test CDATA #IMPLIED>
+
+<!ELEMENT ctrl EMPTY>
+<!ATTLIST ctrl command CDATA #REQUIRED>
+<!ATTLIST ctrl test CDATA #IMPLIED>
+
+<!-- Actions sur les granules -->
+
+<!ELEMENT connect-granule EMPTY>
+<!ATTLIST connect-granule parent CDATA #REQUIRED>
+<!ATTLIST connect-granule child CDATA #REQUIRED>
+<!ATTLIST connect-granule role CDATA "nil">
+<!ATTLIST connect-granule test CDATA #IMPLIED>
+
+<!ELEMENT disconnect-granule EMPTY>
+<!ATTLIST disconnect-granule ident CDATA #REQUIRED>
+<!ATTLIST disconnect-granule test CDATA #IMPLIED>
+
+<!ELEMENT delete-granule EMPTY>
+<!ATTLIST delete-granule ident CDATA #REQUIRED>
+<!ATTLIST delete-granule test CDATA #IMPLIED>
+
+<!ELEMENT forget-granule EMPTY>
+<!ATTLIST forget-granule ident CDATA #REQUIRED>
+<!ATTLIST forget-granule test CDATA #IMPLIED>
+
+<!ELEMENT change-granule EMPTY>
+<!ATTLIST change-granule ident CDATA #REQUIRED>
+<!ATTLIST change-granule concept CDATA #REQUIRED>
+<!ATTLIST change-granule test CDATA #IMPLIED>
+
+<!ELEMENT create-granule (create-granule|reuse-granule|clone-granule)*>
+<!ATTLIST create-granule concept CDATA #REQUIRED>
+<!ATTLIST create-granule ident CDATA #IMPLIED>
+<!ATTLIST create-granule role CDATA "nil">
+<!ATTLIST create-granule test CDATA #IMPLIED>
+
+<!ELEMENT reuse-granule (create-granule|reuse-granule|clone-granule)*>
+<!ATTLIST reuse-granule ident CDATA #REQUIRED>
+<!ATTLIST reuse-granule role CDATA "nil">
+<!ATTLIST reuse-granule modifiers CDATA #IMPLIED> <!-- Uniquement pour la génération littérale -->
+<!ATTLIST reuse-granule test CDATA #IMPLIED>
+
+<!ELEMENT clone-granule (create-granule|reuse-granule|clone-granule)*>
+<!ATTLIST clone-granule ident CDATA #REQUIRED>
+<!ATTLIST clone-granule role CDATA "nil">
+<!ATTLIST clone-granule test CDATA #IMPLIED>
+
+<!ELEMENT remplace-granule (create-granule|reuse-granule|clone-granule)>
+<!ATTLIST remplace-granule ident CDATA #REQUIRED>
+<!ATTLIST remplace-granule test CDATA #IMPLIED>

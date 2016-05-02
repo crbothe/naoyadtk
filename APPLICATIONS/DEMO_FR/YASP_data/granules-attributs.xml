@@ -1,0 +1,113 @@
+<!-- ############################################################################ -->
+<!-- ### GRANULES RITEL                                                       ### -->
+<!-- ############################################################################ -->
+
+<declare-feature id="personne"/>
+<declare-feature id="information"/>
+
+<!-- Types de questions -->
+
+<granule concept="question:savoir">
+	<dependency id="A1" expected="information"/>
+	<syntax pattern="je/j' [souhaiter]/[aimer]/[vouloir]/[pouvoir] savoir/connaître A1"/>
+	<syntax pattern="j' aurais aimé/voulu savoir/connaître A1"/>
+	<syntax pattern="pourrais je savoir/connaître A1"/>
+	<syntax pattern="pouvez vous me donner/dire A1"/>
+	<syntax pattern="quel+ est/sont A1"/>
+</granule>
+
+<!-- Quelques attributs -->
+
+<granule concept="information:superficie">
+	<dependency id="A1" expected="lieu" tag="GN"/>
+	<syntax pattern="(la) superficie"/>
+	<syntax pattern="(la) superficie &DE; A1"/>
+</granule>
+
+<granule concept="information:surface">
+	<dependency id="A1" expected="lieu objet" tag="GN"/>
+	<syntax pattern="(la) surface"/>
+	<syntax pattern="(la) surface &DE; A1"/>
+</granule>
+
+<granule concept="information:hauteur">
+	<dependency id="A1" expected="lieu objet" tag="GN"/>
+	<syntax pattern="(la) hauteur"/>
+	<syntax pattern="(la) hauteur &DE; A1"/>
+</granule>
+
+<granule concept="information:profondeur">
+	<dependency id="A1" expected="lieu objet" tag="GN"/>
+	<syntax pattern="(la) profondeur"/>
+	<syntax pattern="(la) profondeur &DE; A1"/>
+</granule>
+
+<granule concept="information:taille">
+	<dependency id="A1" expected="objet personne" tag="GN"/>
+	<syntax pattern="(la) taille"/>
+	<syntax pattern="(la) taille &DE; A1"/>
+</granule>
+
+<granule concept="information:couleur">
+	<dependency id="A1" expected="objet personne" tag="GN"/>
+	<syntax pattern="(la) couleur"/>
+	<syntax pattern="(la) couleur &DE; A1"/>
+</granule>
+
+<granule concept="information:adresse">
+	<dependency id="A1" expected="lieu personne" tag="GN"/>
+	<syntax pattern="(l') adresse"/>
+	<syntax pattern="(l') adresse &DE; A1"/>
+</granule>
+
+<granule concept="information:localisation">
+	<dependency id="A1" expected="lieu personne" tag="GN"/>
+	<syntax pattern="le lieu &DE; A1"/>
+	<syntax pattern="l' emplacement &DE; A1"/>
+	<syntax pattern="la localisation &DE; A1"/>
+	<syntax pattern="où A1 se trouve/situe" metadata="mode:inter"/>
+	<syntax pattern="où se/on trouve/situe A1" metadata="mode:inter"/>
+	<syntax pattern="où est A1" metadata="mode:inter"/>
+</granule>
+
+<granule concept="information:prix">
+	<dependency id="A1" expected="objet" tag="GN"/>
+	<syntax pattern="(le) prix/tarif/montant"/>
+	<syntax pattern="(la) prix/tarif/montant &DE; A1"/>
+</granule>
+
+<granule concept="information:capitale">
+	<dependency id="A1" expected="pays" tag="GN"/>
+	<syntax pattern="(la) capitale"/>
+	<syntax pattern="(la) capitale &DE; A1"/>
+</granule>
+
+<granule concept="information:date">
+	<dependency id="A1" expected="evenement" tag="GN"/>
+	<syntax pattern="(la) date"/>
+	<syntax pattern="(la) date &DE; A1"/>
+	<syntax pattern="a quelle date A1" metadata="mode:inter"/>
+</granule>
+
+<granule concept="information:age">
+	<dependency id="A1" expected="personne" tag="GN"/>
+	<syntax pattern="(l') âge"/>
+	<syntax pattern="(l') âge &DE; A1"/>
+	<syntax pattern="quel âge a A1" metadata="mode:inter"/>	
+</granule>
+
+<granule concept="information:naissance">
+	<dependency id="A1" expected="personne" tag="GN"/>
+	<syntax pattern="(l') année de naissance"/>
+	<syntax pattern="(l') année de naissance &DE; A1"/>
+	<syntax pattern="quand A1 est (il/elle) né(e)" metadata="mode:inter"/>
+</granule>
+
+<granule concept="information:mort">
+	<dependency id="A1" expected="personne" tag="GN"/>
+	<syntax pattern="(l') année de (la) mort"/>
+	<syntax pattern="(l') année du décès"/>
+	<syntax pattern="(l') année de (la) mort &DE; A1"/>
+	<syntax pattern="(l') année du décès &DE; A1"/>
+	<syntax pattern="quand A1 est (il/elle) mort(e)/décédé(e)" metadata="mode:inter"/>
+</granule>

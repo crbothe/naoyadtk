@@ -1,0 +1,114 @@
+
+<rule descr="vérification remplacement ville">  
+	<conditions>
+		<granule concept="acte:demander" scope="CONTEXT">
+    		<granule concept="MEDIA:hotel">
+                <granule concept="localisation-precise:ville">
+                    <granule concept="ville" ident="?id1"/>
+                </granule>
+            </granule>
+        </granule>        
+        <granule concept="localisation-precise:ville" scope="INDICE">
+            <granule concept="ville" ident="?id2"/>
+        </granule>
+	</conditions>
+	<actions>
+		<speak text="Vous voulez remplacer (rephrase ?id1) par (rephrase ?id2) ?"/>
+	</actions>
+    
+    <rule descr="confirmation remplacement" terminal="TRUE">  
+    	<conditions>
+    		<granule concept="acte:confirmer"/>
+    	</conditions>
+    	<actions>
+    		<speak text="D'accord."/>
+            <remplace-granule ident="?id1">
+                <reuse-granule ident="?id2"/>
+            </remplace-granule>
+    	</actions>
+    </rule>
+</rule>
+
+<rule descr="requête ville" request="TRUE" example="Je voudrais un hôtel à Paris">
+	<conditions scope="GLOBAL">
+		<granule concept="acte:demander">
+    		<granule concept="MEDIA:hotel" ident="?id">
+                <nogranule offer="hotel-etoile"/>
+                <granule concept="localisation-precise:ville">
+                    <granule concept="ville:?ville"/>
+                </granule>
+            </granule>
+        </granule>
+	</conditions>
+	<actions>
+		<speak text="Je recherche (rephrase ?id)."/>
+		<command expr="expression:thinking"/>
+		<command expr="request:ville:?ville"/>
+	</actions>
+</rule>
+
+<rule descr="requête ville + étoiles" request="TRUE">
+    <conditions scope="GLOBAL">
+		<granule concept="acte:demander">
+    		<granule concept="MEDIA:hotel">
+                <granule concept="hotel-etoile:?stars"/>
+                <granule concept="localisation-precise:ville">
+                    <granule concept="ville:?ville"/>
+                </granule>
+            </granule>
+        </granule>
+	</conditions>
+	<actions>
+		<speak text="Je traite la requête."/>
+		<command expr="expression:thinking"/>
+		<command expr="request:ville:?ville:etoiles:?stars"/>
+	</actions>
+</rule>
+
+<rule descr="aucun hôtel">  
+	<conditions>
+		<input regexp="\\[noresult\\]"/>
+	</conditions>
+	<actions>
+		<speak text="Désolé, il n'y a pas de réponse."/>
+		<command expr="expression:neutral"/>
+	</actions>
+</rule>
+
+<rule descr="un hôtel">  
+	<conditions>
+		<input regexp="\\[result:([^:]*)\\]"/>
+	</conditions>
+	<actions>
+		<speak text="La réponse est (group 1)."/>
+		<command expr="expression:neutral"/>
+	</actions>
+</rule>
+
+<rule descr="deux hôtels">  
+	<conditions>
+		<input regexp="\\[result:([^:]*):([^:]*)\\]"/>
+	</conditions>
+	<actions>
+		<speak text="Les réponses sont (group 1), et (group 2)."/>
+		<command expr="expression:neutral"/>
+	</actions>
+</rule>
+
+<rule>
+	<conditions>
+		<granule concept="remerciement"/>
+	</conditions>
+	<actions>
+		<speak text="Je vous en prie."/>
+	</actions>
+</rule>
+
+<rule>
+	<conditions>
+		<granule concept="cloture"/>
+	</conditions>
+	<actions>
+		<speak text="Au revoir et à bientôt."/>
+	</actions>
+</rule>

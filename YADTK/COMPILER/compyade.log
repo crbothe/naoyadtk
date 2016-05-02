@@ -1,0 +1,627 @@
+
+[CSTRCPSR1] WARNING: Redefining defmodule: MAIN
+Defining deffunction: nop
+Defining deffunction: error
+Defining deffunction: true
+Defining deffunction: false
+Defining deffunction: nbfacts
+Defining deffunction: print-type-of
+Defining deffunction: toNumber
+Defining deffunction: toString
+Defining deffunction: genint*
+Defining deffunction: index>
+Defining deffunction: pos>
+Defining deffunction: print-fact
+Defining deffunction: tabulation
+Defining deffunction: fileExists
+Defining deffunction: waitfor
+Defining deffunction: MAIN:debug
+Defining deffunction: spec
+Defining deffunction: str-car
+Defining deffunction: str-cdr
+Defining deffunction: str-cddr
+Defining deffunction: nonvide
+Defining deffunction: est-un-nombre
+Defining deffunction: string>
+Defining deffunction: str-explose
+Defining deffunction: nbchar
+Defining deffunction: nbmots
+Defining deffunction: _tokenise
+Defining deffunction: tokenise
+Defining deffunction: str-replace-all
+Defining deffunction: clearSpaces
+Defining deffunction: sansaccents
+Defining deffunction: token
+Defining deffunction: deparentheser
+Defining deffunction: clearFirstSpaces
+Defining deffunction: clearLastSpaces
+Defining deffunction: clearLastZero
+Defining deffunction: premiereBalise
+Defining defgeneric: +
+   Method #2 defined.
+
+[CSTRCPSR1] WARNING: Redefining defgeneric: +
+   Method #3 defined.
+
+[CSTRCPSR1] WARNING: Redefining defgeneric: +
+   Method #4 defined.
+
+[CSTRCPSR1] WARNING: Redefining defgeneric: +
+   Method #5 defined.
+Defining defglobal: vide
+Defining deffunction: car$
+Defining deffunction: cdr$
+Defining deffunction: cadr$
+Defining deffunction: vide$
+Defining deffunction: nonvide$
+Defining deffunction: dernier$
+Defining deffunction: equal$
+Defining deffunction: intersection$
+Defining deffunction: intersection
+Defining deffunction: intersectp
+Defining deffunction: union$
+Defining deffunction: differents$
+Defining deffunction: supprime-doublons$
+Defining deffunction: mapcar$
+Defining deffunction: concatene$
+Defining deffunction: concatene2$
+Defining deffunction: supprime$
+Defining deffunction: nb-occurence$
+Defining deffunction: clean
+Defining deffunction: cree-liste
+Defining defmodule: LEXIQUE
+Defining defmodule: PRECOMP
+Defining deffunction: writelog
+Defining deftemplate: concept
+Defining deftemplate: attente
+Defining deftemplate: contrainte
+Defining deftemplate: syntaxe
+Defining deftemplate: entity
+Defining deffunction: est-un-code
+Defining deffunction: est-un-jocker
+Defining deffunction: est-optionnel
+Defining deffunction: est-lemmatise
+Defining deffunction: supprime-termes-optionnels
+Defining deffunction: contient-terme-optionnel
+Defining deffunction: correspondance
+Defining deffunction: get-prefix
+Defining deftemplate: syntaxe-temp
+Defining defrule: cree-syntaxe-temp +j
+Defining defrule: derive-syntaxe-temp +j+j
+Defining defrule: cree-syntaxe +j+j
+Defining defrule: supprime-syntaxe +j
+Defining deffunction: sauvegarder-lexique
+Defining deffunction: succ1
+Defining deffunction: succ2
+Defining deffunction: succ3
+Defining deffunction: succ4
+Defining deffunction: succ
+Defining deffunction: _acceptable
+Defining deffunction: _comp
+Defining deffunction: _comp_rec
+Defining deffunction: comp
+Defining defglobal: ordre
+Defining defglobal: indice
+Defining defglobal: contexte
+Defining defglobal: pile-contextes
+Defining defglobal: outputFileName
+Defining defglobal: liste-actions
+Defining deftemplate: input
+Defining deftemplate: mot
+Defining deftemplate: granule
+Defining deftemplate: liaison
+Defining deftemplate: used
+Defining deftemplate: poids-granule
+Defining deftemplate: conflit
+Defining deffunction: getNumber
+Defining deffunction: date>
+Defining deffunction: number>
+Defining deffunction: get-pere
+Defining deffunction: get-fils
+Defining deffunction: get-concept
+Defining deffunction: get-code
+Defining deffunction: get-role
+Defining deffunction: get-offres
+Defining deffunction: attente-satisfaite
+Defining deffunction: get-fils-by-code
+Defining deffunction: get-liaison-by-code
+Defining deffunction: decode-concept
+Defining deffunction: encode-concept
+Defining deffunction: identiques
+Defining deffunction: fusionnable
+Defining deffunction: fusionner
+Defining deffunction: write-granule-XML
+Defining deffunction: write-working-memory-header
+Defining deffunction: write-working-memory
+Defining defmodule: YADEGLOB
+Defining defglobal: timeout
+Defining defglobal: openning
+Defining defglobal: nogranule
+Defining defglobal: noresponse
+Defining defmodule: YADE
+Defining defglobal: mirror
+Defining defglobal: pile-regles
+Defining defglobal: compteur-contexte
+Defining defmodule: YADERULE
+Defining defrule: initialisation +j
+Defining defrule: finalisation +j
+Defining deftemplate: _fact
+Defining deffacts: initial-fact
+Defining deffunction: assert-fact
+Defining deffunction: retract-fact
+Defining deffunction: retract-all
+Defining deftemplate: _counter
+Defining deffunction: reset-counter
+Defining deffunction: increase-counter
+Defining deffunction: remove-counter
+Defining deffunction: counter-value
+Defining deftemplate: contexte
+Defining deftemplate: variable
+Defining deffacts: contexte-initial
+Defining deffunction: actualiser-contexte
+Defining deffunction: incrementer-indice
+Defining deffunction: empiler-contexte
+Defining deffunction: depiler-contexte
+Defining deffunction: reset-dialogue-engine
+Defining deffunction: depiler-tout-contextes
+Defining deffunction: en-attente
+Defining deffunction: retract-granule
+Defining deffunction: get-granule-adress
+Defining deffunction: ancestor-or-self
+Defining deffunction: obsolete
+Defining deffunction: poids
+Defining deffunction: calcule-poids-des-granules
+Defining deffunction: ordered
+Defining deffunction: ok-ordre-fact-1
+Defining deffunction: ok-ordre-fact-2
+Defining deffunction: ok-ordre-fact-liste-1
+Defining deffunction: ok-ordre-fact-liste-2
+Defining deftemplate: reponse
+Defining deffunction: ordre>
+Defining deffunction: __granule-to-XML
+Defining deffunction: granule-to-XML
+Defining deffunction: repondre
+Defining deffunction: rephrase
+Defining deffunction: generer-XML
+Defining deffunction: fin-cycle
+Defining deffunction: mirror
+Defining deffunction: forget-granule
+Defining deffunction: delete-granule
+Defining defrule: initialisation +j
+Defining defglobal: age-max
+Defining deffunction: __obs
+Defining defrule: obsolescence +j+j+j
+Defining defrule: supprime-liaison-obsolete +j+j
+=j+j
+Defining defrule: supprime-granule-obsolete +j+j+j
+Defining defrule: fusion =j+j+j+j+j
+Defining defrule: reset +j
+Defining defrule: mirror +j
+Defining defrule: default +j
+Defining defrule: erreur-nogranule =j+j+j+j
+Defining defrule: erreur-noresponse =j=j+j+j+j+j
+Defining defrule: reponse-machine =j+j+j+j
+Defining deffunction: sauvegarder-yaderules
+Defining deffunction: disconnect-granule
+
+[CSTRCPSR1] WARNING: Redefining deffunction: delete-granule
+Defining deffunction: remplace-granule
+Defining deffunction: change-granule
+Defining deffunction: clone-granule
+Defining deffunction: __forget-granule
+
+[CSTRCPSR1] WARNING: Redefining deffunction: forget-granule
+Defining deffunction: __connect-granule-connectAttr
+Defining deffunction: connect-granule
+Defining deffunction: __find-offers
+Defining deffunction: create-granule-1
+Defining deffunction: create-granule-2
+Defining deffunction: get-color
+Defining deffunction: get-relatedWord
+Defining deffunction: get-distance
+Defining deffacts: initial-facts
+
+[CSTRCPSR1] WARNING: Redefining defglobal: timeout
+
+[CSTRCPSR1] WARNING: Redefining defglobal: openning
+
+[CSTRCPSR1] WARNING: Redefining defglobal: nogranule
+
+[CSTRCPSR1] WARNING: Redefining defglobal: noresponse
+Defining defglobal: salience-idm45712587846048
+Defining defglobal: salience-idm45712587829328
+Defining defglobal: salience-idm45712587733168
+Defining defglobal: salience-idm45712587727760
+Defining defglobal: salience-idm45712587722352
+Defining defglobal: salience-idm45712587716944
+Defining defglobal: salience-idm45712587711536
+Defining defglobal: salience-idm45712587707216
+Defining defglobal: salience-idm45712587702288
+Defining defglobal: salience-idm45712587697024
+Defining defglobal: salience-idm45712587691680
+Defining defglobal: salience-idm45712587650192
+Defining defglobal: salience-idm45712587616960
+Defining defglobal: salience-idm45712587612032
+Defining defglobal: salience-idm45712587607088
+Defining defglobal: salience-idm45712587602144
+Defining defglobal: salience-idm45712587597200
+Defining defglobal: salience-idm45712587592256
+Defining defglobal: salience-idm45712587587376
+Defining defglobal: salience-idm45712587582432
+Defining defrule: idm45712587846048 +j+j+j+j+j
+Defining defrule: idm45712587829328 =j+j+j+j+j
+Defining defrule: idm45712587733168 =j+j+j+j+j+j+j+j
+Defining defrule: idm45712587727760 =j=j=j+j+j+j+j+j
+Defining defrule: idm45712587722352 =j+j+j+j+j+j+j+j
+Defining defrule: idm45712587716944 =j=j=j+j+j+j+j+j
+Defining defrule: idm45712587711536 =j+j+j
+Defining defrule: idm45712587707216 +j+j+j
+Defining defrule: idm45712587702288 +j+j+j+j+j
+Defining defrule: idm45712587697024 =j+j+j+j+j
+Defining defrule: idm45712587691680 +j+j+j
+Defining defrule: idm45712587650192 =j+j+j+j+j
+Defining defrule: idm45712587616960 =j+j+j+j+j
+Defining defrule: idm45712587612032 =j+j+j+j+j
+Defining defrule: idm45712587607088 =j+j+j+j+j
+Defining defrule: idm45712587602144 =j+j+j+j+j
+Defining defrule: idm45712587597200 =j+j+j+j+j
+Defining defrule: idm45712587592256 =j+j+j+j+j
+Defining defrule: idm45712587587376 =j+j+j+j+j
+Defining defrule: idm45712587582432 =j+j+j+j+j
+
+;; ========================================================================
+;; Règles de dialogue générées automatiquement (ne modifiez pas ce fichier)
+;; ========================================================================
+
+(deffacts YADEGLOB::initial-facts
+   (tache0))
+
+(defglobal YADEGLOB ?*timeout* = "Hey, are you sleeping ?")
+(defglobal YADEGLOB ?*openning* = "Hi, what can I do for you ?")
+(defglobal YADEGLOB ?*nogranule* = "Sorry, I didn't understand. Can you reformulate please ?")
+(defglobal YADEGLOB ?*noresponse* = "Sorry, I don't know what to say. I do not have enough dialogue rules...")
+
+(defglobal YADE ?*salience-idm45712587846048* = 0)
+(defglobal YADE ?*salience-idm45712587829328* = 0)
+(defglobal YADE ?*salience-idm45712587733168* = 0)
+(defglobal YADE ?*salience-idm45712587727760* = 0)
+(defglobal YADE ?*salience-idm45712587722352* = 0)
+(defglobal YADE ?*salience-idm45712587716944* = 0)
+(defglobal YADE ?*salience-idm45712587711536* = 0)
+(defglobal YADE ?*salience-idm45712587707216* = 0)
+(defglobal YADE ?*salience-idm45712587702288* = 0)
+(defglobal YADE ?*salience-idm45712587697024* = 0)
+(defglobal YADE ?*salience-idm45712587691680* = 0)
+(defglobal YADE ?*salience-idm45712587650192* = 0)
+(defglobal YADE ?*salience-idm45712587616960* = 0)
+(defglobal YADE ?*salience-idm45712587612032* = 0)
+(defglobal YADE ?*salience-idm45712587607088* = 0)
+(defglobal YADE ?*salience-idm45712587602144* = 0)
+(defglobal YADE ?*salience-idm45712587597200* = 0)
+(defglobal YADE ?*salience-idm45712587592256* = 0)
+(defglobal YADE ?*salience-idm45712587587376* = 0)
+(defglobal YADE ?*salience-idm45712587582432* = 0)
+idm45712587846048
+(defrule YADERULE::idm45712587846048 "hello world rule"
+   (declare (salience ?*salience-idm45712587846048*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587857824 <- (granule (ident ?idm45712587857824) (indice ?indice-idm45712587857824&?indice) (lconcept openning $?))
+   (not (used (ident ?idm45712587857824)))
+   (not (fired ?indice idm45712587846048 =(string-to-field (getNumber ?idm45712587857824))))
+   (poids-granule (ident ?idm45712587857824) (poids ?idm45712587857824-poids))
+   (test (bind ?*salience-idm45712587846048* (+ 400 1 ?idm45712587857824-poids)))
+   =>
+   (assert (fired ?indice idm45712587846048 (string-to-field (getNumber ?idm45712587857824))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587857824))))
+   (writeLog (format nil "### Standalone rule (hello world rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587846048* idm45712587846048))
+   (repondre "Hello world.")
+   (calcule-poids-des-granules))
+idm45712587829328
+(defrule YADERULE::idm45712587829328 "related word rule"
+   (declare (salience ?*salience-idm45712587829328*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587826400 <- (granule (ident ?idm45712587826400) (indice ?indice-idm45712587826400&?indice) (lconcept relation $?))
+   (not (used (ident ?idm45712587826400)))
+   (not (fired ?indice idm45712587829328 =(string-to-field (getNumber ?idm45712587826400))))
+   (poids-granule (ident ?idm45712587826400) (poids ?idm45712587826400-poids))
+   (test (bind ?*salience-idm45712587829328* (+ 400 1 ?idm45712587826400-poids)))
+   =>
+   (assert (fired ?indice idm45712587829328 (string-to-field (getNumber ?idm45712587826400))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587826400))))
+   (writeLog (format nil "### Standalone rule (related word rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587829328* idm45712587829328))
+   (repondre "Yes sure, I will try my best, I am thinking. [nao:getRelation]")
+   (calcule-poids-des-granules))
+idm45712587733168
+(defrule YADERULE::idm45712587733168 "color rule"
+   (declare (salience ?*salience-idm45712587733168*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587730496 <- (granule (ident ?idm45712587730496) (indice ?indice-idm45712587730496&?indice) (lconcept asking $?))
+   (not (used (ident ?idm45712587730496)))
+   ?gr-idm45712587729760 <- (granule (ident ?idm45712587729760) (indice ?indice-idm45712587729760&?indice) (lconcept color $?))
+   (liaison (idpere ?idm45712587730496) (idfils ?idm45712587729760))
+   (not (used (ident ?idm45712587729760)))
+   (test (differents$ (create$ ?gr-idm45712587730496 ?gr-idm45712587729760)))
+   (not (fired ?indice idm45712587733168 =(string-to-field (getNumber ?idm45712587730496)) =(string-to-field (getNumber ?idm45712587729760))))
+   (poids-granule (ident ?idm45712587730496) (poids ?idm45712587730496-poids))
+   (test (bind ?*salience-idm45712587733168* (+ 400 2 ?idm45712587730496-poids)))
+   =>
+   (assert (fired ?indice idm45712587733168 (string-to-field (getNumber ?idm45712587730496)) (string-to-field (getNumber ?idm45712587729760))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587730496)) (string-to-field (getNumber ?idm45712587729760))))
+   (writeLog (format nil "### Standalone rule (color rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587733168* idm45712587733168))
+   (repondre "The wall is a")
+   (repondre (get-color))
+   (repondre "one.")
+   (calcule-poids-des-granules))
+idm45712587727760
+(defrule YADERULE::idm45712587727760 "distance rule"
+   (declare (salience ?*salience-idm45712587727760*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587725088 <- (granule (ident ?idm45712587725088) (indice ?indice-idm45712587725088&?indice) (lconcept asking $?))
+   (not (used (ident ?idm45712587725088)))
+   ?gr-idm45712587724352 <- (granule (ident ?idm45712587724352) (indice ?indice-idm45712587724352&?indice) (lconcept distance $?))
+   (liaison (idpere ?idm45712587725088) (idfils ?idm45712587724352))
+   (not (used (ident ?idm45712587724352)))
+   (test (differents$ (create$ ?gr-idm45712587725088 ?gr-idm45712587724352)))
+   (not (fired ?indice idm45712587727760 =(string-to-field (getNumber ?idm45712587725088)) =(string-to-field (getNumber ?idm45712587724352))))
+   (poids-granule (ident ?idm45712587725088) (poids ?idm45712587725088-poids))
+   (test (bind ?*salience-idm45712587727760* (+ 400 2 ?idm45712587725088-poids)))
+   =>
+   (assert (fired ?indice idm45712587727760 (string-to-field (getNumber ?idm45712587725088)) (string-to-field (getNumber ?idm45712587724352))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587725088)) (string-to-field (getNumber ?idm45712587724352))))
+   (writeLog (format nil "### Standalone rule (distance rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587727760* idm45712587727760))
+   (repondre "It's")
+   (repondre (get-distance))
+   (repondre ".")
+   (calcule-poids-des-granules))
+idm45712587722352
+(defrule YADERULE::idm45712587722352 "command to walk"
+   (declare (salience ?*salience-idm45712587722352*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587719680 <- (granule (ident ?idm45712587719680) (indice ?indice-idm45712587719680&?indice) (lconcept order $?))
+   (not (used (ident ?idm45712587719680)))
+   ?gr-idm45712587718944 <- (granule (ident ?idm45712587718944) (indice ?indice-idm45712587718944&?indice) (lconcept walking $?))
+   (liaison (idpere ?idm45712587719680) (idfils ?idm45712587718944))
+   (not (used (ident ?idm45712587718944)))
+   (test (differents$ (create$ ?gr-idm45712587719680 ?gr-idm45712587718944)))
+   (not (fired ?indice idm45712587722352 =(string-to-field (getNumber ?idm45712587719680)) =(string-to-field (getNumber ?idm45712587718944))))
+   (poids-granule (ident ?idm45712587719680) (poids ?idm45712587719680-poids))
+   (test (bind ?*salience-idm45712587722352* (+ 400 2 ?idm45712587719680-poids)))
+   =>
+   (assert (fired ?indice idm45712587722352 (string-to-field (getNumber ?idm45712587719680)) (string-to-field (getNumber ?idm45712587718944))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587719680)) (string-to-field (getNumber ?idm45712587718944))))
+   (writeLog (format nil "### Standalone rule (command to walk) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587722352* idm45712587722352))
+   (repondre "Ok, I'm walking. [nao:walkForward]")
+   (calcule-poids-des-granules))
+idm45712587716944
+(defrule YADERULE::idm45712587716944 "command to stop"
+   (declare (salience ?*salience-idm45712587716944*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587714272 <- (granule (ident ?idm45712587714272) (indice ?indice-idm45712587714272&?indice) (lconcept order $?))
+   (not (used (ident ?idm45712587714272)))
+   ?gr-idm45712587713536 <- (granule (ident ?idm45712587713536) (indice ?indice-idm45712587713536&?indice) (lconcept stopping $?))
+   (liaison (idpere ?idm45712587714272) (idfils ?idm45712587713536))
+   (not (used (ident ?idm45712587713536)))
+   (test (differents$ (create$ ?gr-idm45712587714272 ?gr-idm45712587713536)))
+   (not (fired ?indice idm45712587716944 =(string-to-field (getNumber ?idm45712587714272)) =(string-to-field (getNumber ?idm45712587713536))))
+   (poids-granule (ident ?idm45712587714272) (poids ?idm45712587714272-poids))
+   (test (bind ?*salience-idm45712587716944* (+ 400 2 ?idm45712587714272-poids)))
+   =>
+   (assert (fired ?indice idm45712587716944 (string-to-field (getNumber ?idm45712587714272)) (string-to-field (getNumber ?idm45712587713536))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587714272)) (string-to-field (getNumber ?idm45712587713536))))
+   (writeLog (format nil "### Standalone rule (command to stop) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587716944* idm45712587716944))
+   (repondre "OK, I'm stopping. [nao:stop]")
+   (calcule-poids-des-granules))
+idm45712587711536
+(defrule YADERULE::idm45712587711536 "timeout rule"
+   (declare (salience ?*salience-idm45712587711536*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   (input (chaine ?texte) (indice ?indice))
+   (test (str-index (lowcase "_timeout_") ?texte))
+   (not (fired ?indice idm45712587711536))
+   (test (bind ?*salience-idm45712587711536* (+ 400 1)))
+   =>
+   (assert (fired ?indice idm45712587711536))
+   (bind ?liste-id (create$))
+   (writeLog (format nil "### Standalone rule (timeout rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587711536* idm45712587711536))
+   (repondre "Hey, are you sleeping?")
+   (calcule-poids-des-granules))
+idm45712587707216
+(defrule YADERULE::idm45712587707216 "rigth-left question"
+   (declare (salience ?*salience-idm45712587707216*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?) (pile-regles ~idm45712587707216 $?))
+   (input (chaine ?texte) (indice ?indice))
+   (test (str-index (lowcase "right_left_question") ?texte))
+   (not (fired ?indice idm45712587707216))
+   (test (bind ?*salience-idm45712587707216* (+ 300 1)))
+   =>
+   (assert (fired ?indice idm45712587707216))
+   (bind ?liste-id (create$))
+   (writeLog (format nil "### Initiative rule (rigth-left question) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587707216* idm45712587707216))
+   (empiler-contexte idm45712587707216)
+   (pop-focus)
+   (repondre "Oh, there's a wall in front of me.")
+   (repondre "Should I go on my right or on my left ? [timeout:5]")
+   (calcule-poids-des-granules))
+idm45712587702288
+(defrule YADERULE::idm45712587702288 "rigth choice"
+   (declare (salience ?*salience-idm45712587702288*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?) (pile-regles idm45712587707216 $?))
+   ?gr-idm45712587699360 <- (granule (ident ?idm45712587699360) (indice ?indice-idm45712587699360&?indice) (lconcept right $?))
+   (not (used (ident ?idm45712587699360)))
+   (not (fired ?indice idm45712587702288 =(string-to-field (getNumber ?idm45712587699360))))
+   (poids-granule (ident ?idm45712587699360) (poids ?idm45712587699360-poids))
+   (test (bind ?*salience-idm45712587702288* (+ 200 1 ?idm45712587699360-poids)))
+   =>
+   (assert (fired ?indice idm45712587702288 (string-to-field (getNumber ?idm45712587699360))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587699360))))
+   (writeLog (format nil "### Nested terminal rule (rigth choice) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587702288* idm45712587702288))
+   (repondre "OK, let's go to the right.")
+   (depiler-contexte)
+   (calcule-poids-des-granules))
+idm45712587697024
+(defrule YADERULE::idm45712587697024 "left choice"
+   (declare (salience ?*salience-idm45712587697024*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?) (pile-regles idm45712587707216 $?))
+   ?gr-idm45712587694096 <- (granule (ident ?idm45712587694096) (indice ?indice-idm45712587694096&?indice) (lconcept left $?))
+   (not (used (ident ?idm45712587694096)))
+   (not (fired ?indice idm45712587697024 =(string-to-field (getNumber ?idm45712587694096))))
+   (poids-granule (ident ?idm45712587694096) (poids ?idm45712587694096-poids))
+   (test (bind ?*salience-idm45712587697024* (+ 200 1 ?idm45712587694096-poids)))
+   =>
+   (assert (fired ?indice idm45712587697024 (string-to-field (getNumber ?idm45712587694096))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587694096))))
+   (writeLog (format nil "### Nested terminal rule (left choice) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587697024* idm45712587697024))
+   (repondre "OK, let's go to the left.")
+   (depiler-contexte)
+   (calcule-poids-des-granules))
+idm45712587691680
+(defrule YADERULE::idm45712587691680 "no direction"
+   (declare (salience ?*salience-idm45712587691680*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?) (pile-regles idm45712587707216 $?))
+   (not (and (granule (ident ?idm45712587688832) (indice ?indice) (offres $? direction $?))))
+   (not (fired ?indice idm45712587691680))
+   (test (bind ?*salience-idm45712587691680* (+ 400 1)))
+   =>
+   (assert (fired ?indice idm45712587691680))
+   (bind ?liste-id (create$))
+   (writeLog (format nil "### Nested non terminal rule (no direction) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587691680* idm45712587691680))
+   (repondre "Please answer me: right or left ? [timeout:5]")
+   (calcule-poids-des-granules))
+idm45712587650192
+(defrule YADERULE::idm45712587650192 "sitting rule"
+   (declare (salience ?*salience-idm45712587650192*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587661344 <- (granule (ident ?idm45712587661344) (indice ?indice-idm45712587661344&?indice) (lconcept sit $?))
+   (not (used (ident ?idm45712587661344)))
+   (not (fired ?indice idm45712587650192 =(string-to-field (getNumber ?idm45712587661344))))
+   (poids-granule (ident ?idm45712587661344) (poids ?idm45712587661344-poids))
+   (test (bind ?*salience-idm45712587650192* (+ 400 1 ?idm45712587661344-poids)))
+   =>
+   (assert (fired ?indice idm45712587650192 (string-to-field (getNumber ?idm45712587661344))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587661344))))
+   (writeLog (format nil "### Standalone rule (sitting rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587650192* idm45712587650192))
+   (repondre "Yeah. [nao:sitdown]")
+   (calcule-poids-des-granules))
+idm45712587616960
+(defrule YADERULE::idm45712587616960 "standing rule"
+   (declare (salience ?*salience-idm45712587616960*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587614000 <- (granule (ident ?idm45712587614000) (indice ?indice-idm45712587614000&?indice) (lconcept stand $?))
+   (not (used (ident ?idm45712587614000)))
+   (not (fired ?indice idm45712587616960 =(string-to-field (getNumber ?idm45712587614000))))
+   (poids-granule (ident ?idm45712587614000) (poids ?idm45712587614000-poids))
+   (test (bind ?*salience-idm45712587616960* (+ 400 1 ?idm45712587614000-poids)))
+   =>
+   (assert (fired ?indice idm45712587616960 (string-to-field (getNumber ?idm45712587614000))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587614000))))
+   (writeLog (format nil "### Standalone rule (standing rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587616960* idm45712587616960))
+   (repondre "Yeah. [nao:standup]")
+   (calcule-poids-des-granules))
+idm45712587612032
+(defrule YADERULE::idm45712587612032 "move forward rule"
+   (declare (salience ?*salience-idm45712587612032*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587609072 <- (granule (ident ?idm45712587609072) (indice ?indice-idm45712587609072&?indice) (lconcept forward $?))
+   (not (used (ident ?idm45712587609072)))
+   (not (fired ?indice idm45712587612032 =(string-to-field (getNumber ?idm45712587609072))))
+   (poids-granule (ident ?idm45712587609072) (poids ?idm45712587609072-poids))
+   (test (bind ?*salience-idm45712587612032* (+ 400 1 ?idm45712587609072-poids)))
+   =>
+   (assert (fired ?indice idm45712587612032 (string-to-field (getNumber ?idm45712587609072))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587609072))))
+   (writeLog (format nil "### Standalone rule (move forward rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587612032* idm45712587612032))
+   (repondre "okay, let's go.[nao:walkForward]")
+   (calcule-poids-des-granules))
+idm45712587607088
+(defrule YADERULE::idm45712587607088 "move back rule"
+   (declare (salience ?*salience-idm45712587607088*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587604128 <- (granule (ident ?idm45712587604128) (indice ?indice-idm45712587604128&?indice) (lconcept backward $?))
+   (not (used (ident ?idm45712587604128)))
+   (not (fired ?indice idm45712587607088 =(string-to-field (getNumber ?idm45712587604128))))
+   (poids-granule (ident ?idm45712587604128) (poids ?idm45712587604128-poids))
+   (test (bind ?*salience-idm45712587607088* (+ 400 1 ?idm45712587604128-poids)))
+   =>
+   (assert (fired ?indice idm45712587607088 (string-to-field (getNumber ?idm45712587604128))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587604128))))
+   (writeLog (format nil "### Standalone rule (move back rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587607088* idm45712587607088))
+   (repondre "okay. [nao:walkBackward]")
+   (calcule-poids-des-granules))
+idm45712587602144
+(defrule YADERULE::idm45712587602144 "move left rule"
+   (declare (salience ?*salience-idm45712587602144*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587599184 <- (granule (ident ?idm45712587599184) (indice ?indice-idm45712587599184&?indice) (lconcept moveleft $?))
+   (not (used (ident ?idm45712587599184)))
+   (not (fired ?indice idm45712587602144 =(string-to-field (getNumber ?idm45712587599184))))
+   (poids-granule (ident ?idm45712587599184) (poids ?idm45712587599184-poids))
+   (test (bind ?*salience-idm45712587602144* (+ 400 1 ?idm45712587599184-poids)))
+   =>
+   (assert (fired ?indice idm45712587602144 (string-to-field (getNumber ?idm45712587599184))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587599184))))
+   (writeLog (format nil "### Standalone rule (move left rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587602144* idm45712587602144))
+   (repondre "Yeah sure. [nao:walkLeft]")
+   (calcule-poids-des-granules))
+idm45712587597200
+(defrule YADERULE::idm45712587597200 "move right rule"
+   (declare (salience ?*salience-idm45712587597200*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587594240 <- (granule (ident ?idm45712587594240) (indice ?indice-idm45712587594240&?indice) (lconcept moveright $?))
+   (not (used (ident ?idm45712587594240)))
+   (not (fired ?indice idm45712587597200 =(string-to-field (getNumber ?idm45712587594240))))
+   (poids-granule (ident ?idm45712587594240) (poids ?idm45712587594240-poids))
+   (test (bind ?*salience-idm45712587597200* (+ 400 1 ?idm45712587594240-poids)))
+   =>
+   (assert (fired ?indice idm45712587597200 (string-to-field (getNumber ?idm45712587594240))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587594240))))
+   (writeLog (format nil "### Standalone rule (move right rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587597200* idm45712587597200))
+   (repondre "Yeah sure. [nao:walkRight]")
+   (calcule-poids-des-granules))
+idm45712587592256
+(defrule YADERULE::idm45712587592256 "turn left rule"
+   (declare (salience ?*salience-idm45712587592256*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587589296 <- (granule (ident ?idm45712587589296) (indice ?indice-idm45712587589296&?indice) (lconcept turnleft $?))
+   (not (used (ident ?idm45712587589296)))
+   (not (fired ?indice idm45712587592256 =(string-to-field (getNumber ?idm45712587589296))))
+   (poids-granule (ident ?idm45712587589296) (poids ?idm45712587589296-poids))
+   (test (bind ?*salience-idm45712587592256* (+ 400 1 ?idm45712587589296-poids)))
+   =>
+   (assert (fired ?indice idm45712587592256 (string-to-field (getNumber ?idm45712587589296))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587589296))))
+   (writeLog (format nil "### Standalone rule (turn left rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587592256* idm45712587592256))
+   (repondre "Yeah sure. [nao:turnLeft]")
+   (calcule-poids-des-granules))
+idm45712587587376
+(defrule YADERULE::idm45712587587376 "turn right rule"
+   (declare (salience ?*salience-idm45712587587376*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587584416 <- (granule (ident ?idm45712587584416) (indice ?indice-idm45712587584416&?indice) (lconcept turnright $?))
+   (not (used (ident ?idm45712587584416)))
+   (not (fired ?indice idm45712587587376 =(string-to-field (getNumber ?idm45712587584416))))
+   (poids-granule (ident ?idm45712587584416) (poids ?idm45712587584416-poids))
+   (test (bind ?*salience-idm45712587587376* (+ 400 1 ?idm45712587584416-poids)))
+   =>
+   (assert (fired ?indice idm45712587587376 (string-to-field (getNumber ?idm45712587584416))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587584416))))
+   (writeLog (format nil "### Standalone rule (turn right rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587587376* idm45712587587376))
+   (repondre "Yeah sure. [nao:turnRight]")
+   (calcule-poids-des-granules))
+idm45712587582432
+(defrule YADERULE::idm45712587582432 "turn around rule"
+   (declare (salience ?*salience-idm45712587582432*))
+   (contexte (indice ?indice) (pile-contextes ?contexte $?))
+   ?gr-idm45712587579472 <- (granule (ident ?idm45712587579472) (indice ?indice-idm45712587579472&?indice) (lconcept turnaround $?))
+   (not (used (ident ?idm45712587579472)))
+   (not (fired ?indice idm45712587582432 =(string-to-field (getNumber ?idm45712587579472))))
+   (poids-granule (ident ?idm45712587579472) (poids ?idm45712587579472-poids))
+   (test (bind ?*salience-idm45712587582432* (+ 400 1 ?idm45712587579472-poids)))
+   =>
+   (assert (fired ?indice idm45712587582432 (string-to-field (getNumber ?idm45712587579472))))
+   (bind ?liste-id (create$ (string-to-field (getNumber ?idm45712587579472))))
+   (writeLog (format nil "### Standalone rule (turn around rule) granules=(%s) salience=%d id=%s" (implode$ ?liste-id) ?*salience-idm45712587582432* idm45712587582432))
+   (repondre "Yeah sure. [nao:turnAround]")
+   (calcule-poids-des-granules))
+
+;; =============================================================================
+;; Fin du fichier

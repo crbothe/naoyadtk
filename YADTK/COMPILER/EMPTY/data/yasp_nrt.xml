@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exemples>
+
+<!-- Past here the examples for non-regression tests -->
+
+<structure text="hello">
+   <mot pos="1" texte="hello" lemmes="hello"/>
+   <granule id="1" concept="openning" code="nil" role="nil" offers="politeness openning" retained="" metadata="" text="hello" pos="1" fin="1" root="TRUE" inferred="FALSE" rescued="FALSE" score="1"/>
+</structure>
+
+</exemples>
